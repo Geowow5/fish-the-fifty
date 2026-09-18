@@ -56,6 +56,7 @@ export default function OklahomaPage() {
             <p className="eyebrow">OFFICIAL PROGRAM</p>
             <h3>Oklahoma Angler Recognition</h3>
             <p>Qualifying catches can earn Trophy Angler awards. Master Angler recognition requires five approved trophy awards, with no more than two from one species.</p>
+            <a href="/states/oklahoma/challenge">Track your challenge →</a><br />
             <a href={sources.recognition.url}>See eligibility & apply ↗</a>
           </div>
           <a className="back-link" href={sources.license.url}>Oklahoma fishing licenses ↗</a><br />
