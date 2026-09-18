@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { checkedDate, checkedLabel, guidePath, sources } from "./lower-illinois-river/guide-data";
 import { guidePath as mountainForkPath } from "./lower-mountain-fork/guide-data";
 import { guidePath as soonerLakePath } from "./sooner-lake/guide-data";
+import { guidePath as texomaPath } from "./lake-texoma/guide-data";
 
 export const metadata: Metadata = {
   title: "Oklahoma Fishing Guide | Fish the Fifty",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 const waters = [
   { name: "Lower Illinois River", detail: "A tailwater below Lake Tenkiller near Gore. Explore public access, map links, stocking updates, and river conditions.", href: guidePath },
   { name: "Blue River", detail: "A scenic public fishing area known for seasonal trout and warmwater fishing." },
-  { name: "Lake Texoma", detail: "One of the country’s best-known inland striped bass fisheries." },
+  { name: "Lake Texoma", detail: "An 88,000-acre border reservoir and one of the country’s best-known inland striped bass fisheries.", href: texomaPath },
   { name: "Sooner Lake", detail: "A 5,400-acre reservoir with hybrid striped bass, saugeye, catfish, crappie, and two OG&E-managed boat ramps.", href: soonerLakePath },
   { name: "Lower Mountain Fork River", detail: "A year-round cold-water trout area below Broken Bow Lake, with access through Beavers Bend State Park.", href: mountainForkPath }
 ];
@@ -40,7 +41,7 @@ export default function OklahomaPage() {
         <article className="detail-panel">
           <p className="eyebrow">START HERE</p>
           <h2>Featured public waters</h2>
-          <p>Start with the Lower Illinois River guide for public access, maps, and trip-planning resources. More detailed water guides are in development.</p>
+          <p>Start with the completed water guides for public access, maps, current rules, and trip-planning resources. More Oklahoma waters are in development.</p>
           <div className="water-cards">
             {waters.map((water) => <div className={`water-card${water.href ? " water-card-live" : ""}`} key={water.name}><strong>{water.name}</strong><span>{water.detail}</span>{water.href ? <a className="water-guide-link" href={water.href}>Open river guide →</a> : <small className="water-guide-pending">Detailed guide coming soon</small>}</div>)}
           </div>
