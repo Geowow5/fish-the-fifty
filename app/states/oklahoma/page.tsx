@@ -4,6 +4,7 @@ import { guidePath as mountainForkPath } from "./lower-mountain-fork/guide-data"
 import { guidePath as soonerLakePath } from "./sooner-lake/guide-data";
 import { guidePath as texomaPath } from "./lake-texoma/guide-data";
 import { guidePath as blueRiverPath } from "./blue-river/guide-data";
+import { guidePath as hefnerPath } from "./lake-hefner/guide-data";
 
 export const metadata: Metadata = {
   title: "Oklahoma Fishing Guide | Fish the Fifty",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 const waters = [
   { name: "Lower Illinois River", detail: "A tailwater below Lake Tenkiller near Gore. Explore public access, map links, stocking updates, and river conditions.", href: guidePath },
   { name: "Blue River", detail: "A 3,367-acre public fishing area with 6.25 wadable stream miles, seasonal rainbow trout, bass, and channel catfish.", href: blueRiverPath },
+  { name: "Lake Hefner", detail: "A 2,500-acre Oklahoma City lake with drive-up shoreline access, docks, a lighted pier, and annually stocked walleye and hybrid striped bass.", href: hefnerPath },
   { name: "Lake Texoma", detail: "An 88,000-acre border reservoir and one of the country’s best-known inland striped bass fisheries.", href: texomaPath },
   { name: "Sooner Lake", detail: "A 5,400-acre reservoir with hybrid striped bass, saugeye, catfish, crappie, and two OG&E-managed boat ramps.", href: soonerLakePath },
   { name: "Lower Mountain Fork River", detail: "A year-round cold-water trout area below Broken Bow Lake, with access through Beavers Bend State Park.", href: mountainForkPath }
