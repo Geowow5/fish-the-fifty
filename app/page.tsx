@@ -19,7 +19,7 @@ export default function Home() {
         <div className="nav-wrap">
           <div className="brand">FISH THE FIFTY</div>
           <nav>
-            <a href="#states">States</a>
+            <a href="/states">States</a>
             <a href="#challenges">Challenges</a>
             <a href="#progress">My Progress</a>
           </nav>
@@ -33,7 +33,7 @@ export default function Home() {
             <h1>Fish the state.<br />Complete the challenge.</h1>
             <p className="lead">Discover fishing opportunities across all 50 states, find public access, explore official state fishing challenges, plan trips, and track the waters you’ve conquered.</p>
             <div className="actions">
-              <a className="btn primary" href="#states">Explore the 50 States</a>
+              <a className="btn primary" href="/states">Explore the 50 States</a>
               <a className="btn secondary" href="#challenges">Find a Challenge</a>
             </div>
           </div>
@@ -97,7 +97,11 @@ export default function Home() {
           <p>Every state will eventually have its own challenge guide, fishing waters, access information, and trip-planning tools.</p>
         </div>
         <div className="states-grid">
-          {states.map((state) => <button key={state}>{state}</button>)}
+          {states.map((state) => (
+            <a key={state} href={state === "Oklahoma" ? "/states/oklahoma" : "/states"}>
+              {state}
+            </a>
+          ))}
         </div>
       </section>
 
@@ -105,7 +109,7 @@ export default function Home() {
         <p className="eyebrow">THE BIG IDEA</p>
         <h2>How many states have you fished?</h2>
         <p>Fish the Fifty will give anglers one place to track states, species, waters, slams, and the fishing adventures still ahead.</p>
-        <a className="btn primary" href="#states">Start Your Fifty</a>
+        <a className="btn primary" href="/states">Start Your Fifty</a>
       </section>
 
       <footer>

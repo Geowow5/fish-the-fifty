@@ -155,7 +155,8 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
 
 .states-section { padding-bottom: 110px; }
 .states-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; }
-.states-grid button {
+.states-grid button,
+.states-grid a {
   appearance: none;
   border: 1px solid var(--line);
   background: white;
@@ -166,7 +167,68 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
   text-align: left;
   cursor: pointer;
 }
-.states-grid button:hover { border-color: var(--river); background: #f2f8f7; }
+.states-grid button:hover,
+.states-grid a:hover { border-color: var(--river); background: #f2f8f7; }
+
+.page-hero {
+  padding: 70px 24px 54px;
+  background: linear-gradient(180deg, #fffdf8 0%, #f3eee4 100%);
+}
+.page-hero-inner { max-width: 1180px; margin: 0 auto; }
+.page-hero h1 { max-width: 850px; }
+.page-hero .lead { max-width: 780px; }
+.search-wrap { max-width: 1180px; margin: -25px auto 0; padding: 0 24px; position: relative; }
+.state-search {
+  width: 100%;
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+  font-size: 17px;
+  box-shadow: 0 16px 50px rgba(8,37,51,.08);
+}
+.state-search:focus { outline: 3px solid rgba(11,102,117,.18); border-color: var(--river); }
+.directory-section { padding-top: 52px; }
+.directory-meta { color: var(--muted); margin: 0 0 22px; }
+.directory-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.state-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 225px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: white;
+}
+.state-card.featured { border-color: var(--river); box-shadow: 0 14px 40px rgba(8,37,51,.08); }
+.state-card-top { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+.state-card h2 { font-size: 28px; letter-spacing: -.02em; }
+.status-pill { padding: 6px 9px; border-radius: 999px; background: #eef1ef; color: var(--muted); font-size: 11px; font-weight: 900; white-space: nowrap; }
+.status-pill.live { background: #e6f3ef; color: var(--river-dark); }
+.state-card p { color: var(--muted); line-height: 1.55; margin: 5px 0 22px; }
+.state-card .card-link { margin-top: auto; color: var(--river); font-weight: 900; }
+.state-card .disabled-link { margin-top: auto; color: #91a0a6; font-weight: 800; }
+.empty-state { grid-column: 1 / -1; padding: 40px; text-align: center; color: var(--muted); }
+
+.breadcrumb { max-width: 1180px; margin: 0 auto; padding: 24px 24px 0; font-size: 14px; font-weight: 800; color: var(--river); }
+.state-detail-hero { padding-top: 42px; }
+.state-facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.state-facts span { padding: 9px 12px; border-radius: 999px; background: white; border: 1px solid var(--line); font-size: 13px; font-weight: 800; }
+.detail-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 22px; }
+.detail-panel { padding: 30px; border: 1px solid var(--line); border-radius: 24px; background: white; }
+.detail-panel h2 { font-size: 34px; }
+.detail-panel > p { color: var(--muted); line-height: 1.65; }
+.water-cards { display: grid; gap: 12px; margin-top: 22px; }
+.water-card { padding: 18px; border-radius: 16px; background: #f5f7f5; }
+.water-card strong { display: block; margin-bottom: 6px; }
+.water-card span { color: var(--muted); font-size: 14px; line-height: 1.45; }
+.species-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+.species-list span { padding: 9px 11px; border-radius: 10px; background: #edf2e5; color: #53661f; font-size: 13px; font-weight: 800; }
+.challenge-callout { margin-top: 22px; padding: 22px; border-radius: 18px; background: var(--ink); color: white; }
+.challenge-callout p { color: #c7d3d7; line-height: 1.55; }
+.back-link { display: inline-block; margin-top: 24px; color: var(--river); font-weight: 900; }
 
 .final-cta {
   text-align: center;
@@ -191,6 +253,8 @@ footer span { color: #a9bbc2; }
   .card-grid { grid-template-columns: 1fr; }
   .states-grid { grid-template-columns: repeat(3,1fr); }
   .hero-logo-card { max-width: 680px; }
+  .directory-grid { grid-template-columns: repeat(2,1fr); }
+  .detail-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {
   nav { display: none; }
@@ -201,4 +265,5 @@ footer span { color: #a9bbc2; }
   .water-list { grid-template-columns: 1fr; }
   .states-grid { grid-template-columns: repeat(2,1fr); }
   footer { flex-direction: column; align-items: flex-start; }
+  .directory-grid { grid-template-columns: 1fr; }
 }
