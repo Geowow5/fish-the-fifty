@@ -50,7 +50,7 @@ export default function StatesPage() {
         <div className="page-hero-inner">
           <p className="eyebrow">EXPLORE THE COUNTRY</p>
           <h1>Choose your next state.</h1>
-          <p className="lead">Browse fishing opportunities across all 50 states. Oklahoma is the first complete guide, with more state pages coming as the Fish the Fifty database grows.</p>
+          <p className="lead">Browse fishing opportunities across all 50 states. Start with our growing Oklahoma guide and its first detailed water guide, the Lower Illinois River. More state pages are on the way.</p>
         </div>
       </section>
 

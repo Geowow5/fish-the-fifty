@@ -1,3 +1,5 @@
+import { accessAreas, guidePath } from "./states/oklahoma/lower-illinois-river/guide-data";
+
 const states = [
   "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia",
   "Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland",
@@ -45,8 +47,13 @@ export default function Home() {
 
       <section className="stats">
         <div><strong>50</strong><span>States to Explore</span></div>
-        <div><strong>100+</strong><span>Challenge Opportunities</span></div>
+        <div><strong>{featured.length}</strong><span>Featured Challenges</span></div>
         <div><strong>1</strong><span>National Adventure</span></div>
+      </section>
+
+      <section className="water-guide-feature" aria-labelledby="featured-water-heading">
+        <div><p className="eyebrow">NEW · OKLAHOMA WATER GUIDE</p><h2 id="featured-water-heading">Meet the Lower Illinois River.</h2><p>{accessAreas.length} public access areas, map links, and official resources for planning your next trip.</p></div>
+        <a className="btn primary" href={guidePath}>Explore the river →</a>
       </section>
 
       <section id="challenges" className="section">

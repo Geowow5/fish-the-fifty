@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
+import { checkedDate, checkedLabel, guidePath, sources } from "./lower-illinois-river/guide-data";
+
+export const metadata: Metadata = {
+  title: "Oklahoma Fishing Guide | Fish the Fifty",
+  description: "Explore Oklahoma fishing waters, the Lower Illinois River access guide, and official angler recognition and licensing resources.",
+};
+
 const waters = [
-  { name: "Lower Illinois River", detail: "Year-round tailwater trout fishing below Lake Tenkiller, with public access near Gore." },
+  { name: "Lower Illinois River", detail: "A tailwater below Lake Tenkiller near Gore. Explore public access, map links, stocking updates, and river conditions.", href: guidePath },
   { name: "Blue River", detail: "A scenic public fishing area known for seasonal trout and warmwater fishing." },
   { name: "Lake Texoma", detail: "One of the country’s best-known inland striped bass fisheries." },
   { name: "Sooner Lake", detail: "A productive warmwater lake for striped bass hybrids, catfish, drum, and white bass." },
@@ -30,10 +38,11 @@ export default function OklahomaPage() {
         <article className="detail-panel">
           <p className="eyebrow">START HERE</p>
           <h2>Featured public waters</h2>
-          <p>A starter collection of distinctive Oklahoma fisheries. Access details, maps, seasonal notes, and regulations can be added as each water guide is completed.</p>
+          <p>Start with the Lower Illinois River guide for public access, maps, and trip-planning resources. More detailed water guides are in development.</p>
           <div className="water-cards">
-            {waters.map((water) => <div className="water-card" key={water.name}><strong>{water.name}</strong><span>{water.detail}</span></div>)}
+            {waters.map((water) => <div className={`water-card${water.href ? " water-card-live" : ""}`} key={water.name}><strong>{water.name}</strong><span>{water.detail}</span>{water.href ? <a className="water-guide-link" href={water.href}>Open river guide →</a> : <small className="water-guide-pending">Detailed guide coming soon</small>}</div>)}
           </div>
+          <div className="state-stocking-note"><strong>Lower Illinois stocking update</strong><p>ODWC lists a temporary trout stocking suspension. Checked <time dateTime={checkedDate}>{checkedLabel}</time>.</p><a className="text-link" href={sources.area.url}>Read the latest ODWC notice ↗</a></div>
         </article>
 
         <aside className="detail-panel">
@@ -43,10 +52,12 @@ export default function OklahomaPage() {
             {["Largemouth Bass", "Smallmouth Bass", "Striped Bass", "Hybrid Striped Bass", "Rainbow Trout", "Brown Trout", "Crappie", "Blue Catfish", "Freshwater Drum", "White Bass", "Walleye", "Paddlefish"].map((species) => <span key={species}>{species}</span>)}
           </div>
           <div className="challenge-callout">
-            <p className="eyebrow">CHALLENGE SPOTLIGHT</p>
-            <h3>Oklahoma fishing challenges</h3>
-            <p>This section will connect official programs, qualifying species or waters, completion requirements, and submission links as they are verified.</p>
+            <p className="eyebrow">OFFICIAL PROGRAM</p>
+            <h3>Oklahoma Angler Recognition</h3>
+            <p>Qualifying catches can earn Trophy Angler awards. Master Angler recognition requires five approved trophy awards, with no more than two from one species.</p>
+            <a href={sources.recognition.url}>See eligibility & apply ↗</a>
           </div>
+          <a className="back-link" href={sources.license.url}>Oklahoma fishing licenses ↗</a><br />
           <a className="back-link" href="/states">Explore all 50 states →</a>
         </aside>
       </section>
