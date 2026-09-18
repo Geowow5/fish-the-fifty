@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { checkedDate, checkedLabel, guidePath, sources } from "./lower-illinois-river/guide-data";
+import { guidePath as mountainForkPath } from "./lower-mountain-fork/guide-data";
 
 export const metadata: Metadata = {
   title: "Oklahoma Fishing Guide | Fish the Fifty",
@@ -11,7 +12,7 @@ const waters = [
   { name: "Blue River", detail: "A scenic public fishing area known for seasonal trout and warmwater fishing." },
   { name: "Lake Texoma", detail: "One of the country’s best-known inland striped bass fisheries." },
   { name: "Sooner Lake", detail: "A productive warmwater lake for striped bass hybrids, catfish, drum, and white bass." },
-  { name: "Mountain Fork River", detail: "Cold-water trout fishing below Broken Bow Lake in southeastern Oklahoma." }
+  { name: "Lower Mountain Fork River", detail: "A year-round cold-water trout area below Broken Bow Lake, with access through Beavers Bend State Park.", href: mountainForkPath }
 ];
 
 export default function OklahomaPage() {
