@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { checkedDate, checkedLabel, sources } from "./lower-illinois-river/guide-data";
 import { waters } from "./waters";
-import { guidePath as greatSaltPlainsPath } from "./great-salt-plains/guide-data";
 
 export const metadata: Metadata = {
   title: "Oklahoma Fishing Guide | Fish the Fifty",
@@ -14,11 +13,16 @@ export default function OklahomaPage() {
       <header className="nav-shell">
         <div className="nav-wrap">
           <a className="brand" href="/">FISH THE FIFTY</a>
-          <nav><a href="/states">States</a><a href="/winter-trout">Winter Trout</a><a href="/#challenges">Challenges</a><a href="/#progress">My Progress</a></nav>
+          <nav><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/#progress">My Progress</a></nav>
         </div>
       </header>
 
       <div className="breadcrumb"><a href="/states">← All States</a></div>
+      <nav className="state-guide-tabs" aria-label="Oklahoma guide pages">
+        <a href="/states/oklahoma" aria-current="page">Fishing Waters</a>
+        <a href="/winter-trout">Winter Trout</a>
+        <a href="/states/oklahoma/challenge">Oklahoma Challenge</a>
+      </nav>
       <section className="page-hero state-detail-hero">
         <div className="page-hero-inner">
           <p className="eyebrow">STATE GUIDE 01</p>

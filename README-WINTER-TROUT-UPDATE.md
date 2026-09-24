@@ -1,6 +1,6 @@
 # Fish the Fifty — Winter Trout update
 
-This update adds a Winter Trout tab and an Oklahoma guide at `/winter-trout` with seasonal stocking windows, map links, Stillwater-area access, year-round trout fisheries, current stocking alerts, and ODWC resources.
+This update adds an Oklahoma guide at `/winter-trout` with seasonal stocking windows, map links, Stillwater-area access, year-round trout fisheries, current stocking alerts, and ODWC resources. The Winter Trout tab is on the Oklahoma guide page, beside Fishing Waters and Oklahoma Challenge, rather than in the site-wide navigation.
 
 ## Upload
 

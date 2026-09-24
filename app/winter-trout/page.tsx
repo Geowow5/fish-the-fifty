@@ -15,7 +15,7 @@ export default function WinterTroutPage() {
           <a className="brand" href="/">FISH THE FIFTY</a>
           <nav aria-label="Main navigation">
             <a href="/states">States</a>
-            <a href="/winter-trout" aria-current="page">Winter Trout</a>
+            
             <a href="/#challenges">Challenges</a>
             <a href="/#progress">My Progress</a>
           </nav>

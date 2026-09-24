@@ -42,6 +42,10 @@ a:focus-visible { outline: 3px solid var(--river); outline-offset: 5px; }
 .brand { font-weight: 900; letter-spacing: .08em; }
 nav { display: flex; gap: 26px; font-size: 14px; font-weight: 700; }
 nav a:hover { color: var(--river); }
+.state-guide-tabs { max-width: 1180px; margin: 0 auto; padding: 14px 24px 0; display: flex; gap: 8px; border-bottom: 1px solid var(--line); }
+.state-guide-tabs a { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 18px; border: 1px solid var(--line); border-bottom: 0; border-radius: 13px 13px 0 0; background: #f3f6f2; color: var(--river-dark); font-size: 14px; font-weight: 800; white-space: nowrap; }
+.state-guide-tabs a[aria-current="page"] { background: var(--ink); border-color: var(--ink); color: white; }
+.state-guide-tabs a:hover:not([aria-current="page"]) { background: #e7f0ed; color: var(--river-dark); }
 
 .hero {
   padding: 72px 24px 44px;
@@ -399,6 +403,8 @@ footer span { color: #a9bbc2; }
   .nav-wrap { flex-wrap: wrap; gap: 12px; padding: 14px 20px 8px; }
   .nav-wrap nav { display: flex; flex-wrap: wrap; gap: 8px 22px; width: 100%; font-size: 13px; }
   .nav-wrap nav a { display: inline-flex; align-items: center; min-height: 40px; }
+  .state-guide-tabs { padding: 10px 20px 0; overflow-x: auto; }
+  .state-guide-tabs a { padding: 9px 14px; font-size: 13px; }
   .hero { padding-top: 48px; }
   .lead { font-size: 18px; }
   .stats { grid-template-columns: 1fr; }
