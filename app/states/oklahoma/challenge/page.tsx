@@ -23,7 +23,7 @@ const sources = {
 export default function OklahomaChallengePage() {
   return (
     <main>
-      <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/#progress">My Progress</a></nav></div></header>
+      <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/winter-trout">Winter Trout</a><a href="/#challenges">Challenges</a><a href="/#progress">My Progress</a></nav></div></header>
       <div className="breadcrumb"><a href="/states">States</a><span aria-hidden="true"> / </span><a href="/states/oklahoma">Oklahoma</a><span aria-hidden="true"> / </span><span>Challenge</span></div>
       <section className="page-hero challenge-hero"><div className="page-hero-inner"><p className="eyebrow">OKLAHOMA · OFFICIAL PROGRAM</p><h1>Become a<br />Master Angler.</h1><p className="lead">Build five approved Trophy Angler awards from Oklahoma waters, then submit for Master Angler recognition through Oklahoma Wildlife.</p><div className="state-facts"><span>5 Trophy Awards</span><span>All ages welcome</span><span>Residents & nonresidents</span><span>Max 2 per species</span></div></div></section>
 

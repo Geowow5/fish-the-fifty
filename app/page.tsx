@@ -21,7 +21,7 @@ export default function Home() {
         <div className="nav-wrap">
           <div className="brand">FISH THE FIFTY</div>
           <nav>
-            <a href="/states">States</a>
+            <a href="/states">States</a><a href="/winter-trout">Winter Trout</a>
             <a href="#challenges">Challenges</a>
             <a href="#progress">My Progress</a>
           </nav>

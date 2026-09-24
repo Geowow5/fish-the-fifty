@@ -262,6 +262,9 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
 .stocking-notice .eyebrow { color: #705419; font-size: 11px; letter-spacing: .08em; line-height: 1.7; }
 .stocking-notice h2 { font-size: clamp(23px, 3vw, 28px); letter-spacing: -.02em; line-height: 1.2; margin-bottom: 10px; }
 .stocking-notice p:not(.eyebrow) { max-width: 890px; line-height: 1.65; margin: 8px 0 12px; color: #574d33; }
+.local-trout-feature { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center; }
+.local-trout-feature h3 { margin: 0 0 12px; font-size: clamp(22px, 3vw, 30px); line-height: 1.15; }
+.local-trout-feature > .map-links { flex-direction: column; align-items: flex-start; }
 .text-link { color: var(--river-dark); font-weight: 800; text-decoration: underline; text-underline-offset: 4px; line-height: 1.6; }
 .guide-jump-links { display: flex; flex-wrap: wrap; gap: 6px 20px; padding: 8px 0 24px; border-bottom: 1px solid var(--line); }
 .guide-jump-links a { display: inline-flex; align-items: center; min-height: 44px; }
@@ -303,6 +306,7 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
 .resource-links { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
 .resource-links a { color: var(--river-dark); text-decoration: underline; text-underline-offset: 3px; font-weight: 700; font-size: 14px; padding: 10px 0; line-height: 1.5; }
 .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 28px; }
+.rules-grid-single { grid-template-columns: 1fr; }
 .rule-card { background: white; padding: 26px; border: 1px solid var(--line); border-radius: 20px; }
 .rule-card h3 { margin: 0 0 14px; }
 .rule-card .text-link { font-size: 14px; display: inline-block; margin-top: 8px; }
@@ -409,6 +413,7 @@ footer span { color: #a9bbc2; }
   .river-hero .actions .btn { font-size: 14px; }
   .river-brief { padding: 24px; }
   .stocking-notice { padding: 22px; }
+  .local-trout-feature { grid-template-columns: 1fr; }
   .access-grid, .rules-grid { grid-template-columns: 1fr; }
   .access-card, .rule-card { padding: 22px; }
   .guide-section { padding: 42px 0; }
