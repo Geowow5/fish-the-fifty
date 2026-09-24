@@ -160,12 +160,19 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
 .tiers span { display: block; font-size: 11px; letter-spacing: .12em; color: #b6cf76; font-weight: 900; }
 .tiers strong { display: block; margin-top: 8px; font-size: 28px; }
 .progress-card { background: var(--surface-raised); color: var(--text); border: 1px solid var(--line); border-radius: 26px; padding: 26px; }
-.progress-top { display: flex; justify-content: space-between; align-items: center; font-weight: 800; }
+.progress-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-weight: 800; }
+.progress-top a { color: var(--river); font-size: 13px; }
 .progress-track { height: 10px; background: #2b454e; border-radius: 999px; margin: 16px 0 22px; overflow: hidden; }
 .progress-track span { display: block; width: 4%; height: 100%; background: var(--moss); }
 .water-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; }
 .water-list div { display: flex; align-items: center; gap: 10px; font-size: 14px; }
 .check { width: 17px; height: 17px; border: 2px solid #6c858b; border-radius: 5px; flex: 0 0 auto; }
+.home-water-card { align-self: stretch; }
+.home-missouri-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
+.home-missouri-links a { display: flex; align-items: center; gap: 8px; min-width: 0; padding: 9px 10px; border: 1px solid #35505b; border-radius: 11px; color: #e8f0ed; font-size: 12px; font-weight: 700; }
+.home-missouri-links a:hover { background: var(--surface-hover); border-color: var(--river); }
+.home-missouri-links a span { color: #c1d689; font-size: 10px; font-weight: 900; }
+.home-missouri-links a b { margin-left: auto; color: var(--river); }
 
 .states-section { padding-bottom: 110px; }
 .states-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; }
@@ -351,6 +358,24 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
 .tracker-actions .btn { border-color: white; cursor: pointer; font: inherit; }
 .tracker-clear { border: 0; color: #c7d3d7; background: transparent; cursor: pointer; font: inherit; text-decoration: underline; text-underline-offset: 4px; padding: 10px 0; }
 .tracker-saved { color: #c1d689; font-size: 13px; font-weight: 800; }
+.slam-milestones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin: 20px 0; }
+.slam-milestones > div { display: flex; flex-direction: column; gap: 4px; padding: 12px; border: 1px solid #3c5861; border-radius: 13px; background: rgba(255,255,255,.045); }
+.slam-milestones > div.earned { border-color: #9fbb63; background: rgba(193,214,141,.13); }
+.slam-milestones span { color: #c1d689; font-size: 12px; font-weight: 900; }
+.slam-milestones strong { font-size: 14px; }
+.slam-milestones small { color: #c7d3d7; font-size: 11px; }
+.slam-water-list { display: grid; gap: 7px; margin-top: 18px; }
+.slam-water-item { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 5px 0; border-top: 1px solid rgba(255,255,255,.12); }
+.slam-water-option { display: flex; align-items: center; gap: 12px; min-width: 0; min-height: 42px; cursor: pointer; }
+.slam-water-option input { width: 19px; height: 19px; flex: 0 0 auto; accent-color: #c1d689; }
+.slam-water-option input:focus-visible { outline: 3px solid #c1d689; outline-offset: 3px; }
+.slam-water-option span { display: flex; flex-direction: column; gap: 3px; }
+.slam-water-option strong { font-size: 14px; }
+.slam-water-option small { color: #c7d3d7; font-size: 12px; }
+.slam-water-item > a { display: inline-flex; align-items: center; min-height: 42px; color: #c1d689; font-size: 12px; font-weight: 800; white-space: nowrap; }
+.guide-neighbors { display: flex; flex: 1; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+.tackle-note ul, .season-notes ul { padding-left: 20px; color: var(--muted); line-height: 1.7; }
+.tackle-note li + li, .season-notes li + li { margin-top: 6px; }
 .challenge-note { padding: 18px 20px; border-left: 3px solid var(--river); margin-top: 18px; }
 .challenge-note strong { font-size: 14px; }
 .challenge-note p { color: var(--muted); font-size: 13px; line-height: 1.6; margin: 6px 0 0; }
@@ -405,6 +430,7 @@ footer span { color: #a9bbc2; }
   .fishing-grid, .source-section { grid-template-columns: 1fr; gap: 36px; }
   .guide-section-heading { align-items: flex-start; flex-direction: column; gap: 8px; }
   .challenge-layout { grid-template-columns: 1fr; }
+  .home-missouri-links { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 620px) {
   .nav-wrap { flex-wrap: wrap; gap: 12px; padding: 14px 20px 8px; }
@@ -421,6 +447,7 @@ footer span { color: #a9bbc2; }
   footer { flex-direction: column; align-items: flex-start; }
   .directory-grid { grid-template-columns: 1fr; }
   .water-guide-feature { margin-left: 20px; margin-right: 20px; padding: 24px; }
+  .home-missouri-links { grid-template-columns: 1fr; }
   .guide-shell { padding: 0 20px; }
   .river-hero { padding: 36px 20px; }
   .river-hero .actions .btn { font-size: 14px; }
@@ -434,6 +461,7 @@ footer span { color: #a9bbc2; }
   .tracker-card, .challenge-side { padding: 22px; }
   .tracker-slots label { grid-template-columns: 1fr; gap: 5px; }
   .qualification-table-wrap th, .qualification-table-wrap td { padding: 12px 13px; }
+  .slam-milestones > div { padding: 9px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

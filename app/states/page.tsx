@@ -50,7 +50,7 @@ export default function StatesPage() {
         <div className="page-hero-inner">
           <p className="eyebrow">EXPLORE THE COUNTRY</p>
           <h1>Choose your next state.</h1>
-          <p className="lead">Browse fishing opportunities across all 50 states. Start with our growing Oklahoma guide and its first detailed water guide, the Lower Illinois River. More state pages are on the way.</p>
+          <p className="lead">Browse fishing opportunities across all 50 states. Open the Oklahoma guide for trout and warmwater trips, or explore Missouri’s nine Blue Ribbon trout waters and Slam tracker.</p>
         </div>
       </section>
 
@@ -69,7 +69,8 @@ export default function StatesPage() {
         <p className="directory-meta">Showing {filtered.length} of 50 states</p>
         <div className="directory-grid">
           {filtered.map(([state, fish]) => {
-            const isLive = state === "Oklahoma";
+            const isLive = state === "Oklahoma" || state === "Missouri";
+            const stateHref = state === "Oklahoma" ? "/states/oklahoma" : state === "Missouri" ? "/states/missouri" : undefined;
             return (
               <article className={`state-card${isLive ? " featured" : ""}`} key={state}>
                 <div className="state-card-top">
@@ -77,7 +78,7 @@ export default function StatesPage() {
                   <span className={`status-pill${isLive ? " live" : ""}`}>{isLive ? "GUIDE LIVE" : "COMING SOON"}</span>
                 </div>
                 <p>Featured fishing: {fish}</p>
-                {isLive ? <a className="card-link" href="/states/oklahoma">Explore Oklahoma →</a> : <span className="disabled-link">Guide in development</span>}
+                {isLive ? <a className="card-link" href={stateHref}>{state === "Missouri" ? "Explore nine trout waters →" : "Explore Oklahoma →"}</a> : <span className="disabled-link">Guide in development</span>}
               </article>
             );
           })}

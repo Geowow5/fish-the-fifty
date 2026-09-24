@@ -1,4 +1,5 @@
 import { accessAreas, guidePath } from "./states/oklahoma/lower-illinois-river/guide-data";
+import { missouriWaters } from "./states/missouri/guides";
 
 const states = [
   "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia",
@@ -69,7 +70,7 @@ export default function Home() {
               <span className="state-pill">{item.state}</span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
-              <a href="#missouri">View challenge →</a>
+              <a href={item.state === "Missouri" ? "/states/missouri/challenge" : "#states"}>{item.state === "Missouri" ? "View challenge →" : "Explore states →"}</a>
             </article>
           ))}
         </div>
@@ -77,22 +78,20 @@ export default function Home() {
 
       <section id="missouri" className="section featured-slam">
         <div className="slam-copy">
-          <p className="eyebrow">FIRST FULL BUILD</p>
+          <p className="eyebrow">MISSOURI · COMPLETE GUIDE</p>
           <h2>Missouri Blue Ribbon Trout Slam</h2>
-          <p>Our first complete Fish the Fifty adventure will connect the challenge itself with access, parking, fishing notes, trip planning, and progress tracking.</p>
+          <p>Explore all nine eligible waters, open complete stream guides, and track your Bronze, Silver, or Gold progress. Your checklist stays in this browser.</p>
           <div className="tiers">
             <div><span>BRONZE</span><strong>5 / 9</strong></div>
             <div><span>SILVER</span><strong>7 / 9</strong></div>
             <div><span>GOLD</span><strong>9 / 9</strong></div>
           </div>
+          <div className="actions"><a className="btn primary" href="/states/missouri">Explore Missouri waters</a><a className="btn secondary" href="/states/missouri/challenge">Open Slam tracker</a></div>
         </div>
-        <div className="progress-card">
-          <div className="progress-top"><span>Your Progress</span><strong>0 / 9</strong></div>
-          <div className="progress-track"><span /></div>
-          <div className="water-list">
-            {["Barren Fork Creek","Blue Springs Creek","Crane Creek","Current River","Eleven Point River","Little Piney Creek","Mill Creek","North Fork","Spring Creek"].map((water) => (
-              <div key={water}><span className="check" />{water}</div>
-            ))}
+        <div className="progress-card home-water-card">
+          <div className="progress-top"><span>All nine eligible waters</span><a href="/states/missouri">View all guides →</a></div>
+          <div className="home-missouri-links">
+            {missouriWaters.map((water) => <a href={`/states/missouri/${water.slug}`} key={water.slug}><span>{water.number}</span>{water.name}<b aria-hidden="true">↗</b></a>)}
           </div>
         </div>
       </section>
@@ -105,7 +104,7 @@ export default function Home() {
         </div>
         <div className="states-grid">
           {states.map((state) => (
-            <a key={state} href={state === "Oklahoma" ? "/states/oklahoma" : "/states"}>
+            <a key={state} href={state === "Oklahoma" ? "/states/oklahoma" : state === "Missouri" ? "/states/missouri" : "/states"}>
               {state}
             </a>
           ))}
