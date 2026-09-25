@@ -1,40 +1,35 @@
 :root {
   --ink: #082533;
-  --river: #63c9c4;
-  --river-dark: #8bdcd6;
-  --moss: #c4d98d;
-  --sand: #142b34;
-  --paper: #091820;
-  --line: #2b454e;
-  --muted: #a6b9bd;
-  --text: #e8f0ed;
-  --surface: #10242d;
-  --surface-raised: #17313a;
-  --surface-hover: #1b3942;
+  --river: #0b6675;
+  --river-dark: #074a56;
+  --moss: #687d2a;
+  --sand: #f3eee4;
+  --paper: #fffdf8;
+  --line: #d8dfdc;
+  --muted: #60717a;
 }
 
 * { box-sizing: border-box; }
-html { color-scheme: dark; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--paper);
-  color: var(--text);
+  color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
 }
 a { color: inherit; text-decoration: none; }
 a:focus-visible { outline: 3px solid var(--river); outline-offset: 5px; }
 [id] { scroll-margin-top: 125px; }
-.skip-link { position: fixed; top: -100px; left: 16px; z-index: 30; padding: 16px; background: var(--surface-raised); color: var(--text); border: 2px solid var(--river); border-radius: 12px; }
+.skip-link { position: fixed; top: -100px; left: 16px; z-index: 30; padding: 16px; background: white; border: 2px solid var(--ink); border-radius: 12px; }
 .skip-link:focus { top: 12px; }
 
 .nav-shell {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(8,23,30,.94);
+  background: rgba(255,253,248,.94);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(139,220,214,.16);
+  border-bottom: 1px solid rgba(8,37,51,.08);
 }
 .nav-wrap {
   max-width: 1180px;
@@ -47,16 +42,12 @@ a:focus-visible { outline: 3px solid var(--river); outline-offset: 5px; }
 .brand { font-weight: 900; letter-spacing: .08em; }
 nav { display: flex; gap: 26px; font-size: 14px; font-weight: 700; }
 nav a:hover { color: var(--river); }
-.state-guide-tabs { max-width: 1180px; margin: 0 auto; padding: 14px 24px 0; display: flex; gap: 8px; border-bottom: 1px solid var(--line); }
-.state-guide-tabs a { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 18px; border: 1px solid var(--line); border-bottom: 0; border-radius: 13px 13px 0 0; background: var(--surface); color: var(--river-dark); font-size: 14px; font-weight: 800; white-space: nowrap; }
-.state-guide-tabs a[aria-current="page"] { background: var(--surface-raised); border-color: var(--line); color: var(--text); }
-.state-guide-tabs a:hover:not([aria-current="page"]) { background: var(--surface-hover); color: var(--river-dark); }
 
 .hero {
   padding: 72px 24px 44px;
   background:
-    radial-gradient(circle at 85% 20%, rgba(255,187,68,.12), transparent 28%),
-    linear-gradient(180deg, #0c2029 0%, #10242d 100%);
+    radial-gradient(circle at 85% 20%, rgba(255,187,68,.20), transparent 28%),
+    linear-gradient(180deg, #fffdf8 0%, #f5f0e6 100%);
 }
 .hero-content {
   max-width: 1180px;
@@ -92,15 +83,14 @@ h1 {
   padding: 14px 20px;
   border-radius: 999px;
   font-weight: 800;
-  border: 1px solid var(--line);
+  border: 1px solid var(--ink);
 }
-.btn.primary { background: var(--river); border-color: var(--river); color: #062028; }
-.btn.primary:hover { background: #85ded8; border-color: #85ded8; }
+.btn.primary { background: var(--ink); color: white; }
+.btn.primary:hover { background: var(--river-dark); }
 .btn.secondary { background: transparent; }
-.btn.secondary:hover { background: var(--surface-hover); }
+.btn.secondary:hover { background: white; }
 .hero-logo-card {
-  background: var(--surface-raised);
-  border: 1px solid var(--line);
+  background: white;
   border-radius: 28px;
   padding: 18px;
   box-shadow: 0 24px 70px rgba(8,37,51,.13);
@@ -119,7 +109,7 @@ h1 {
   border-radius: 20px;
   overflow: hidden;
 }
-.stats div { background: var(--surface); padding: 28px; display: flex; flex-direction: column; }
+.stats div { background: white; padding: 28px; display: flex; flex-direction: column; }
 .stats strong { font-size: 36px; }
 .stats span { color: var(--muted); margin-top: 4px; }
 
@@ -133,11 +123,11 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
   min-height: 310px;
   padding: 28px;
   border-radius: 24px;
-  background: var(--surface);
+  background: #fff;
   border: 1px solid var(--line);
 }
-.card-number { position: absolute; right: 24px; top: 20px; font-size: 56px; font-weight: 900; color: #29434c; }
-.state-pill { display: inline-block; background: #263a2d; color: #d0e49b; border-radius: 999px; padding: 7px 10px; font-size: 12px; font-weight: 900; }
+.card-number { position: absolute; right: 24px; top: 20px; font-size: 56px; font-weight: 900; color: #edf1ef; }
+.state-pill { display: inline-block; background: #edf2e5; color: #53661f; border-radius: 999px; padding: 7px 10px; font-size: 12px; font-weight: 900; }
 .challenge-card h3 { margin: 42px 0 12px; font-size: 28px; }
 .challenge-card p { color: var(--muted); line-height: 1.6; }
 .challenge-card a { position: absolute; left: 28px; bottom: 28px; font-weight: 900; color: var(--river); }
@@ -159,20 +149,13 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
 .tiers div { padding: 18px; background: rgba(255,255,255,.07); border-radius: 16px; }
 .tiers span { display: block; font-size: 11px; letter-spacing: .12em; color: #b6cf76; font-weight: 900; }
 .tiers strong { display: block; margin-top: 8px; font-size: 28px; }
-.progress-card { background: var(--surface-raised); color: var(--text); border: 1px solid var(--line); border-radius: 26px; padding: 26px; }
-.progress-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-weight: 800; }
-.progress-top a { color: var(--river); font-size: 13px; }
-.progress-track { height: 10px; background: #2b454e; border-radius: 999px; margin: 16px 0 22px; overflow: hidden; }
+.progress-card { background: white; color: var(--ink); border-radius: 26px; padding: 26px; }
+.progress-top { display: flex; justify-content: space-between; align-items: center; font-weight: 800; }
+.progress-track { height: 10px; background: #e6ece9; border-radius: 999px; margin: 16px 0 22px; overflow: hidden; }
 .progress-track span { display: block; width: 4%; height: 100%; background: var(--moss); }
 .water-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; }
 .water-list div { display: flex; align-items: center; gap: 10px; font-size: 14px; }
-.check { width: 17px; height: 17px; border: 2px solid #6c858b; border-radius: 5px; flex: 0 0 auto; }
-.home-water-card { align-self: stretch; }
-.home-missouri-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
-.home-missouri-links a { display: flex; align-items: center; gap: 8px; min-width: 0; padding: 9px 10px; border: 1px solid #35505b; border-radius: 11px; color: #e8f0ed; font-size: 12px; font-weight: 700; }
-.home-missouri-links a:hover { background: var(--surface-hover); border-color: var(--river); }
-.home-missouri-links a span { color: #c1d689; font-size: 10px; font-weight: 900; }
-.home-missouri-links a b { margin-left: auto; color: var(--river); }
+.check { width: 17px; height: 17px; border: 2px solid #b8c7c3; border-radius: 5px; flex: 0 0 auto; }
 
 .states-section { padding-bottom: 110px; }
 .states-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; }
@@ -180,8 +163,8 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
 .states-grid a {
   appearance: none;
   border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--text);
+  background: white;
+  color: var(--ink);
   border-radius: 13px;
   padding: 14px 12px;
   font-weight: 750;
@@ -189,11 +172,11 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
   cursor: pointer;
 }
 .states-grid button:hover,
-.states-grid a:hover { border-color: var(--river); background: var(--surface-hover); }
+.states-grid a:hover { border-color: var(--river); background: #f2f8f7; }
 
 .page-hero {
   padding: 70px 24px 54px;
-  background: linear-gradient(180deg, #0c2029 0%, #10242d 100%);
+  background: linear-gradient(180deg, #fffdf8 0%, #f3eee4 100%);
 }
 .page-hero-inner { max-width: 1180px; margin: 0 auto; }
 .page-hero h1 { max-width: 850px; }
@@ -204,14 +187,13 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
   padding: 20px 24px;
   border: 1px solid var(--line);
   border-radius: 18px;
-  background: var(--surface);
-  color: var(--text);
+  background: white;
+  color: var(--ink);
   font: inherit;
   font-size: 17px;
   box-shadow: 0 16px 50px rgba(8,37,51,.08);
 }
-.state-search::placeholder { color: #849ba2; }
-.state-search:focus { outline: 3px solid rgba(99,201,196,.25); border-color: var(--river); }
+.state-search:focus { outline: 3px solid rgba(11,102,117,.18); border-color: var(--river); }
 .directory-section { padding-top: 52px; }
 .directory-meta { color: var(--muted); margin: 0 0 22px; }
 .directory-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -222,13 +204,13 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: 22px;
-  background: var(--surface);
+  background: white;
 }
 .state-card.featured { border-color: var(--river); box-shadow: 0 14px 40px rgba(8,37,51,.08); }
 .state-card-top { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
 .state-card h2 { font-size: 28px; letter-spacing: -.02em; }
-.status-pill { padding: 6px 9px; border-radius: 999px; background: #20343b; color: #b4c4c7; font-size: 11px; font-weight: 900; white-space: nowrap; }
-.status-pill.live { background: #153b3d; color: #9de4dd; }
+.status-pill { padding: 6px 9px; border-radius: 999px; background: #eef1ef; color: var(--muted); font-size: 11px; font-weight: 900; white-space: nowrap; }
+.status-pill.live { background: #e6f3ef; color: var(--river-dark); }
 .state-card p { color: var(--muted); line-height: 1.55; margin: 5px 0 22px; }
 .state-card .card-link { margin-top: auto; color: var(--river); font-weight: 900; }
 .state-card .disabled-link { margin-top: auto; color: #91a0a6; font-weight: 800; }
@@ -237,21 +219,21 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
 .breadcrumb { max-width: 1180px; margin: 0 auto; padding: 24px 24px 0; font-size: 14px; font-weight: 800; color: var(--river); }
 .state-detail-hero { padding-top: 42px; }
 .state-facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
-.state-facts span { padding: 9px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-size: 13px; font-weight: 800; }
+.state-facts span { padding: 9px 12px; border-radius: 999px; background: white; border: 1px solid var(--line); font-size: 13px; font-weight: 800; }
 .detail-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 22px; }
-.detail-panel { padding: 30px; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); }
+.detail-panel { padding: 30px; border: 1px solid var(--line); border-radius: 24px; background: white; }
 .detail-panel h2 { font-size: 34px; }
 .detail-panel > p { color: var(--muted); line-height: 1.65; }
 .water-cards { display: grid; gap: 12px; margin-top: 22px; }
-.water-card { padding: 18px; border-radius: 16px; background: var(--surface-raised); }
+.water-card { padding: 18px; border-radius: 16px; background: #f5f7f5; }
 .water-card strong { display: block; margin-bottom: 6px; }
 .water-card span { color: var(--muted); font-size: 14px; line-height: 1.45; }
 .species-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
-.species-list span { padding: 9px 11px; border-radius: 10px; background: #263a2d; color: #d0e49b; font-size: 13px; font-weight: 800; }
+.species-list span { padding: 9px 11px; border-radius: 10px; background: #edf2e5; color: #53661f; font-size: 13px; font-weight: 800; }
 .challenge-callout { margin-top: 22px; padding: 22px; border-radius: 18px; background: var(--ink); color: white; }
 .challenge-callout p { color: #c7d3d7; line-height: 1.55; }
 .back-link { display: inline-block; margin-top: 24px; color: var(--river); font-weight: 900; }
-.water-card-live { border: 1px solid #3e7777; background: #123234; }
+.water-card-live { border: 1px solid #abc8c3; background: #edf5f2; }
 .water-guide-link { display: block; width: fit-content; margin-top: 16px; padding: 6px 0; font-weight: 800; color: var(--river-dark); }
 .water-guide-pending { display: block; color: var(--muted); margin-top: 12px; font-size: 12px; }
 .state-stocking-note { margin-top: 22px; border-left: 3px solid #b38b33; padding: 4px 0 4px 16px; font-size: 14px; }
@@ -259,7 +241,7 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
 .challenge-callout .eyebrow { color: #c1d689; }
 .challenge-callout a { display: inline-block; color: #fff; padding: 8px 0; font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
 
-.water-guide-feature { max-width: 1132px; margin: 36px auto 0; padding: 30px; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); display: flex; gap: 28px; justify-content: space-between; align-items: center; }
+.water-guide-feature { max-width: 1132px; margin: 36px auto 0; padding: 30px; border: 1px solid var(--line); border-radius: 24px; background: #edf3ef; display: flex; gap: 28px; justify-content: space-between; align-items: center; }
 .water-guide-feature h2 { font-size: clamp(26px, 3vw, 36px); }
 .water-guide-feature p:last-child { color: var(--muted); line-height: 1.6; margin-bottom: 0; max-width: 640px; }
 .water-guide-feature .btn { flex-shrink: 0; }
@@ -276,13 +258,10 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
 .river-brief dd { margin: 0; font-weight: 800; font-size: 15px; }
 .river-brief > a { display: inline-block; color: #c1d689; font-size: 13px; font-weight: 700; padding: 5px 0; }
 .guide-shell { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
-.stocking-notice { margin: 30px 0 24px; padding: 24px 28px; border: 1px solid #705d34; background: #2c281e; border-radius: 20px; }
-.stocking-notice .eyebrow { color: #e7ce85; font-size: 11px; letter-spacing: .08em; line-height: 1.7; }
+.stocking-notice { margin: 30px 0 24px; padding: 24px 28px; border: 1px solid #dfc991; background: #fff4d9; border-radius: 20px; }
+.stocking-notice .eyebrow { color: #705419; font-size: 11px; letter-spacing: .08em; line-height: 1.7; }
 .stocking-notice h2 { font-size: clamp(23px, 3vw, 28px); letter-spacing: -.02em; line-height: 1.2; margin-bottom: 10px; }
-.stocking-notice p:not(.eyebrow) { max-width: 890px; line-height: 1.65; margin: 8px 0 12px; color: #e1d6bb; }
-.local-trout-feature { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center; }
-.local-trout-feature h3 { margin: 0 0 12px; font-size: clamp(22px, 3vw, 30px); line-height: 1.15; }
-.local-trout-feature > .map-links { flex-direction: column; align-items: flex-start; }
+.stocking-notice p:not(.eyebrow) { max-width: 890px; line-height: 1.65; margin: 8px 0 12px; color: #574d33; }
 .text-link { color: var(--river-dark); font-weight: 800; text-decoration: underline; text-underline-offset: 4px; line-height: 1.6; }
 .guide-jump-links { display: flex; flex-wrap: wrap; gap: 6px 20px; padding: 8px 0 24px; border-bottom: 1px solid var(--line); }
 .guide-jump-links a { display: inline-flex; align-items: center; min-height: 44px; }
@@ -294,18 +273,18 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
 .guide-intro { color: var(--muted); max-width: 810px; line-height: 1.7; font-size: 17px; margin: 16px 0 28px; }
 .guide-intro a { text-decoration: underline; text-underline-offset: 3px; }
 .access-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.access-card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 26px; }
+.access-card { display: flex; flex-direction: column; background: white; border: 1px solid var(--line); border-radius: 22px; padding: 26px; }
 .access-card-top { display: flex; gap: 16px; align-items: center; justify-content: space-between; }
 .access-number { color: #8fa8a4; font-size: 28px; font-weight: 800; }
 .access-card h3 { margin: 20px 0 8px; }
 .access-card p { color: var(--muted); line-height: 1.65; margin: 6px 0; }
 .access-card .access-note { font-size: 14px; padding-bottom: 20px; }
-.map-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; border-top: 1px solid var(--line); padding-top: 16px; }
+.map-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; border-top: 1px solid #e5eae6; padding-top: 16px; }
 .map-links a { display: inline-flex; align-items: center; min-height: 44px; border: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; font-size: 13px; font-weight: 800; gap: 10px; }
-.map-links a:hover { background: var(--surface-hover); border-color: var(--river); }
+.map-links a:hover { background: #edf5f2; border-color: var(--river); }
 .condition-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .condition-card { padding: 24px; background: var(--ink); color: white; border-radius: 20px; }
-.condition-card:hover { background: #12343e; }
+.condition-card:hover { background: var(--river-dark); }
 .condition-card > span { color: #c1d689; font-size: 10px; letter-spacing: .1em; font-weight: 800; }
 .condition-card h3 { font-size: 20px; margin: 16px 0 12px; }
 .condition-card p { color: #c7d3d7; line-height: 1.6; font-size: 14px; margin-bottom: 0; }
@@ -313,7 +292,7 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
 .fishing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; }
 .source-note { font-size: 13px; color: var(--river-dark); margin-top: 20px; line-height: 1.6; }
 .source-note a { text-decoration: underline; text-underline-offset: 3px; }
-.tackle-note { padding: 22px; margin-top: 28px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); }
+.tackle-note { padding: 22px; margin-top: 28px; border-radius: 18px; background: #edf3ef; }
 .tackle-note h3 { font-size: 20px; margin: 0 0 12px; }
 .tackle-note p { color: var(--muted); line-height: 1.65; font-size: 15px; }
 .tackle-note a { font-size: 14px; }
@@ -324,11 +303,10 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
 .resource-links { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
 .resource-links a { color: var(--river-dark); text-decoration: underline; text-underline-offset: 3px; font-weight: 700; font-size: 14px; padding: 10px 0; line-height: 1.5; }
 .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 28px; }
-.rules-grid-single { grid-template-columns: 1fr; }
-.rule-card { background: var(--surface); padding: 26px; border: 1px solid var(--line); border-radius: 20px; }
+.rule-card { background: white; padding: 26px; border: 1px solid var(--line); border-radius: 20px; }
 .rule-card h3 { margin: 0 0 14px; }
 .rule-card .text-link { font-size: 14px; display: inline-block; margin-top: 8px; }
-.special-rule { background: var(--surface-raised); }
+.special-rule { background: #edf3ef; }
 .special-rule .eyebrow { display: block; margin-bottom: 12px; font-size: 10px; }
 .source-section { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; }
 .source-section h2 { font-size: 30px; }
@@ -358,38 +336,20 @@ h2 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; let
 .tracker-actions .btn { border-color: white; cursor: pointer; font: inherit; }
 .tracker-clear { border: 0; color: #c7d3d7; background: transparent; cursor: pointer; font: inherit; text-decoration: underline; text-underline-offset: 4px; padding: 10px 0; }
 .tracker-saved { color: #c1d689; font-size: 13px; font-weight: 800; }
-.slam-milestones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin: 20px 0; }
-.slam-milestones > div { display: flex; flex-direction: column; gap: 4px; padding: 12px; border: 1px solid #3c5861; border-radius: 13px; background: rgba(255,255,255,.045); }
-.slam-milestones > div.earned { border-color: #9fbb63; background: rgba(193,214,141,.13); }
-.slam-milestones span { color: #c1d689; font-size: 12px; font-weight: 900; }
-.slam-milestones strong { font-size: 14px; }
-.slam-milestones small { color: #c7d3d7; font-size: 11px; }
-.slam-water-list { display: grid; gap: 7px; margin-top: 18px; }
-.slam-water-item { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 5px 0; border-top: 1px solid rgba(255,255,255,.12); }
-.slam-water-option { display: flex; align-items: center; gap: 12px; min-width: 0; min-height: 42px; cursor: pointer; }
-.slam-water-option input { width: 19px; height: 19px; flex: 0 0 auto; accent-color: #c1d689; }
-.slam-water-option input:focus-visible { outline: 3px solid #c1d689; outline-offset: 3px; }
-.slam-water-option span { display: flex; flex-direction: column; gap: 3px; }
-.slam-water-option strong { font-size: 14px; }
-.slam-water-option small { color: #c7d3d7; font-size: 12px; }
-.slam-water-item > a { display: inline-flex; align-items: center; min-height: 42px; color: #c1d689; font-size: 12px; font-weight: 800; white-space: nowrap; }
-.guide-neighbors { display: flex; flex: 1; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
-.tackle-note ul, .season-notes ul { padding-left: 20px; color: var(--muted); line-height: 1.7; }
-.tackle-note li + li, .season-notes li + li { margin-top: 6px; }
 .challenge-note { padding: 18px 20px; border-left: 3px solid var(--river); margin-top: 18px; }
 .challenge-note strong { font-size: 14px; }
 .challenge-note p { color: var(--muted); font-size: 13px; line-height: 1.6; margin: 6px 0 0; }
-.challenge-side { padding: 30px; background: var(--surface); border: 1px solid var(--line); border-radius: 24px; }
+.challenge-side { padding: 30px; background: #edf3ef; border-radius: 24px; }
 .challenge-side h2 { font-size: 36px; }
 .challenge-steps { list-style: none; padding: 0; margin: 24px 0 28px; counter-reset: steps; }
 .challenge-steps li { counter-increment: steps; position: relative; padding: 0 0 22px 45px; }
 .challenge-steps li::before { content: counter(steps); position: absolute; left: 0; top: 0; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: white; font-weight: 800; font-size: 13px; }
-.challenge-steps li::after { content: ""; position: absolute; left: 13px; top: 28px; width: 2px; height: calc(100% - 22px); background: #3a5962; }
+.challenge-steps li::after { content: ""; position: absolute; left: 13px; top: 28px; width: 2px; height: calc(100% - 22px); background: #c5d5d1; }
 .challenge-steps li:last-child::after { display: none; }
 .challenge-steps strong { display: block; margin-bottom: 4px; }
 .challenge-steps span { display: block; color: var(--muted); font-size: 14px; line-height: 1.55; }
 .qualification-section { padding-top: 30px; }
-.qualification-table-wrap { border: 1px solid var(--line); border-radius: 20px; overflow: hidden; background: var(--surface); max-width: 760px; }
+.qualification-table-wrap { border: 1px solid var(--line); border-radius: 20px; overflow: hidden; background: white; max-width: 760px; }
 .qualification-table-wrap table { width: 100%; border-collapse: collapse; text-align: left; }
 .qualification-table-wrap th, .qualification-table-wrap td { padding: 13px 18px; border-bottom: 1px solid var(--line); font-size: 14px; }
 .qualification-table-wrap thead th { background: var(--ink); color: white; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
@@ -430,14 +390,11 @@ footer span { color: #a9bbc2; }
   .fishing-grid, .source-section { grid-template-columns: 1fr; gap: 36px; }
   .guide-section-heading { align-items: flex-start; flex-direction: column; gap: 8px; }
   .challenge-layout { grid-template-columns: 1fr; }
-  .home-missouri-links { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 620px) {
   .nav-wrap { flex-wrap: wrap; gap: 12px; padding: 14px 20px 8px; }
   .nav-wrap nav { display: flex; flex-wrap: wrap; gap: 8px 22px; width: 100%; font-size: 13px; }
   .nav-wrap nav a { display: inline-flex; align-items: center; min-height: 40px; }
-  .state-guide-tabs { padding: 10px 20px 0; overflow-x: auto; }
-  .state-guide-tabs a { padding: 9px 14px; font-size: 13px; }
   .hero { padding-top: 48px; }
   .lead { font-size: 18px; }
   .stats { grid-template-columns: 1fr; }
@@ -447,13 +404,11 @@ footer span { color: #a9bbc2; }
   footer { flex-direction: column; align-items: flex-start; }
   .directory-grid { grid-template-columns: 1fr; }
   .water-guide-feature { margin-left: 20px; margin-right: 20px; padding: 24px; }
-  .home-missouri-links { grid-template-columns: 1fr; }
   .guide-shell { padding: 0 20px; }
   .river-hero { padding: 36px 20px; }
   .river-hero .actions .btn { font-size: 14px; }
   .river-brief { padding: 24px; }
   .stocking-notice { padding: 22px; }
-  .local-trout-feature { grid-template-columns: 1fr; }
   .access-grid, .rules-grid { grid-template-columns: 1fr; }
   .access-card, .rule-card { padding: 22px; }
   .guide-section { padding: 42px 0; }
@@ -461,9 +416,113 @@ footer span { color: #a9bbc2; }
   .tracker-card, .challenge-side { padding: 22px; }
   .tracker-slots label { grid-template-columns: 1fr; gap: 5px; }
   .qualification-table-wrap th, .qualification-table-wrap td { padding: 12px 13px; }
-  .slam-milestones > div { padding: 9px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+}
+
+/* Utah Cutthroat Slam page: dark river-at-dusk treatment. */
+.utah-page {
+  --utah-bg: #071820;
+  --utah-panel: #102630;
+  --utah-panel-soft: #142f38;
+  --utah-line: #29434b;
+  --utah-text: #f4f5ef;
+  --utah-muted: #b0c0c2;
+  --utah-lime: #c2d782;
+  background: var(--utah-bg);
+  color: var(--utah-text);
+  min-height: 100vh;
+}
+.utah-page .nav-shell { background: rgba(7,24,32,.94); border-bottom-color: var(--utah-line); }
+.utah-page .brand, .utah-page nav a { color: var(--utah-text); }
+.utah-page nav a:hover { color: var(--utah-lime); }
+.utah-page .breadcrumb { color: var(--utah-lime); }
+.utah-page .breadcrumb a { color: var(--utah-lime); }
+.utah-hero { padding: 82px 24px 68px; background: radial-gradient(ellipse at 83% 25%, rgba(38,116,105,.32), transparent 32%), linear-gradient(135deg, #0a222b 0%, #0d3038 58%, #173d3c 100%); border-bottom: 1px solid var(--utah-line); }
+.utah-hero-inner, .utah-section { max-width: 1180px; margin: 0 auto; }
+.utah-hero h1 { max-width: 900px; font-size: clamp(54px, 8vw, 96px); color: var(--utah-text); }
+.utah-hero h1 em { color: var(--utah-lime); font-style: normal; }
+.utah-kicker { margin: 0 0 14px; color: var(--utah-lime); letter-spacing: .14em; font-size: 11px; font-weight: 900; }
+.utah-lead { max-width: 740px; margin: 24px 0 0; color: #d0dddd; font-size: 20px; line-height: 1.65; }
+.utah-facts { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
+.utah-facts span { padding: 9px 12px; border: 1px solid #43616a; border-radius: 999px; background: rgba(6,22,29,.35); color: var(--utah-text); font-size: 13px; font-weight: 800; }
+.utah-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.utah-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 12px 18px; border: 1px solid transparent; border-radius: 999px; font-weight: 850; }
+.utah-btn:focus-visible, .utah-page a:focus-visible, .utah-page button:focus-visible { outline: 3px solid #e7f5a9; outline-offset: 4px; }
+.utah-btn-lime { background: var(--utah-lime); color: #142319; }
+.utah-btn-lime:hover { background: #d5e6a1; }
+.utah-btn-outline { color: var(--utah-text); border-color: #779095; background: transparent; }
+.utah-btn-outline:hover { background: rgba(255,255,255,.08); }
+.utah-section { padding: 76px 24px; }
+.utah-section-heading { max-width: 790px; margin-bottom: 30px; }
+.utah-section-heading h2, .utah-tracker-copy h2, .utah-final h2 { margin: 0 0 14px; color: var(--utah-text); font-size: clamp(34px, 5vw, 56px); line-height: 1.03; letter-spacing: -.04em; }
+.utah-section-heading > p:last-child, .utah-tracker-copy > p:not(.utah-kicker) { margin: 0; color: var(--utah-muted); font-size: 17px; line-height: 1.7; }
+.utah-rule-callout { display: grid; grid-template-columns: minmax(190px,.65fr) 1.35fr; gap: 20px; padding: 23px 26px; border: 1px solid #587345; border-radius: 18px; background: #172b27; color: var(--utah-text); }
+.utah-rule-callout strong { color: var(--utah-lime); }
+.utah-rule-callout span { color: #ccd7d1; line-height: 1.6; font-size: 14px; }
+.utah-tracker-section { max-width: none; padding-left: max(24px, calc((100vw - 1180px)/2 + 24px)); padding-right: max(24px, calc((100vw - 1180px)/2 + 24px)); display: grid; grid-template-columns: minmax(250px,.75fr) minmax(0,1.25fr); gap: 42px; align-items: start; background: #0b2029; border-top: 1px solid #19343d; border-bottom: 1px solid #19343d; }
+.utah-tracker-copy { padding-top: 16px; }
+.utah-text-link { display: inline-block; margin-top: 22px; color: var(--utah-lime); font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
+.utah-tracker { padding: 28px; border: 1px solid #36515a; border-radius: 24px; background: var(--utah-panel); box-shadow: 0 18px 48px rgba(0,0,0,.18); }
+.utah-tracker-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.utah-tracker-top h2 { margin: 0; font-size: 28px; letter-spacing: -.02em; }
+.utah-tracker-top > strong { color: var(--utah-lime); font-size: 36px; }
+.utah-tracker-top > strong small { color: #91a8a9; font-size: 18px; }
+.utah-progress { height: 9px; margin: 18px 0 14px; overflow: hidden; border-radius: 99px; background: #263d45; }
+.utah-progress span { display: block; height: 100%; border-radius: inherit; background: var(--utah-lime); transition: width .2s ease; }
+.utah-tracker-help { color: var(--utah-muted); font-size: 13px; line-height: 1.6; }
+.utah-catch-list { display: grid; gap: 10px; margin-top: 20px; }
+.utah-catch { padding: 16px; border: 1px solid #324a52; border-radius: 15px; background: #0c2028; }
+.utah-catch.is-complete { border-color: #758952; background: #172820; }
+.utah-catch-check { display: flex; gap: 12px; align-items: flex-start; cursor: pointer; }
+.utah-catch-check input { width: 19px; height: 19px; margin: 1px 0 0; accent-color: var(--utah-lime); flex: 0 0 auto; }
+.utah-catch-check strong, .utah-catch-check small { display: block; }
+.utah-catch-check strong { font-size: 15px; }
+.utah-catch-check small { margin-top: 4px; color: #aebfc0; font-size: 12px; line-height: 1.45; }
+.utah-catch-fields { display: grid; grid-template-columns: .8fr 1.2fr; gap: 10px; margin: 14px 0 0 31px; }
+.utah-catch-fields label { display: grid; gap: 6px; color: #b8c9c8; font-size: 11px; font-weight: 800; }
+.utah-catch-fields input { width: 100%; min-height: 40px; padding: 8px 10px; border: 1px solid #466069; border-radius: 9px; background: #122c35; color: white; font: inherit; font-size: 13px; }
+.utah-catch-fields input::placeholder { color: #92a6aa; }
+.utah-tracker-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 13px; margin-top: 18px; }
+.utah-btn-light { cursor: pointer; background: var(--utah-lime); color: #142319; }
+.utah-clear { padding: 9px 0; border: 0; background: transparent; color: #c4d0cf; font: inherit; font-size: 13px; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.utah-tracker-actions [role="status"] { color: var(--utah-lime); font-size: 12px; font-weight: 800; }
+.utah-waters { padding-bottom: 58px; }
+.utah-water-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+.utah-water-card { position: relative; min-height: 240px; padding: 25px; border: 1px solid var(--utah-line); border-radius: 20px; background: var(--utah-panel); }
+.utah-water-number { position: absolute; top: 18px; right: 22px; color: #526970; font-size: 35px; font-weight: 900; }
+.utah-water-basin { margin: 0 0 9px; color: var(--utah-lime); font-size: 10px; letter-spacing: .12em; font-weight: 900; text-transform: uppercase; }
+.utah-water-card h3 { margin: 0 0 10px; font-size: 23px; }
+.utah-water-card > p:not(.utah-water-basin) { max-width: 460px; margin: 0 0 20px; color: var(--utah-muted); font-size: 14px; line-height: 1.6; }
+.utah-water-card a { color: var(--utah-lime); font-size: 13px; font-weight: 850; text-decoration: underline; text-underline-offset: 3px; }
+.utah-special-note { margin: 20px 0 0; padding: 19px 22px; border-left: 3px solid #c39251; border-radius: 0 13px 13px 0; background: #29251e; color: #d9d4c9; font-size: 14px; line-height: 1.65; }
+.utah-special-note strong { color: #f1ce8d; }
+.utah-steps { padding-top: 55px; }
+.utah-step-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; }
+.utah-step-grid article { padding: 22px; border: 1px solid var(--utah-line); border-radius: 18px; background: #0d222b; }
+.utah-step-grid article > span { color: var(--utah-lime); font-size: 12px; letter-spacing: .1em; font-weight: 900; }
+.utah-step-grid h3 { margin: 18px 0 9px; font-size: 18px; }
+.utah-step-grid p { margin: 0; color: var(--utah-muted); font-size: 13px; line-height: 1.6; }
+.utah-final { padding: 65px 24px 78px; text-align: center; background: linear-gradient(180deg, #102831, #0b2028); border-top: 1px solid var(--utah-line); }
+.utah-final > p:not(.utah-kicker) { max-width: 710px; margin: 0 auto; color: var(--utah-muted); font-size: 16px; line-height: 1.7; }
+.utah-final .utah-actions { justify-content: center; }
+.utah-page footer { border-top: 1px solid #1c333a; }
+@media (max-width: 900px) {
+  .utah-tracker-section { grid-template-columns: 1fr; gap: 24px; }
+  .utah-tracker-copy { max-width: 720px; }
+  .utah-step-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 620px) {
+  .utah-hero { padding: 55px 20px 48px; }
+  .utah-hero h1 { font-size: clamp(48px, 13vw, 72px); }
+  .utah-lead { font-size: 17px; }
+  .utah-section { padding: 55px 20px; }
+  .utah-tracker-section { padding-left: 20px; padding-right: 20px; }
+  .utah-rule-callout { grid-template-columns: 1fr; gap: 9px; }
+  .utah-water-grid, .utah-step-grid { grid-template-columns: 1fr; }
+  .utah-catch-fields { grid-template-columns: 1fr; margin-left: 31px; }
+  .utah-tracker { padding: 20px; }
+  .utah-final { padding: 54px 20px 62px; }
 }
