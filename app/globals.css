@@ -596,3 +596,34 @@ body { background: var(--paper); color: var(--ink); }
 .final-cta { color: var(--ink); }
 .final-cta p:not(.eyebrow) { color: var(--muted); }
 footer { background: #050f14; border-top: 1px solid #20363e; }
+
+/* Texas Elite Angler tracker details (uses the shared site-wide dark theme). */
+.texas-tracker .eyebrow { color: #c4d982; }
+.texas-division { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; margin: 18px 0; padding: 12px 14px; border: 1px solid #38525a; border-radius: 12px; }
+.texas-division legend { padding: 0 6px; color: #c5d3d3; font-size: 12px; font-weight: 800; }
+.texas-division label { display: inline-flex; align-items: center; gap: 7px; color: #edf4f2; font-size: 13px; font-weight: 750; cursor: pointer; }
+.texas-division input { accent-color: #c4d982; }
+.texas-slots { display: grid; gap: 11px; }
+.texas-slot { padding: 15px; border: 1px solid #304b54; border-radius: 14px; background: #102c35; }
+.texas-slot-heading { display: flex; justify-content: space-between; gap: 12px; align-items: center; margin-bottom: 11px; color: #eff6f4; font-size: 13px; }
+.texas-slot-heading span { color: #c4d982; font-size: 11px; font-weight: 800; }
+.texas-slot > label, .texas-slot-fields label { display: grid; gap: 6px; margin-top: 9px; color: #c0d0d1; font-size: 11px; font-weight: 800; }
+.texas-slot select, .texas-slot input { width: 100%; min-height: 40px; padding: 8px 10px; border: 1px solid #47616a; border-radius: 9px; background: #173640; color: #f0f6f4; font: inherit; font-size: 13px; }
+.texas-slot input::placeholder { color: #91a6aa; }
+.texas-slot select:focus, .texas-slot input:focus { outline: 3px solid #c4d982; outline-offset: 2px; }
+.texas-slot-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.texas-below-minimum { margin: 8px 0 0; color: #ffd39b; font-size: 12px; line-height: 1.45; }
+.texas-minimums { padding-top: 25px; }
+.texas-tables { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.texas-tables .qualification-table-wrap { max-width: none; }
+.texas-table-caption { padding: 14px 18px; background: #102e38; color: #d4e69c; text-align: left; font-weight: 900; }
+.texas-tables .qualification-table-wrap th, .texas-tables .qualification-table-wrap td { padding: 10px 14px; font-size: 13px; }
+.texas-side-program { padding-top: 10px; }
+.texas-share-card { display: flex; justify-content: space-between; align-items: center; gap: 34px; padding: 32px; border: 1px solid #38525a; border-radius: 24px; background: #102a33; }
+.texas-share-card h2 { margin: 0 0 12px; font-size: clamp(30px, 4vw, 44px); }
+.texas-share-card p:not(.eyebrow) { max-width: 720px; margin: 0; color: var(--muted); line-height: 1.65; }
+.texas-share-card .btn { flex: 0 0 auto; color: #e8f2ef; border-color: #789092; }
+@media (max-width: 800px) {
+  .texas-tables { grid-template-columns: 1fr; }
+  .texas-share-card { align-items: flex-start; flex-direction: column; }
+}

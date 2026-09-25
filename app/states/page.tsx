@@ -69,16 +69,17 @@ export default function StatesPage() {
         <p className="directory-meta">Showing {filtered.length} of 50 states</p>
         <div className="directory-grid">
           {filtered.map(([state, fish]) => {
-            const isLive = state === "Oklahoma" || state === "Utah";
-            const stateHref = state === "Oklahoma" ? "/states/oklahoma" : state === "Utah" ? "/states/utah/challenge" : "";
+            const isLive = state === "Oklahoma" || state === "Utah" || state === "Texas";
+            const stateHref = state === "Oklahoma" ? "/states/oklahoma" : state === "Utah" ? "/states/utah/challenge" : state === "Texas" ? "/states/texas/challenge" : "";
+            const linkLabel = state === "Utah" ? "Open Utah Cutthroat Slam →" : state === "Texas" ? "Open Texas competition →" : "Explore Oklahoma →";
             return (
               <article className={`state-card${isLive ? " featured" : ""}`} key={state}>
                 <div className="state-card-top">
                   <h2>{state}</h2>
-                  <span className={`status-pill${isLive ? " live" : ""}`}>{isLive ? "GUIDE LIVE" : "COMING SOON"}</span>
+                  <span className={`status-pill${isLive ? " live" : ""}`}>{isLive ? (state === "Oklahoma" ? "GUIDE LIVE" : "CHALLENGE LIVE") : "COMING SOON"}</span>
                 </div>
                 <p>Featured fishing: {fish}</p>
-                {isLive ? <a className="card-link" href={stateHref}>{state === "Utah" ? "Open Utah Cutthroat Slam →" : "Explore Oklahoma →"}</a> : <span className="disabled-link">Guide in development</span>}
+                {isLive ? <a className="card-link" href={stateHref}>{linkLabel}</a> : <span className="disabled-link">Guide in development</span>}
               </article>
             );
           })}
