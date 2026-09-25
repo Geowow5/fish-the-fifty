@@ -4,6 +4,7 @@ This update adds the Utah competition page at `/states/utah/challenge` and makes
 
 ## Included
 
+- Dark-mode styling across the home page, state directory, and state guides
 - Dark-mode Utah Cutthroat Slam competition page
 - Local-browser checklist for the four native Utah cutthroat subspecies, with catch date and water notes
 - Official rules, registration, native-range map, subspecies, and Utah fishing guidebook links
