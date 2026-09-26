@@ -679,3 +679,21 @@ footer { background: #050f14; border-top: 1px solid #20363e; }
 .illinois-awards .challenge-card { min-height: 250px; }
 @media (max-width: 1050px) { .illinois-awards .card-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 620px) { .illinois-awards .card-grid { grid-template-columns: 1fr; } }
+.arkansas-hero { background: radial-gradient(circle at 78% 18%, rgba(221,68,50,.2), transparent 34%), linear-gradient(135deg, #071c29 0%, #173743 56%, #38231f 100%); }
+.arkansas-trackers { display: grid; grid-template-columns: minmax(0,1.65fr) minmax(300px,.75fr); gap: 22px; align-items: start; }
+.arkansas-slam-list { display: grid; gap: 10px; margin-top: 18px; }
+.arkansas-slam-list section { padding: 13px; border: 1px solid #38525a; border-radius: 13px; background: #0d252e; }
+.arkansas-slam-list section > div { display: grid; grid-template-columns: 135px 1fr; gap: 8px; margin: 9px 0; }
+.arkansas-slam-list input { min-width: 0; }
+.slam-check, .slam-photo { display: flex; align-items: center; gap: 8px; color: #e0ebe7; font-size: 12px; }
+.slam-check input, .slam-photo input { width: 17px; min-height: 17px; height: 17px; padding: 0; accent-color: #c4d982; }
+.arkansas-save { grid-column: 1 / -1; }
+.arkansas-tracker-section { padding-top: 54px; }
+.arkansas-category-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 18px; }
+.arkansas-category-grid .challenge-card { min-height: 0; }
+.arkansas-fish-row { display: flex; justify-content: space-between; gap: 14px; padding: 9px 0; border-bottom: 1px solid #2e4850; color: #c9d8d5; font-size: 13px; }
+.arkansas-fish-row:last-child { border-bottom: 0; }
+.arkansas-fish-row strong { color: #dce9a8; white-space: nowrap; }
+.arkansas-lunker { border-color: #765331; background: linear-gradient(135deg,#102a33,#2e231c); }
+@media (max-width: 1000px) { .arkansas-trackers { grid-template-columns: 1fr; } .arkansas-category-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 620px) { .arkansas-category-grid { grid-template-columns: 1fr; } .arkansas-slam-list section > div { grid-template-columns: 1fr; } }
