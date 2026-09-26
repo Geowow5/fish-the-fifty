@@ -1,0 +1,28 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+import { ohioSpecies, qualifyingLength } from "./qualifying-species";
+
+type Catch = { species: string; waterType: "lake-erie" | "inland"; length: string; date: string; water: string; submitted: boolean };
+const STORAGE_KEY = "fish-the-fifty-ohio-fish-ohio-v1";
+const emptyCatch = (): Catch => ({ species: "", waterType: "inland", length: "", date: "", water: "", submitted: false });
+
+export default function OhioTracker() {
+  const [catches, setCatches] = useState<Catch[]>(Array.from({ length: 4 }, emptyCatch));
+  const [saved, setSaved] = useState(false);
+  useEffect(() => { try { const raw = localStorage.getItem(STORAGE_KEY); if (!raw) return; const value = JSON.parse(raw) as Catch[]; if (Array.isArray(value)) setCatches(Array.from({ length: 4 }, (_, i) => ({ ...emptyCatch(), ...(value[i] ?? {}) }))); } catch { /* Keep tracker usable. */ } }, []);
+  const challengeYear = useMemo(() => catches.find((item) => item.date)?.date.slice(0, 4) || String(new Date().getFullYear()), [catches]);
+  const mixedYears = useMemo(() => new Set(catches.filter((item) => item.date).map((item) => item.date.slice(0, 4))).size > 1, [catches]);
+  const qualifying = useMemo(() => catches.filter((item, index) => {
+    const species = ohioSpecies.find((candidate) => candidate.name === item.species);
+    const minimum = qualifyingLength(species, item.waterType);
+    return item.date.startsWith(challengeYear) && minimum !== undefined && Number(item.length) >= minimum && catches.findIndex((other) => other.species === item.species && other.date.startsWith(challengeYear)) === index;
+  }).length, [catches, challengeYear]);
+  function update(index: number, field: keyof Catch, value: string | boolean) { setSaved(false); setCatches((current) => current.map((item, i) => i === index ? { ...item, [field]: value } : item)); }
+  function save() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(catches)); } catch { /* Continue without persistence. */ } setSaved(true); }
+  function clear() { setCatches(Array.from({ length: 4 }, emptyCatch)); setSaved(false); try { localStorage.removeItem(STORAGE_KEY); } catch { /* Nothing to clear. */ } }
+  return <div className="tracker-card texas-tracker ohio-tracker"><div className="tracker-top"><div><p className="eyebrow">YOUR PRIVATE MASTER ANGLER LOG</p><h3>{challengeYear} · four different species</h3></div><strong>{qualifying} / 4</strong></div><div className="tracker-track"><span style={{ width: `${qualifying * 25}%` }} /></div><p className="tracker-help">Log four different species caught in the same calendar year. The tracker checks your length against the official Lake Erie or inland threshold and saves only in this browser.</p>{mixedYears && <p className="texas-below-minimum">Your dated catches span multiple years. Only catches from {challengeYear} count in this progress total.</p>}<div className="texas-slots">{catches.map((item, index) => {
+    const id = `ohio-catch-${index + 1}`; const species = ohioSpecies.find((candidate) => candidate.name === item.species); const minimum = qualifyingLength(species, item.waterType); const measured = Number(item.length); const below = minimum !== undefined && measured > 0 && measured < minimum; const unavailable = Boolean(species && minimum === undefined); const duplicate = Boolean(item.species && catches.findIndex((other) => other.species === item.species) !== index);
+    return <section className="texas-slot" key={id}><div className="texas-slot-heading"><strong>Species {index + 1}</strong>{item.submitted && <span>Submitted to ODNR</span>}</div><label>Species<select value={item.species} onChange={(e) => update(index, "species", e.target.value)}><option value="">Choose a species…</option>{ohioSpecies.map((fish) => <option key={fish.name}>{fish.name}</option>)}</select></label><div className="ohio-water-type"><label><input type="radio" name={`${id}-water`} checked={item.waterType === "inland"} onChange={() => update(index, "waterType", "inland")} /> Inland / Ohio River</label><label><input type="radio" name={`${id}-water`} checked={item.waterType === "lake-erie"} onChange={() => update(index, "waterType", "lake-erie")} /> Lake Erie / tributary</label></div><div className="texas-slot-fields"><label>Length (inches)<input type="number" min="0" step="0.25" value={item.length} onChange={(e) => update(index, "length", e.target.value)} placeholder={minimum ? `Minimum ${minimum}` : "Enter length"} /></label><label>Catch date<input type="date" value={item.date} onChange={(e) => update(index, "date", e.target.value)} /></label></div>{below && <p className="texas-below-minimum">Below the {minimum}-inch Fish Ohio minimum for this water type.</p>}{unavailable && <p className="texas-below-minimum">This species is listed only for Lake Erie and its tributaries.</p>}{duplicate && <p className="texas-below-minimum">Master Angler requires four different species; this one is already logged.</p>}<label>Ohio water<input value={item.water} onChange={(e) => update(index, "water", e.target.value)} placeholder="Lake, river, stream or pond" /></label><label className="kansas-applied"><input type="checkbox" checked={item.submitted} onChange={(e) => update(index, "submitted", e.target.checked)} /> I submitted this catch at FishOhio.gov</label></section>;
+  })}</div><div className="tracker-actions"><button className="btn primary" type="button" onClick={save}>Save my catches</button><button className="tracker-clear" type="button" onClick={clear}>Clear catch log</button>{saved && <span className="tracker-saved">Saved in this browser.</span>}</div></div>;
+}
