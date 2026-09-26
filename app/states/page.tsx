@@ -69,9 +69,9 @@ export default function StatesPage() {
         <p className="directory-meta">Showing {filtered.length} of 50 states</p>
         <div className="directory-grid">
           {filtered.map(([state, fish]) => {
-            const isLive = state === "Oklahoma" || state === "Utah" || state === "Texas" || state === "Kansas";
-            const stateHref = state === "Oklahoma" ? "/states/oklahoma" : state === "Utah" ? "/states/utah/challenge" : state === "Texas" ? "/states/texas/challenge" : state === "Kansas" ? "/states/kansas/challenge" : "";
-            const linkLabel = state === "Utah" ? "Open Utah Cutthroat Slam →" : state === "Texas" ? "Open Texas challenge →" : state === "Kansas" ? "Open Kansas Master Angler →" : "Explore Oklahoma →";
+            const isLive = state === "Oklahoma" || state === "Utah" || state === "Texas" || state === "Kansas" || state === "New Mexico";
+            const stateHref = state === "Oklahoma" ? "/states/oklahoma" : state === "Utah" ? "/states/utah/challenge" : state === "Texas" ? "/states/texas/challenge" : state === "Kansas" ? "/states/kansas/challenge" : state === "New Mexico" ? "/states/new-mexico/challenge" : "";
+            const linkLabel = state === "Utah" ? "Open Utah Cutthroat Slam →" : state === "Texas" ? "Open Texas challenge →" : state === "Kansas" ? "Open Kansas Master Angler →" : state === "New Mexico" ? "Open New Mexico challenges →" : "Explore Oklahoma →";
             return (
               <article className={`state-card${isLive ? " featured" : ""}`} key={state}>
                 <div className="state-card-top">
