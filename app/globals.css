@@ -697,3 +697,25 @@ footer { background: #050f14; border-top: 1px solid #20363e; }
 .arkansas-lunker { border-color: #765331; background: linear-gradient(135deg,#102a33,#2e231c); }
 @media (max-width: 1000px) { .arkansas-trackers { grid-template-columns: 1fr; } .arkansas-category-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 620px) { .arkansas-category-grid { grid-template-columns: 1fr; } .arkansas-slam-list section > div { grid-template-columns: 1fr; } }
+.california-hero { background: radial-gradient(circle at 78% 18%, rgba(242,188,73,.22), transparent 34%), linear-gradient(135deg, #071b29 0%, #173846 54%, #3c3020 100%); }
+.california-trackers { display: grid; grid-template-columns: minmax(0,1.7fr) minmax(310px,.72fr); gap: 22px; align-items: start; }
+.california-checks { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 12px; }
+.california-checks label { display: flex; align-items: center; gap: 7px; color: #d5e2df; font-size: 11px; font-weight: 800; }
+.california-checks input { width: 16px; min-height: 16px; height: 16px; padding: 0; accent-color: #c4d982; }
+.california-award-counts { display: grid; gap: 14px; margin-top: 18px; }
+.california-award-counts section { padding: 14px; border: 1px solid #38525a; border-radius: 14px; background: #0d252e; }
+.california-award-counts section > div:first-child { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.california-award-counts section > div span { color: #a9bab6; font-size: 10px; text-align: right; }
+.california-award-counts label { display: grid; grid-template-columns: 1fr 78px; align-items: center; gap: 8px; color: #d5e2df; font-size: 11px; }
+.california-award-counts input { min-width: 0; }
+.california-award-counts small { display: block; margin-top: 8px; color: #b8c8c4; }
+.california-supreme { margin-top: 18px; padding: 18px; border: 1px solid #77633c; border-radius: 14px; background: #2a2519; }
+.california-supreme p { margin-bottom: 0; color: #cdd6c6; }
+.california-save { grid-column: 1 / -1; }
+.california-tracker-section { padding-top: 54px; }
+.california-trout-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; }
+.california-trout-grid .challenge-card { min-height: 190px; }
+.california-passport-levels .card-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+.california-supreme-card { margin-top: 22px; border-color: #77633c; background: linear-gradient(135deg,#102a33,#30291b); }
+@media (max-width: 1000px) { .california-trackers { grid-template-columns: 1fr; } .california-trout-grid, .california-passport-levels .card-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 620px) { .california-trout-grid, .california-passport-levels .card-grid { grid-template-columns: 1fr; } }
