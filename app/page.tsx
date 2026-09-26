@@ -9,16 +9,16 @@ const states = [
 ];
 
 const featured = [
-  { state: "Missouri", title: "Blue Ribbon Trout Slam", detail: "Fish 5, 7, or all 9 Blue Ribbon Trout Areas for Bronze, Silver, or Gold.", href: "#missouri" },
-  { state: "Utah", title: "Utah Cutthroat Slam", detail: "Catch Utah’s four native cutthroat trout subspecies in their native ranges.", href: "/states/utah/challenge" },
-  { state: "Texas", title: "Texas Elite Angler", detail: "Earn Big Fish awards for five different freshwater or saltwater species.", href: "/states/texas/challenge" },
-  { state: "Kansas", title: "Kansas Master Angler", detail: "Catch a fish that meets Kansas’s official trophy-length standard.", href: "/states/kansas/challenge" },
-  { state: "New Mexico", title: "New Mexico Fish Challenges", detail: "Complete the five-trout or four-bass official species challenge.", href: "/states/new-mexico/challenge" },
+  { state: "Arkansas", title: "Arkansas Master Angler", detail: "Catch qualifying trophy fish from four of eight categories—across as many years as needed.", href: "/states/arkansas/challenge" },
   { state: "Colorado", title: "Colorado Master Angler", detail: "Catch a fish that meets Colorado’s official trophy-length standard.", href: "/states/colorado/challenge" },
-  { state: "Pennsylvania", title: "Pennsylvania Angler Awards", detail: "Earn recognition by weight, catch-and-release length, first fish, or a 50-inch musky.", href: "/states/pennsylvania/challenge" },
-  { state: "Ohio", title: "Fish Ohio & Master Angler", detail: "Catch one qualifying trophy fish—or four different species in one year for Master Angler.", href: "/states/ohio/challenge" },
   { state: "Illinois", title: "Illinois Master Angler", detail: "Catch five different Illinois species and create an official personalized certificate.", href: "/states/illinois/challenge" },
-  { state: "Arkansas", title: "Arkansas Master Angler", detail: "Catch qualifying trophy fish from four of eight categories—across as many years as needed.", href: "/states/arkansas/challenge" }
+  { state: "Kansas", title: "Kansas Master Angler", detail: "Catch a fish that meets Kansas’s official trophy-length standard.", href: "/states/kansas/challenge" },
+  { state: "Missouri", title: "Blue Ribbon Trout Slam", detail: "Fish 5, 7, or all 9 Blue Ribbon Trout Areas for Bronze, Silver, or Gold.", href: "#missouri" },
+  { state: "New Mexico", title: "New Mexico Fish Challenges", detail: "Complete the five-trout or four-bass official species challenge.", href: "/states/new-mexico/challenge" },
+  { state: "Ohio", title: "Fish Ohio & Master Angler", detail: "Catch one qualifying trophy fish—or four different species in one year for Master Angler.", href: "/states/ohio/challenge" },
+  { state: "Pennsylvania", title: "Pennsylvania Angler Awards", detail: "Earn recognition by weight, catch-and-release length, first fish, or a 50-inch musky.", href: "/states/pennsylvania/challenge" },
+  { state: "Texas", title: "Texas Elite Angler", detail: "Earn Big Fish awards for five different freshwater or saltwater species.", href: "/states/texas/challenge" },
+  { state: "Utah", title: "Utah Cutthroat Slam", detail: "Catch Utah’s four native cutthroat trout subspecies in their native ranges.", href: "/states/utah/challenge" }
 ];
 
 export default function Home() {
