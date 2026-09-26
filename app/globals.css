@@ -671,3 +671,11 @@ footer { background: #050f14; border-top: 1px solid #20363e; }
 .ohio-water-type label { display: flex; align-items: center; gap: .45rem; font-size: .86rem; font-weight: 700; }
 .ohio-water-type input { width: auto; }
 .ohio-table th:first-child { min-width: 180px; }
+.illinois-hero { background: radial-gradient(circle at 78% 20%, rgba(234,179,8,.2), transparent 34%), linear-gradient(135deg, #071b27 0%, #153541 57%, #263226 100%); }
+.illinois-method { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 16px 0; padding: 14px 16px; border: 1px solid #38525a; border-radius: 14px; background: #102a33; }
+.illinois-method label { display: inline-flex; align-items: center; gap: 8px; color: #e0ebe7; font-size: 12px; font-weight: 800; cursor: pointer; }
+.illinois-method input { width: 17px; min-height: 17px; height: 17px; padding: 0; accent-color: #c4d982; }
+.illinois-awards .card-grid { grid-template-columns: repeat(5,minmax(0,1fr)); }
+.illinois-awards .challenge-card { min-height: 250px; }
+@media (max-width: 1050px) { .illinois-awards .card-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 620px) { .illinois-awards .card-grid { grid-template-columns: 1fr; } }

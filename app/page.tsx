@@ -16,7 +16,8 @@ const featured = [
   { state: "New Mexico", title: "New Mexico Fish Challenges", detail: "Complete the five-trout or four-bass official species challenge.", href: "/states/new-mexico/challenge" },
   { state: "Colorado", title: "Colorado Master Angler", detail: "Catch a fish that meets Colorado’s official trophy-length standard.", href: "/states/colorado/challenge" },
   { state: "Pennsylvania", title: "Pennsylvania Angler Awards", detail: "Earn recognition by weight, catch-and-release length, first fish, or a 50-inch musky.", href: "/states/pennsylvania/challenge" },
-  { state: "Ohio", title: "Fish Ohio & Master Angler", detail: "Catch one qualifying trophy fish—or four different species in one year for Master Angler.", href: "/states/ohio/challenge" }
+  { state: "Ohio", title: "Fish Ohio & Master Angler", detail: "Catch one qualifying trophy fish—or four different species in one year for Master Angler.", href: "/states/ohio/challenge" },
+  { state: "Illinois", title: "Illinois Master Angler", detail: "Catch five different Illinois species and create an official personalized certificate.", href: "/states/illinois/challenge" }
 ];
 
 export default function Home() {
@@ -110,7 +111,7 @@ export default function Home() {
         </div>
         <div className="states-grid">
           {states.map((state) => (
-            <a key={state} href={state === "Oklahoma" ? "/states/oklahoma" : state === "Kansas" ? "/states/kansas/challenge" : state === "Utah" ? "/states/utah/challenge" : state === "Texas" ? "/states/texas/challenge" : state === "New Mexico" ? "/states/new-mexico/challenge" : state === "Colorado" ? "/states/colorado/challenge" : state === "Pennsylvania" ? "/states/pennsylvania/challenge" : state === "Ohio" ? "/states/ohio/challenge" : "/states"}>
+            <a key={state} href={state === "Oklahoma" ? "/states/oklahoma" : state === "Kansas" ? "/states/kansas/challenge" : state === "Utah" ? "/states/utah/challenge" : state === "Texas" ? "/states/texas/challenge" : state === "New Mexico" ? "/states/new-mexico/challenge" : state === "Colorado" ? "/states/colorado/challenge" : state === "Pennsylvania" ? "/states/pennsylvania/challenge" : state === "Ohio" ? "/states/ohio/challenge" : state === "Illinois" ? "/states/illinois/challenge" : "/states"}>
               {state}
             </a>
           ))}
