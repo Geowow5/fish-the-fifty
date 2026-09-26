@@ -646,6 +646,15 @@ footer { background: #050f14; border-top: 1px solid #20363e; }
 .colorado-tables { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; align-items: start; }
 .colorado-tables .qualification-table-wrap { max-width: none; }
 @media (max-width: 760px) { .colorado-tables { grid-template-columns: 1fr; } }
+.pa-hero { background: radial-gradient(circle at 78% 20%, rgba(99,157,103,.2), transparent 35%), linear-gradient(135deg, #092632 0%, #173b45 58%, #263c31 100%); }
+.pa-division { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+.pa-division label { display: inline-flex; align-items: center; gap: 6px; color: #d5e2df; font-size: 11px; font-weight: 800; cursor: pointer; }
+.pa-division input { width: 16px; min-height: 16px; height: 16px; padding: 0; accent-color: #c4d982; }
+.pa-award-paths .card-grid { grid-template-columns: repeat(5,minmax(0,1fr)); }
+.pa-award-paths .challenge-card { min-height: 255px; }
+.pa-table { max-width: 980px; }
+@media (max-width: 1050px) { .pa-award-paths .card-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 620px) { .pa-award-paths .card-grid { grid-template-columns: 1fr; } .pa-table { overflow-x: auto; } .pa-table table { min-width: 680px; } }
 .texas-share-card { display: flex; justify-content: space-between; align-items: center; gap: 34px; padding: 32px; border: 1px solid #38525a; border-radius: 24px; background: #102a33; }
 .texas-share-card h2 { margin: 0 0 12px; font-size: clamp(30px, 4vw, 44px); }
 .texas-share-card p:not(.eyebrow) { max-width: 720px; margin: 0; color: var(--muted); line-height: 1.65; }
