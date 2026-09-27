@@ -781,6 +781,96 @@ footer { background: #050f14; border-top: 1px solid #20363e; }
 }
 @media (max-width: 620px) { .california-trout-grid, .california-passport-levels .card-grid { grid-template-columns: 1fr; } }
 
+/* Georgia Bass Slam guide */
+.georgia-page { min-height: 100vh; background: #08171e; color: #e9f1ef; }
+.georgia-page .nav-shell { background: rgba(8,23,30,.94); border-bottom-color: #29434b; }
+.georgia-page .nav-shell nav a:hover { color: #e6ad75; }
+.georgia-breadcrumb { max-width: 1180px; margin: 0 auto; padding: 22px 24px 0; color: #a9c1c3; font-size: 14px; font-weight: 750; }
+.georgia-breadcrumb a, .georgia-footer a, .georgia-mail-link { color: #92d2c0; }
+.georgia-hero { position: relative; overflow: hidden; padding: 84px 24px 78px; background: radial-gradient(circle at 82% 15%,rgba(84,155,138,.24),transparent 29%),linear-gradient(135deg,#112e32 0%,#10242d 64%,#0a1b23 100%); border-bottom: 1px solid #36504c; }
+.georgia-hero::after { content: ""; position: absolute; width: 510px; height: 510px; right: -145px; bottom: -300px; border: 1px solid rgba(143,207,185,.22); border-radius: 50%; box-shadow: 0 0 0 40px rgba(143,207,185,.035),0 0 0 85px rgba(143,207,185,.022); pointer-events: none; }
+.georgia-hero-inner, .georgia-section { width: min(1180px,100%); margin: 0 auto; }
+.georgia-hero-inner { position: relative; z-index: 1; }
+.georgia-kicker { margin: 0 0 13px; color: #a8dbc2; font-size: 11px; letter-spacing: .16em; font-weight: 900; }
+.georgia-page h1 { max-width: 900px; color: #f2f7f5; font-size: clamp(48px,7vw,86px); line-height: .98; letter-spacing: -.055em; }
+.georgia-page h1 em { color: #e6ad75; font-style: normal; }
+.georgia-lead { max-width: 750px; margin: 24px 0 0; color: #c1d0d1; font-size: 20px; line-height: 1.65; }
+.georgia-facts, .georgia-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.georgia-facts { margin-top: 26px; }
+.georgia-facts span { padding: 9px 13px; color: #d6e7df; background: #17333a; border: 1px solid #3d5e59; border-radius: 999px; font-size: 13px; font-weight: 750; }
+.georgia-actions { margin-top: 28px; }
+.georgia-button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; padding: 12px 18px; border: 1px solid #42616a; border-radius: 999px; color: #edf5f2; font: inherit; font-size: 14px; font-weight: 850; cursor: pointer; }
+.georgia-button.is-copper { background: #e1a66e; border-color: #e1a66e; color: #28231d; }
+.georgia-button.is-copper:hover { background: #efbd8b; }
+.georgia-button.is-outline { background: transparent; }
+.georgia-button.is-outline:hover { background: #18333b; }
+.georgia-button:disabled { cursor: wait; opacity: .65; }
+.georgia-page button:focus-visible, .georgia-page input:focus-visible { outline: 3px solid #abd8c1; outline-offset: 2px; }
+.georgia-section { padding: 76px 24px; }
+.georgia-section-heading { max-width: 810px; margin-bottom: 29px; }
+.georgia-page h2 { margin: 0 0 13px; color: #edf4f2; font-size: clamp(30px,4.3vw,48px); line-height: 1.08; letter-spacing: -.04em; }
+.georgia-section-heading > p:last-child { color: #afc0c3; font-size: 16px; line-height: 1.7; }
+.georgia-species-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 13px; }
+.georgia-species-card, .ga-tracker-panel, .georgia-rules-grid article, .georgia-recognition { background: #10232c; border: 1px solid #29434b; border-radius: 18px; }
+.georgia-species-card { min-height: 190px; padding: 20px; }
+.georgia-species-number { color: #9ccbb1; font-size: 12px; font-weight: 900; letter-spacing: .12em; }
+.georgia-species-card h3 { margin: 17px 0 8px; color: #f0f5f3; font-size: 19px; }
+.georgia-species-card p { margin: 0; color: #b5c6c8; font-size: 14px; line-height: 1.55; }
+.georgia-group-note { display: block; margin-top: 10px; color: #e8bb87; font-size: 13px; line-height: 1.5; }
+.georgia-resource-actions { margin-top: 22px; }
+.georgia-tracker-section, .georgia-rules-section { border-top: 1px solid #203840; }
+.ga-tracker { max-width: 1080px; }
+.ga-tracker-panel { padding: 26px; }
+.ga-tracker-top { display: flex; justify-content: space-between; gap: 20px; align-items: center; }
+.ga-tracker-top .ga-kicker { margin-bottom: 7px; color: #a8dbc2; font-size: 11px; font-weight: 900; letter-spacing: .14em; }
+.ga-tracker-top h3 { margin: 0; color: #edf4f2; font-size: 25px; }
+.ga-tracker-top p:last-child { margin: 6px 0 0; color: #aebfc1; }
+.ga-tracker-top > strong { color: #e8b783; font-size: 42px; white-space: nowrap; }
+.ga-tracker-top small { color: #aebfc1; font-size: 16px; }
+.ga-progress { height: 9px; margin: 20px 0 22px; overflow: hidden; background: #263e45; border-radius: 99px; }
+.ga-progress span { display: block; height: 100%; background: linear-gradient(90deg,#65b89b,#dfb275); transition: width .2s ease; }
+.ga-catch-list { display: grid; gap: 9px; }
+.ga-catch { display: grid; grid-template-columns: minmax(220px,.72fr) minmax(0,1.28fr); gap: 14px; align-items: center; padding: 13px; background: #0b1d25; border: 1px solid #29434b; border-radius: 14px; }
+.ga-catch.is-caught { border-color: #668b73; background: #102822; }
+.ga-catch-check { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; }
+.ga-catch-check input { width: 18px; height: 18px; margin: 3px 0 0; accent-color: #84c7a7; flex: 0 0 auto; }
+.ga-catch-check strong, .ga-catch-check small { display: block; }
+.ga-catch-check strong { color: #edf4f2; font-size: 14px; }
+.ga-catch-check small { margin-top: 4px; color: #a9bfc0; font-size: 12px; line-height: 1.5; }
+.ga-catch-fields { display: grid; grid-template-columns: minmax(125px,.65fr) minmax(180px,1fr) minmax(125px,.65fr); gap: 9px; }
+.ga-catch-fields label { display: grid; gap: 5px; color: #afc0c3; font-size: 12px; font-weight: 800; }
+.ga-catch-fields input { width: 100%; min-height: 39px; padding: 8px 10px; border: 1px solid #37525a; border-radius: 9px; background: #142a33; color: #edf4f2; font: inherit; font-size: 13px; }
+.ga-tracker-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 18px; }
+.ga-clear { padding: 10px 4px; border: 0; background: transparent; color: #c7d6d5; font: inherit; font-weight: 750; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.ga-tracker-actions [role="status"] { color: #a8dbc2; font-size: 13px; }
+.ga-tracker-note { margin: 16px 0 0; color: #91a7aa; font-size: 12px; line-height: 1.6; }
+.georgia-rules-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+.georgia-rules-grid article { padding: 21px; }
+.georgia-rules-grid article > span { color: #a8dbc2; font-size: 12px; font-weight: 900; letter-spacing: .1em; }
+.georgia-rules-grid h3 { margin: 13px 0 8px; color: #edf4f2; font-size: 18px; }
+.georgia-rules-grid p, .georgia-recognition p:last-child { margin: 0; color: #b5c6c8; font-size: 14px; line-height: 1.65; }
+.georgia-recognition { margin-top: 16px; padding: 22px; background: linear-gradient(145deg,#18352e,#10232c 78%); }
+.georgia-recognition h3 { margin: 0 0 8px; color: #edf4f2; font-size: 21px; }
+.georgia-recognition .georgia-kicker { margin-bottom: 9px; }
+.georgia-mail-link { align-self: center; font-size: 14px; font-weight: 850; text-decoration: underline; text-underline-offset: 3px; }
+.georgia-disclaimer { max-width: 900px; margin: 23px 0 0; color: #8fa5a9; font-size: 12px; line-height: 1.6; }
+.georgia-footer { display: flex; justify-content: space-between; gap: 20px; max-width: 1180px; margin: 0 auto; padding: 24px; border-top: 1px solid #203840; color: #dbe8e6; font-size: 13px; }
+@media (max-width: 960px) {
+  .georgia-species-grid, .georgia-rules-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .ga-catch-fields { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 660px) {
+  .georgia-breadcrumb { padding: 18px 20px 0; font-size: 12px; }
+  .georgia-hero { padding: 60px 20px 55px; }
+  .georgia-lead { font-size: 17px; }
+  .georgia-section { padding: 56px 20px; }
+  .georgia-species-grid, .georgia-rules-grid { grid-template-columns: 1fr; }
+  .ga-tracker-panel { padding: 17px; }
+  .ga-catch { grid-template-columns: 1fr; }
+  .ga-catch-fields { grid-template-columns: 1fr 1fr; padding-left: 28px; }
+  .georgia-footer { padding: 20px; }
+}
+
 /* Missouri Blue Ribbon Trout Slam guide */
 .missouri-page { min-height: 100vh; background: #08171e; color: #e9f1ef; }
 .missouri-breadcrumb { max-width: 1180px; margin: 0 auto; padding: 22px 24px 0; color: #a9c1c3; font-size: 14px; font-weight: 750; }
