@@ -718,4 +718,65 @@ footer { background: #050f14; border-top: 1px solid #20363e; }
 .california-passport-levels .card-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
 .california-supreme-card { margin-top: 22px; border-color: #77633c; background: linear-gradient(135deg,#102a33,#30291b); }
 @media (max-width: 1000px) { .california-trackers { grid-template-columns: 1fr; } .california-trout-grid, .california-passport-levels .card-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+
+/* Florida's freshwater and saltwater recognition guide and private progress tracker. */
+.florida-hero { background: radial-gradient(circle at 84% 18%, rgba(28,134,145,.25), transparent 31%), linear-gradient(180deg, #102b33 0%, #0b1c24 100%); }
+.florida-program-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.florida-program-card, .florida-path-card, .florida-detail-card { min-width: 0; padding: 28px; border: 1px solid #294650; border-radius: 22px; background: #10232c; color: #e9f1ee; box-shadow: 0 16px 38px rgba(0,0,0,.12); }
+.florida-program-card h3, .florida-path-card h3, .florida-detail-card h3 { margin: 22px 0 10px; color: #f0f6f4; font-size: 24px; }
+.florida-program-card p, .florida-path-card p, .florida-detail-card p { color: #c0d0d1; line-height: 1.65; }
+.florida-card-links { display: grid; gap: 10px; margin-top: 20px; }
+.florida-card-links a, .florida-path-card a { color: #c9e18f; font-weight: 850; line-height: 1.5; text-decoration: none; }
+.florida-card-links a:hover, .florida-path-card a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.florida-path-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.florida-details-grid { display: grid; grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); gap: 20px; align-items: start; }
+.florida-detail-card h3 { margin-top: 0; }
+.florida-detail-card ul { padding-left: 20px; color: #c0d0d1; line-height: 1.6; }
+.florida-detail-card li { margin: 0 0 12px; }
+.florida-detail-card li strong { color: #edf4f1; }
+.florida-reel-table-wrap { max-height: 620px; overflow: auto; border: 1px solid #294650; border-radius: 12px; }
+.florida-reel-table-wrap table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.florida-reel-table-wrap th, .florida-reel-table-wrap td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #294650; }
+.florida-reel-table-wrap th { position: sticky; top: 0; background: #17343d; color: #e9f1ee; }
+.florida-reel-table-wrap td { color: #c0d0d1; }
+.florida-note { margin-top: 28px; }
+.florida-progress-summary { max-width: 1180px; margin: 0 auto 20px; padding: 28px; border: 1px solid #294650; border-radius: 22px; background: #10232c; color: #e9f1ee; }
+.florida-progress-summary h3 { margin: 0; font-size: 26px; }
+.florida-progress-summary .tracker-top > strong { color: #c4d982; font-size: 34px; }
+.florida-progress-summary .tracker-help { max-width: 760px; margin-bottom: 0; }
+.florida-count-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.florida-count-card { min-width: 0; }
+.florida-count-card h3, .florida-list-card h3 { font-size: 24px; }
+.florida-count-card .tracker-top > strong, .florida-list-card .tracker-top > strong { font-size: 28px; }
+.florida-number-label { display: grid; grid-template-columns: 1fr 100px; gap: 14px; align-items: center; margin: 18px 0; color: #edf4f1; font-weight: 800; }
+.florida-number-label input { width: 100%; min-height: 44px; border: 1px solid #55717a; border-radius: 10px; padding: 8px 10px; background: #173640; color: #f0f6f4; font: inherit; }
+.florida-saltwater-heading { max-width: 1180px; margin: 42px auto 18px; }
+.florida-saltwater-heading .eyebrow { margin-bottom: 7px; }
+.florida-saltwater-heading h3 { margin: 0; color: #f0f6f4; font-size: 28px; }
+.florida-saltwater-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.florida-list-card { min-width: 0; }
+.florida-list-card .tracker-top { align-items: center; }
+.florida-list-card .tracker-top > strong { color: #c4d982; }
+.florida-checklist { margin-top: 18px; border-top: 1px solid #35535d; padding-top: 15px; }
+.florida-checklist summary { color: #c9e18f; font-weight: 850; cursor: pointer; }
+.florida-checkbox-list, .florida-reel-list, .florida-slam-list { display: grid; gap: 7px; max-height: 440px; overflow-y: auto; margin-top: 14px; padding-right: 5px; }
+.florida-checkbox-list { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.florida-checkbox-list label, .florida-reel-row, .florida-slam-row { display: flex; gap: 9px; align-items: flex-start; padding: 9px 10px; border: 1px solid #294650; border-radius: 10px; background: #132d36; color: #dce7e3; font-size: 13px; line-height: 1.45; }
+.florida-checkbox-list input, .florida-reel-row input, .florida-slam-row input { margin-top: 3px; accent-color: #c4d982; }
+.florida-reel-row strong, .florida-slam-row strong { display: block; color: #f0f6f4; }
+.florida-reel-row small, .florida-slam-row small { display: block; margin-top: 3px; color: #b8cacc; font-size: 12px; }
+.florida-checklist-note { color: #b8cacc; font-size: 12px; line-height: 1.5; }
+.florida-tracker-actions { max-width: 1180px; }
+.florida-final .actions { justify-content: center; }
+
+@media (max-width: 1000px) {
+  .florida-program-grid, .florida-path-grid, .florida-saltwater-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .florida-details-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 650px) {
+  .florida-program-grid, .florida-path-grid, .florida-saltwater-grid, .florida-count-grid, .florida-checkbox-list { grid-template-columns: 1fr; }
+  .florida-program-card, .florida-path-card, .florida-detail-card, .florida-progress-summary { padding: 21px; }
+  .florida-number-label { grid-template-columns: 1fr 84px; gap: 8px; font-size: 13px; }
+  .florida-reel-table-wrap { max-height: 440px; }
+}
 @media (max-width: 620px) { .california-trout-grid, .california-passport-levels .card-grid { grid-template-columns: 1fr; } }
