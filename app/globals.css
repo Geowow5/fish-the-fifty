@@ -780,3 +780,96 @@ footer { background: #050f14; border-top: 1px solid #20363e; }
   .florida-reel-table-wrap { max-height: 440px; }
 }
 @media (max-width: 620px) { .california-trout-grid, .california-passport-levels .card-grid { grid-template-columns: 1fr; } }
+
+/* Missouri Blue Ribbon Trout Slam guide */
+.missouri-page { min-height: 100vh; background: #08171e; color: #e9f1ef; }
+.missouri-breadcrumb { max-width: 1180px; margin: 0 auto; padding: 22px 24px 0; color: #a9c1c3; font-size: 14px; font-weight: 750; }
+.missouri-breadcrumb a, .missouri-footer a { color: #91d4ce; }
+.missouri-hero { position: relative; overflow: hidden; padding: 86px 24px 78px; background: radial-gradient(circle at 82% 20%, rgba(91,155,129,.24), transparent 27%), linear-gradient(135deg,#102831 0%,#0a1c24 72%); border-bottom: 1px solid #29434b; }
+.missouri-hero::after { content: ""; position: absolute; width: 480px; height: 480px; right: -115px; bottom: -270px; border: 1px solid rgba(145,212,206,.18); border-radius: 50%; box-shadow: 0 0 0 38px rgba(145,212,206,.035),0 0 0 82px rgba(145,212,206,.025); pointer-events: none; }
+.missouri-hero-inner, .missouri-section { width: min(1180px,100%); margin: 0 auto; }
+.missouri-hero-inner { position: relative; z-index: 1; }
+.missouri-kicker { margin: 0 0 13px; color: #c4d982; font-size: 11px; letter-spacing: .16em; font-weight: 900; }
+.missouri-page h1 { color: #f2f7f5; max-width: 900px; font-size: clamp(48px,7vw,86px); line-height: .99; letter-spacing: -.055em; }
+.missouri-page h1 em { color: #a7d68c; font-style: normal; }
+.missouri-lead { max-width: 720px; margin: 24px 0 0; color: #c1d0d1; font-size: 20px; line-height: 1.65; }
+.missouri-facts, .missouri-actions, .missouri-bottom-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.missouri-facts { margin-top: 26px; }
+.missouri-facts span { padding: 9px 13px; color: #d6e5e1; background: #17333b; border: 1px solid #34525a; border-radius: 999px; font-size: 13px; font-weight: 750; }
+.missouri-actions { margin-top: 30px; }
+.missouri-button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; padding: 12px 18px; border: 1px solid #42616a; border-radius: 999px; color: #edf5f2; font: inherit; font-size: 14px; font-weight: 850; cursor: pointer; }
+.missouri-button.is-bright { background: #a7d68c; border-color: #a7d68c; color: #14291f; }
+.missouri-button.is-bright:hover { background: #c4e9a6; }
+.missouri-button.is-outline { background: transparent; }
+.missouri-button.is-outline:hover { background: #18333b; }
+.missouri-button:disabled { cursor: wait; opacity: .65; }
+.missouri-section { padding: 76px 24px; }
+.missouri-section-heading { max-width: 790px; margin-bottom: 28px; }
+.missouri-page h2 { margin: 0 0 13px; color: #edf4f2; font-size: clamp(30px,4.3vw,48px); line-height: 1.08; letter-spacing: -.04em; }
+.missouri-section-heading > p:last-child { color: #afc0c3; font-size: 16px; line-height: 1.7; }
+.missouri-award-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 15px; }
+.missouri-award, .missouri-tracker, .missouri-water-card, .missouri-rules-grid article { background: #10232c; border: 1px solid #29434b; border-radius: 20px; }
+.missouri-award { padding: 23px; }
+.missouri-award > span { color: #c4d982; font-size: 12px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.missouri-award > strong { display: block; margin: 14px 0 10px; color: #f2f7f5; font-size: 38px; }
+.missouri-award small { color: #9fb4b8; font-size: 14px; }
+.missouri-award p, .missouri-rules-grid p { margin: 0; color: #b5c6c8; font-size: 14px; line-height: 1.65; }
+.missouri-tracker { padding: 26px; }
+.missouri-tracker-top { display: flex; justify-content: space-between; gap: 20px; align-items: center; }
+.missouri-tracker-top .missouri-kicker { margin-bottom: 8px; }
+.missouri-tracker-top h3 { margin: 0; color: #edf4f2; font-size: 25px; }
+.missouri-tracker-top p:last-child { margin: 6px 0 0; color: #aebfc1; }
+.missouri-tracker-top > strong { color: #c4d982; font-size: 42px; white-space: nowrap; }
+.missouri-tracker-top small { color: #aebfc1; font-size: 16px; }
+.missouri-progress { height: 9px; margin: 20px 0 22px; overflow: hidden; background: #263e45; border-radius: 99px; }
+.missouri-progress span { display: block; height: 100%; background: linear-gradient(90deg,#7fc8b6,#c4d982); transition: width .2s ease; }
+.missouri-catch-list { display: grid; gap: 9px; }
+.missouri-catch { display: grid; grid-template-columns: minmax(220px,.8fr) minmax(0,1.2fr); gap: 14px; align-items: center; padding: 13px; background: #0b1d25; border: 1px solid #29434b; border-radius: 14px; }
+.missouri-catch.is-complete { border-color: #608971; background: #102822; }
+.missouri-catch-check { display: flex; gap: 11px; align-items: flex-start; cursor: pointer; }
+.missouri-catch-check input { width: 18px; height: 18px; margin: 3px 0 0; accent-color: #a7d68c; flex: 0 0 auto; }
+.missouri-catch-check strong, .missouri-catch-check small { display: block; }
+.missouri-catch-check strong { color: #edf4f2; font-size: 14px; }
+.missouri-catch-check small { margin-top: 4px; color: #9fb4b8; font-size: 12px; }
+.missouri-catch-fields { display: grid; grid-template-columns: minmax(130px,.55fr) minmax(180px,1fr); gap: 10px; }
+.missouri-catch-fields label { display: grid; gap: 5px; color: #afc0c3; font-size: 11px; font-weight: 800; }
+.missouri-catch-fields input { width: 100%; min-height: 39px; padding: 8px 10px; border: 1px solid #37525a; border-radius: 9px; background: #142a33; color: #edf4f2; font: inherit; font-size: 13px; }
+.missouri-catch-fields input:focus { outline: 2px solid #79c5c1; outline-offset: 1px; }
+.missouri-tracker-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 18px; }
+.missouri-clear { padding: 10px 4px; border: 0; background: transparent; color: #c7d6d5; font: inherit; font-weight: 750; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.missouri-tracker-actions [role="status"] { color: #c4d982; font-size: 13px; }
+.missouri-water-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 15px; }
+.missouri-water-card { min-height: 275px; padding: 22px; display: flex; flex-direction: column; }
+.missouri-water-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.missouri-water-number { color: #c4d982; font-size: 13px; font-weight: 900; letter-spacing: .1em; }
+.missouri-county { padding: 6px 9px; border-radius: 999px; background: #203b3b; color: #b9d9c9; font-size: 10px; font-weight: 800; }
+.missouri-water-card h3 { margin: 22px 0 16px; color: #edf4f2; font-size: 22px; line-height: 1.2; }
+.missouri-reach-label { margin: 0 0 6px !important; color: #9fb4b8 !important; font-size: 10px !important; font-weight: 900; letter-spacing: .12em; }
+.missouri-water-card > p:not(.missouri-reach-label) { margin: 0 0 12px; color: #b5c6c8; font-size: 13px; line-height: 1.65; }
+.missouri-water-card .missouri-access-note { padding: 10px; border-left: 2px solid #c4d982; background: #172c30; }
+.missouri-water-card a, .missouri-text-link { margin-top: auto; color: #91d4ce; font-size: 13px; font-weight: 850; text-decoration: underline; text-underline-offset: 3px; }
+.missouri-rules { border-top: 1px solid #203840; }
+.missouri-rules-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 15px; }
+.missouri-rules-grid article { padding: 22px; }
+.missouri-rules-grid h3 { margin: 0 0 11px; color: #edf4f2; font-size: 18px; }
+.missouri-bottom-actions { margin-top: 24px; }
+.missouri-text-link { margin-top: 0; padding: 12px 0; }
+.missouri-disclaimer { max-width: 870px; margin: 25px 0 0; color: #8fa5a9; font-size: 12px; line-height: 1.6; }
+.missouri-footer { display: flex; justify-content: space-between; gap: 20px; max-width: 1180px; margin: 0 auto; padding: 24px; border-top: 1px solid #203840; color: #dbe8e6; font-size: 13px; }
+.featured-slam > .slam-copy > .btn { margin-top: 22px; }
+
+@media (max-width: 850px) {
+  .missouri-award-grid, .missouri-rules-grid { grid-template-columns: 1fr; }
+  .missouri-water-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .missouri-section { padding: 58px 22px; }
+}
+@media (max-width: 620px) {
+  .missouri-breadcrumb { padding: 18px 20px 0; font-size: 12px; }
+  .missouri-hero { padding: 62px 20px 58px; }
+  .missouri-lead { font-size: 17px; }
+  .missouri-water-grid { grid-template-columns: 1fr; }
+  .missouri-tracker { padding: 17px; }
+  .missouri-catch { grid-template-columns: 1fr; }
+  .missouri-catch-fields { grid-template-columns: 1fr; padding-left: 29px; }
+  .missouri-footer { padding: 20px; }
+}

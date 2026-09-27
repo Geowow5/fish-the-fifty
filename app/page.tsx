@@ -15,7 +15,7 @@ const featured = [
   { state: "Florida", title: "Florida FWC Angler Recognition", detail: "Track Big Catch, 8-pound TrophyCatch bass, and the 75-species saltwater Life List.", href: "/states/florida/challenge" },
   { state: "Illinois", title: "Illinois Master Angler", detail: "Catch five different Illinois species and create an official personalized certificate.", href: "/states/illinois/challenge" },
   { state: "Kansas", title: "Kansas Master Angler", detail: "Catch a fish that meets Kansas’s official trophy-length standard.", href: "/states/kansas/challenge" },
-  { state: "Missouri", title: "Blue Ribbon Trout Slam", detail: "Fish 5, 7, or all 9 Blue Ribbon Trout Areas for Bronze, Silver, or Gold.", href: "#missouri" },
+  { state: "Missouri", title: "Blue Ribbon Trout Slam", detail: "Fish 5, 7, or all 9 Blue Ribbon Trout Areas for Bronze, Silver, or Gold.", href: "/states/missouri/challenge" },
   { state: "New Mexico", title: "New Mexico Fish Challenges", detail: "Complete the five-trout or four-bass official species challenge.", href: "/states/new-mexico/challenge" },
   { state: "Ohio", title: "Fish Ohio & Master Angler", detail: "Catch one qualifying trophy fish—or four different species in one year for Master Angler.", href: "/states/ohio/challenge" },
   { state: "Pennsylvania", title: "Pennsylvania Angler Awards", detail: "Earn recognition by weight, catch-and-release length, first fish, or a 50-inch musky.", href: "/states/pennsylvania/challenge" },
@@ -88,12 +88,13 @@ export default function Home() {
         <div className="slam-copy">
           <p className="eyebrow">FIRST FULL BUILD</p>
           <h2>Missouri Blue Ribbon Trout Slam</h2>
-          <p>Our first complete Fish the Fifty adventure will connect the challenge itself with access, parking, fishing notes, trip planning, and progress tracking.</p>
+          <p>Catch trout in five of Missouri’s nine Blue Ribbon Trout Areas for Bronze, seven for Silver, or all nine for Gold. Explore the official stream reaches and keep a private checklist as you plan.</p>
           <div className="tiers">
             <div><span>BRONZE</span><strong>5 / 9</strong></div>
             <div><span>SILVER</span><strong>7 / 9</strong></div>
             <div><span>GOLD</span><strong>9 / 9</strong></div>
           </div>
+          <a className="btn primary" href="/states/missouri/challenge">Open the Missouri guide →</a>
         </div>
         <div className="progress-card">
           <div className="progress-top"><span>Your Progress</span><strong>0 / 9</strong></div>
@@ -114,7 +115,7 @@ export default function Home() {
         </div>
         <div className="states-grid">
           {states.map((state) => (
-            <a key={state} href={state === "Oklahoma" ? "/states/oklahoma" : state === "Kansas" ? "/states/kansas/challenge" : state === "Utah" ? "/states/utah/challenge" : state === "Texas" ? "/states/texas/challenge" : state === "New Mexico" ? "/states/new-mexico/challenge" : state === "Colorado" ? "/states/colorado/challenge" : state === "Pennsylvania" ? "/states/pennsylvania/challenge" : state === "Ohio" ? "/states/ohio/challenge" : state === "Illinois" ? "/states/illinois/challenge" : state === "Arkansas" ? "/states/arkansas/challenge" : state === "California" ? "/states/california/challenge" : state === "Florida" ? "/states/florida/challenge" : "/states"}>
+            <a key={state} href={state === "Oklahoma" ? "/states/oklahoma" : state === "Missouri" ? "/states/missouri" : state === "Kansas" ? "/states/kansas/challenge" : state === "Utah" ? "/states/utah/challenge" : state === "Texas" ? "/states/texas/challenge" : state === "New Mexico" ? "/states/new-mexico/challenge" : state === "Colorado" ? "/states/colorado/challenge" : state === "Pennsylvania" ? "/states/pennsylvania/challenge" : state === "Ohio" ? "/states/ohio/challenge" : state === "Illinois" ? "/states/illinois/challenge" : state === "Arkansas" ? "/states/arkansas/challenge" : state === "California" ? "/states/california/challenge" : state === "Florida" ? "/states/florida/challenge" : "/states"}>
               {state}
             </a>
           ))}

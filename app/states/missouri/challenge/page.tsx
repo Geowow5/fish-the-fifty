@@ -1,15 +1,28 @@
 import type { Metadata } from "next";
 import MissouriSlamTracker from "./tracker";
-import { checkedDate, checkedLabel, missouriSources, missouriWaters } from "../guides";
+import { blueRibbonWaters } from "./waters";
 
 export const metadata: Metadata = {
   title: "Missouri Blue Ribbon Trout Slam | Fish the Fifty",
-  description: "Plan for Bronze, Silver, or Gold in the Missouri Blue Ribbon Trout Slam. Review the official rules and track all nine qualifying streams.",
+  description: "Plan Missouri’s official Blue Ribbon Trout Slam across all nine streams, check current MDC reaches and rules, and track your catches.",
 };
 
-export default function MissouriChallengePage() {
+const links = {
+  program: "https://mdc.mo.gov/fishing/trophies-certificates/blue-ribbon-trout-slam",
+  areas: "https://mdc.mo.gov/fishing/species/trout/trout-areas",
+  entry: "https://mdc.mo.gov/fishing/trophies-certificates/blue-ribbon-trout-slam/blue-ribbon-trout-slam-entry-form",
+  seasons: "https://mdc.mo.gov/fishing/regulations",
+};
+
+const awards = [
+  { name: "Bronze", count: 5, detail: "Catch a trout from any 5 of the 9 Blue Ribbon Trout Areas. MDC awards a certificate and bronze pin." },
+  { name: "Silver", count: 7, detail: "Catch a trout from any 7 of the 9 areas. MDC awards a certificate and silver pin." },
+  { name: "Gold", count: 9, detail: "Catch a trout from all 9 areas. MDC awards a certificate, gold pin, and medallion." },
+];
+
+export default function MissouriBlueRibbonSlamPage() {
   return (
-    <main>
+    <main className="missouri-page">
       <header className="nav-shell">
         <div className="nav-wrap">
           <a className="brand" href="/">FISH THE FIFTY</a>
@@ -17,65 +30,54 @@ export default function MissouriChallengePage() {
         </div>
       </header>
 
-      <div className="breadcrumb"><a href="/states">States</a><span aria-hidden="true"> / </span><a href="/states/missouri">Missouri</a></div>
-      <nav className="state-guide-tabs" aria-label="Missouri guide pages">
-        <a href="/states/missouri">Fishing Waters</a>
-        <a href="/states/missouri/challenge" aria-current="page">Blue Ribbon Trout Slam</a>
-      </nav>
+      <div className="missouri-breadcrumb"><a href="/states">States</a><span aria-hidden="true"> / </span><span>Missouri</span><span aria-hidden="true"> / </span><span>Blue Ribbon Trout Slam</span></div>
 
-      <section className="page-hero challenge-hero">
-        <div className="page-hero-inner">
-          <p className="eyebrow">MISSOURI · MDC + TROUT UNLIMITED</p>
-          <h1>Fish the Blue Ribbon Trout Slam.</h1>
-          <p className="lead">Catch a trout in five, seven, or all nine Blue Ribbon Trout Areas. Use the tracker for your own planning, then submit every qualifying catch through MDC’s official form.</p>
-          <div className="actions"><a className="btn primary" href="#tracker">Track my waters</a><a className="btn secondary" href={missouriSources.slam.url}>Official Slam details ↗</a></div>
+      <section className="missouri-hero">
+        <div className="missouri-hero-inner">
+          <p className="missouri-kicker">MISSOURI · OFFICIAL MDC TROUT CHALLENGE</p>
+          <h1>Missouri Blue Ribbon<br /><em>Trout Slam</em></h1>
+          <p className="missouri-lead">Find a trout in each stream’s Blue Ribbon reach. Missouri’s official challenge has nine qualifying waters and three recognition levels.</p>
+          <div className="missouri-facts"><span>9 Blue Ribbon waters</span><span>5 / 7 / 9 catch milestones</span><span>Legal methods per stream rules</span></div>
+          <div className="missouri-actions">
+            <a className="missouri-button is-bright" href={links.program} target="_blank" rel="noreferrer">Read MDC slam rules ↗</a>
+            <a className="missouri-button is-outline" href="#waters">Explore all nine streams ↓</a>
+          </div>
         </div>
       </section>
 
-      <section className="section" id="tracker">
-        <div className="section-heading">
-          <p className="eyebrow">5 / 7 / 9 WATERS</p>
-          <h2>Track your own progress.</h2>
-          <p>Any-size trout can qualify when caught legally in a listed Blue Ribbon area. Trout under 18 inches must be released.</p>
+      <section className="missouri-section missouri-awards" aria-labelledby="missouri-awards-heading">
+        <div className="missouri-section-heading"><p className="missouri-kicker">THREE LEVELS</p><h2 id="missouri-awards-heading">Build your slam, one stream at a time.</h2><p>You can earn the levels as your total grows. The Missouri Department of Conservation recognizes first-time achievers at Bronze, Silver, and Gold.</p></div>
+        <div className="missouri-award-grid">{awards.map((award) => <article className="missouri-award" key={award.name}><span>{award.name}</span><strong>{award.count}<small> / 9 streams</small></strong><p>{award.detail}</p></article>)}</div>
+      </section>
+
+      <section className="missouri-section missouri-tracker-section" aria-labelledby="missouri-tracker-heading">
+        <div className="missouri-section-heading"><p className="missouri-kicker">YOUR TRIP CHECKLIST</p><h2 id="missouri-tracker-heading">Keep your catches together.</h2><p>Record a catch date and notes for each stream. The checklist saves in this browser only; submit your catches separately through MDC’s official entry form.</p></div>
+        <MissouriSlamTracker />
+      </section>
+
+      <section className="missouri-section missouri-waters" id="waters" aria-labelledby="missouri-waters-heading">
+        <div className="missouri-section-heading"><p className="missouri-kicker">THE NINE QUALIFYING REACHES</p><h2 id="missouri-waters-heading">Plan by stream.</h2><p>Each card names the qualifying Blue Ribbon reach as MDC currently describes it. Use the official stream page for its boundary map, access information, and current water-specific rules before you go.</p></div>
+        <div className="missouri-water-grid">{blueRibbonWaters.map((water, index) => <article className="missouri-water-card" key={water.slug}>
+          <div className="missouri-water-top"><span className="missouri-water-number">{String(index + 1).padStart(2, "0")}</span><span className="missouri-county">{water.county}</span></div>
+          <h3>{water.name}</h3>
+          <p className="missouri-reach-label">QUALIFYING REACH</p><p>{water.reach}</p>
+          {water.accessNote && <p className="missouri-access-note"><strong>Access note:</strong> {water.accessNote}</p>}
+          <a href={water.regulationUrl} target="_blank" rel="noreferrer">MDC reach, map &amp; rules ↗</a>
+        </article>)}</div>
+      </section>
+
+      <section className="missouri-section missouri-rules" aria-labelledby="missouri-rules-heading">
+        <div className="missouri-section-heading"><p className="missouri-kicker">BEFORE YOU FISH</p><h2 id="missouri-rules-heading">Know the rules and protect access.</h2></div>
+        <div className="missouri-rules-grid">
+          <article><h3>Qualifying catches</h3><p>MDC accepts trout of any size caught after January 1, 2020, using legal methods under the Missouri Wildlife Code. Submit all of your qualifying catches, not only the catch that reaches a new award level.</p></article>
+          <article><h3>Blue Ribbon regulations</h3><p>These reaches generally have an 18-inch minimum length and a one-trout daily limit. Only flies and artificial lures are allowed; soft plastics, natural bait, and scented bait are prohibited. Check each stream’s current regulations.</p></article>
+          <article><h3>Wader and land access</h3><p>Porous-soled waders are prohibited on these streams. Some banks and reaches cross private land. Enter only at public access points or with landowner permission, and never trespass.</p></article>
         </div>
-        <MissouriSlamTracker waters={missouriWaters} />
+        <div className="missouri-bottom-actions"><a className="missouri-button is-bright" href={links.entry} target="_blank" rel="noreferrer">Enter catches with MDC ↗</a><a className="missouri-text-link" href={links.areas} target="_blank" rel="noreferrer">Open MDC trout-area directory ↗</a><a className="missouri-text-link" href={links.seasons} target="_blank" rel="noreferrer">Check current regulations ↗</a></div>
+        <p className="missouri-disclaimer">Fish the Fifty is an independent planning and tracking guide. It does not issue MDC awards or submit your catches. MDC pages control if rules, boundaries, access, or season dates change.</p>
       </section>
 
-      <section className="section">
-        <div className="section-heading"><p className="eyebrow">OFFICIAL LEVELS</p><h2>Three milestones. Nine streams.</h2></div>
-        <div className="card-grid">
-          <article className="challenge-card compact"><span className="state-pill">BRONZE · 5 / 9</span><h3>Start the Slam</h3><p>Catch a trout from five different Blue Ribbon Trout Areas. MDC awards a certificate and bronze pin.</p></article>
-          <article className="challenge-card compact"><span className="state-pill">SILVER · 7 / 9</span><h3>Fish seven waters</h3><p>Catch a trout from seven different areas. MDC awards a certificate and silver pin.</p></article>
-          <article className="challenge-card compact"><span className="state-pill">GOLD · 9 / 9</span><h3>Complete all nine</h3><p>Catch a trout from every listed Blue Ribbon Trout Area. MDC awards a certificate, gold pin, and medallion.</p></article>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="section-heading"><p className="eyebrow">BEFORE YOU SUBMIT</p><h2>Record the catch. Check the current rule.</h2></div>
-        <div className="rules-grid">
-          <article className="rule-card special-rule"><h3>Use this tracker for planning</h3><p>Your checklist is saved in this browser and is not sent to the Conservation Department. It is separate from MDC’s official entry form.</p></article>
-          <article className="rule-card"><h3>Submit all qualifying catches</h3><p>MDC asks anglers to report all catches, not just the last fish that earns a level. The entry form says angler information is shared with Trout Unlimited.</p><a className="text-link" href={missouriSources.entry.url}>Open MDC’s entry form ↗</a></article>
-          <article className="rule-card"><h3>Follow each water’s rules</h3><p>Blue Ribbon areas allow artificial lures and flies only. The daily limit is one trout, with an 18-inch minimum for harvest. Soft plastics, natural bait, and scented bait are prohibited for any species.</p><a className="text-link" href={missouriSources.waders.url}>Review the porous-soled wader ban ↗</a></article>
-          <article className="rule-card"><h3>Respect stream access</h3><p>Use a named public access or get landowner permission where required. Each water guide links its area map and flags restricted reaches.</p><a className="text-link" href={missouriSources.privateWater.url}>MDC stream access guidance ↗</a></article>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="section-heading"><p className="eyebrow">THE NINE WATERS</p><h2>Open a complete water guide.</h2><p>Each guide includes the eligible reach, public access notes, a map, fishing approach, seasonal guidance, and official links.</p></div>
-        <div className="states-grid missouri-water-links">
-          {missouriWaters.map((water) => <a href={`/states/missouri/${water.slug}`} key={water.slug}>{water.name}</a>)}
-        </div>
-      </section>
-
-      <section className="section source-section">
-        <div><p className="eyebrow">OFFICIAL SOURCES</p><h2>Verify before each trip.</h2><p>Missouri rules, access, and conditions can change. These guides were checked <time dateTime={checkedDate}>{checkedLabel}</time>; use MDC’s live pages before fishing.</p></div>
-        <ul>
-          {[missouriSources.slam, missouriSources.entry, missouriSources.permits, missouriSources.waders, missouriSources.privateWater].map((source) => <li key={source.url}><a href={source.url}>{source.label} <span aria-hidden="true">↗</span></a></li>)}
-        </ul>
-      </section>
-
-      <div className="guide-return"><a className="btn primary" href="/states/missouri">← Back to Missouri</a><a className="text-link" href="/states">Explore all 50 states →</a></div>
-      <footer><strong>FISH THE FIFTY</strong><span>Built for anglers who want to fish farther.</span></footer>
+      <footer className="missouri-footer"><a href="/states">← Back to all states</a><strong>FISH THE FIFTY</strong></footer>
     </main>
   );
 }

@@ -1,74 +1,84 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import type { MissouriWaterGuide } from "../guides";
+import { useEffect, useMemo, useState } from "react";
+import { blueRibbonWaters } from "./waters";
 
-const STORAGE_KEY = "fish-the-fifty-missouri-blue-ribbon-trout-slam";
+type CatchRecord = { caught: boolean; date: string; notes: string };
+type CatchRecords = Record<string, CatchRecord>;
 
-export default function MissouriSlamTracker({ waters }: { waters: MissouriWaterGuide[] }) {
-  const [caught, setCaught] = useState<string[]>([]);
-  const [loaded, setLoaded] = useState(false);
-  const [saved, setSaved] = useState(false);
+const STORAGE_KEY = "fish-the-fifty-missouri-blue-ribbon-slam-v1";
+
+function emptyRecords(): CatchRecords {
+  return Object.fromEntries(blueRibbonWaters.map((water) => [water.slug, { caught: false, date: "", notes: "" }])) as CatchRecords;
+}
+
+function normalizeRecord(value: unknown): CatchRecord {
+  if (!value || typeof value !== "object") return { caught: false, date: "", notes: "" };
+  const record = value as Partial<CatchRecord>;
+  return {
+    caught: record.caught === true,
+    date: typeof record.date === "string" ? record.date : "",
+    notes: typeof record.notes === "string" ? record.notes : "",
+  };
+}
+
+export default function MissouriSlamTracker() {
+  const [records, setRecords] = useState<CatchRecords>(emptyRecords);
+  const [ready, setReady] = useState(false);
+  const [status, setStatus] = useState("");
 
   useEffect(() => {
     try {
-      const stored = window.localStorage.getItem(STORAGE_KEY);
-      if (stored) {
-        const parsed: unknown = JSON.parse(stored);
-        if (Array.isArray(parsed)) {
-          setCaught(parsed.filter((slug): slug is string => typeof slug === "string" && waters.some((water) => water.slug === slug)));
-        }
+      const stored: unknown = JSON.parse(window.localStorage.getItem(STORAGE_KEY) ?? "null");
+      if (stored && typeof stored === "object" && !Array.isArray(stored)) {
+        const saved = stored as Record<string, unknown>;
+        setRecords(Object.fromEntries(blueRibbonWaters.map((water) => [water.slug, normalizeRecord(saved[water.slug])] )) as CatchRecords);
       }
-    } catch { /* Keep the checklist usable if local storage is unavailable. */ }
-    setLoaded(true);
-  }, [waters]);
+    } catch { /* Keep an empty checklist if storage is unavailable or invalid. */ }
+    setReady(true);
+  }, []);
 
-  function toggleWater(slug: string) {
-    setSaved(false);
-    setCaught((current) => {
-      const next = current.includes(slug) ? current.filter((item) => item !== slug) : [...current, slug];
-      try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next)); } catch { /* Keep the current page state. */ }
-      setSaved(true);
-      return next;
-    });
+  const completed = useMemo(() => blueRibbonWaters.filter((water) => records[water.slug]?.caught).length, [records]);
+  const tier = completed >= 9 ? "Gold" : completed >= 7 ? "Silver" : completed >= 5 ? "Bronze" : "Keep going";
+
+  function update(slug: string, field: keyof CatchRecord, value: string | boolean) {
+    setStatus("Unsaved changes.");
+    setRecords((current) => ({ ...current, [slug]: { ...current[slug], [field]: value } }));
   }
 
-  function clearProgress() {
-    setCaught([]);
-    setSaved(false);
-    try { window.localStorage.removeItem(STORAGE_KEY); } catch { /* Nothing to clear. */ }
+  function save() {
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(records));
+      setStatus("Saved in this browser.");
+    } catch {
+      setStatus("This browser could not save the checklist.");
+    }
   }
 
-  const completed = caught.length;
+  function clear() {
+    setRecords(emptyRecords());
+    try {
+      window.localStorage.removeItem(STORAGE_KEY);
+      setStatus("Checklist cleared.");
+    } catch {
+      setStatus("Checklist cleared for this visit.");
+    }
+  }
 
   return (
-    <section className="tracker-card slam-tracker" aria-labelledby="tracker-heading">
-      <div className="tracker-top">
-        <div><p className="eyebrow">YOUR PRIVATE CHECKLIST</p><h3 id="tracker-heading">Missouri Slam progress</h3></div>
-        <strong>{completed} / 9</strong>
-      </div>
-      <div className="tracker-track" role="progressbar" aria-label="Missouri trout slam progress" aria-valuemin={0} aria-valuemax={9} aria-valuenow={completed}><span style={{ width: `${completed / 9 * 100}%` }} /></div>
-      <div className="slam-milestones" aria-label="Slam levels">
-        {[{ name: "Bronze", count: 5 }, { name: "Silver", count: 7 }, { name: "Gold", count: 9 }].map((level) => (
-          <div className={completed >= level.count ? "earned" : ""} key={level.name}><span>{level.name}</span><strong>{level.count} waters</strong><small>{completed >= level.count ? "Reached" : "In progress"}</small></div>
-        ))}
-      </div>
-      <p className="tracker-help">Check a stream after a qualifying catch. Progress saves in this browser only; it is not submitted to MDC.</p>
-      <div className="slam-water-list">
-        {waters.map((water) => (
-          <div className="slam-water-item" key={water.slug}>
-            <label className="slam-water-option">
-              <input type="checkbox" checked={caught.includes(water.slug)} onChange={() => toggleWater(water.slug)} disabled={!loaded} />
-              <span><strong>{water.name}</strong><small>{water.county} · {water.miles}</small></span>
-            </label>
-            <a href={`/states/missouri/${water.slug}`}>Guide ↗</a>
-          </div>
-        ))}
-      </div>
-      <div className="tracker-actions">
-        <button className="tracker-clear" type="button" onClick={clearProgress}>Clear checklist</button>
-        {saved && <span className="tracker-saved" role="status">Saved in this browser.</span>}
-      </div>
-    </section>
+    <div className="missouri-tracker">
+      <div className="missouri-tracker-top"><div><p className="missouri-kicker">PRIVATE CHECKLIST</p><h3>Slam progress</h3><p>{tier}{completed >= 5 ? " level reached" : " — Bronze starts at 5 streams"}</p></div><strong>{completed}<small> / 9</small></strong></div>
+      <div className="missouri-progress" role="progressbar" aria-label={`${completed} of 9 streams recorded`} aria-valuemin={0} aria-valuemax={9} aria-valuenow={completed}><span style={{ width: `${(completed / 9) * 100}%` }} /></div>
+      <div className="missouri-catch-list">{blueRibbonWaters.map((water) => {
+        const record = records[water.slug] ?? { caught: false, date: "", notes: "" };
+        const dateId = `${water.slug}-date`;
+        const notesId = `${water.slug}-notes`;
+        return <article className={`missouri-catch${record.caught ? " is-complete" : ""}`} key={water.slug}>
+          <label className="missouri-catch-check"><input type="checkbox" checked={record.caught} onChange={(event) => update(water.slug, "caught", event.target.checked)} /><span><strong>{water.name}</strong><small>{water.county}</small></span></label>
+          <div className="missouri-catch-fields"><label htmlFor={dateId}>Catch date<input id={dateId} type="date" value={record.date} onChange={(event) => update(water.slug, "date", event.target.value)} /></label><label htmlFor={notesId}>Notes<input id={notesId} type="text" value={record.notes} onChange={(event) => update(water.slug, "notes", event.target.value)} placeholder="Access, fly, or catch details" /></label></div>
+        </article>;
+      })}</div>
+      <div className="missouri-tracker-actions"><button type="button" className="missouri-button is-bright" disabled={!ready} onClick={save}>Save my checklist</button><button type="button" className="missouri-clear" onClick={clear}>Clear checklist</button><span role="status" aria-live="polite">{status}</span></div>
+    </div>
   );
 }
