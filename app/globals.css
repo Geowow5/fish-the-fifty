@@ -873,3 +873,114 @@ footer { background: #050f14; border-top: 1px solid #20363e; }
   .missouri-catch-fields { grid-template-columns: 1fr; padding-left: 29px; }
   .missouri-footer { padding: 20px; }
 }
+
+/* Arizona Trout Challenge page */
+.arizona-page { min-height: 100vh; background: #08171e; color: #e9f1ef; }
+.arizona-breadcrumb { max-width: 1180px; margin: 0 auto; padding: 22px 24px 0; color: #a9c1c3; font-size: 14px; font-weight: 750; }
+.arizona-breadcrumb a, .arizona-footer a { color: #e4a66b; }
+.arizona-hero { position: relative; overflow: hidden; padding: 84px 24px 78px; background: radial-gradient(circle at 82% 15%,rgba(201,133,77,.25),transparent 28%),linear-gradient(135deg,#292820 0%,#10242d 64%,#0a1b23 100%); border-bottom: 1px solid #3f4542; }
+.arizona-hero::after { content: ""; position: absolute; width: 520px; height: 520px; right: -150px; bottom: -310px; border: 1px solid rgba(228,166,107,.24); border-radius: 50%; box-shadow: 0 0 0 40px rgba(228,166,107,.04),0 0 0 86px rgba(228,166,107,.025); pointer-events: none; }
+.arizona-hero-inner, .arizona-section { width: min(1180px,100%); margin: 0 auto; }
+.arizona-hero-inner { position: relative; z-index: 1; }
+.az-kicker, .arizona-kicker { margin: 0 0 13px; color: #e8b783; font-size: 11px; letter-spacing: .16em; font-weight: 900; }
+.arizona-page h1 { max-width: 900px; color: #f2f7f5; font-size: clamp(48px,7vw,86px); line-height: .98; letter-spacing: -.055em; }
+.arizona-page h1 em { color: #e7ae72; font-style: normal; }
+.arizona-lead { max-width: 760px; margin: 24px 0 0; color: #c1d0d1; font-size: 20px; line-height: 1.65; }
+.arizona-facts, .arizona-actions, .arizona-tool-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.arizona-facts { margin-top: 26px; }
+.arizona-facts span { padding: 9px 13px; color: #e7e1d6; background: #30342e; border: 1px solid #55574a; border-radius: 999px; font-size: 13px; font-weight: 750; }
+.arizona-actions, .arizona-tool-links { margin-top: 28px; }
+.arizona-button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; padding: 12px 18px; border: 1px solid #555f60; border-radius: 999px; color: #eff5f2; font: inherit; font-size: 14px; font-weight: 850; cursor: pointer; }
+.arizona-button.is-copper { background: #e0a36c; border-color: #e0a36c; color: #2a211a; }
+.arizona-button.is-copper:hover { background: #efba87; }
+.arizona-button.is-outline { background: transparent; }
+.arizona-button.is-outline:hover { background: #1a3239; }
+.arizona-button:disabled { cursor: wait; opacity: .65; }
+.arizona-page button:focus-visible, .arizona-page input:focus-visible, .arizona-page select:focus-visible { outline: 3px solid #e8b783; outline-offset: 2px; }
+.arizona-section { padding: 76px 24px; }
+.arizona-section-heading { max-width: 800px; margin-bottom: 29px; }
+.arizona-page h2 { margin: 0 0 13px; color: #edf4f2; font-size: clamp(30px,4.3vw,48px); line-height: 1.08; letter-spacing: -.04em; }
+.arizona-section-heading > p:last-child { color: #afc0c3; font-size: 16px; line-height: 1.7; }
+.arizona-track-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.arizona-track-card, .arizona-species-card, .az-tracker-panel, .arizona-steps article, .arizona-survey-callout { background: #10232c; border: 1px solid #29434b; border-radius: 20px; }
+.arizona-track-card { padding: 26px; }
+.arizona-track-card.is-wild { background: linear-gradient(145deg,#173430,#10232c 75%); border-color: #456b58; }
+.arizona-track-label { color: #e8b783; font-size: 11px; letter-spacing: .13em; font-weight: 900; }
+.arizona-track-card > strong { display: block; margin: 15px 0 12px; color: #f2f7f5; font-size: 42px; }
+.arizona-track-card p { min-height: 72px; color: #b8c8c9; font-size: 14px; line-height: 1.7; }
+.arizona-track-card a, .arizona-species-link, .arizona-survey-callout a { color: #91d4ce; font-size: 13px; font-weight: 850; text-decoration: underline; text-underline-offset: 3px; }
+.arizona-rule-callout { display: grid; grid-template-columns: 140px 1fr; gap: 18px; margin-top: 17px; padding: 19px 21px; background: #302a20; border: 1px solid #635238; border-radius: 16px; color: #ded2ba; font-size: 14px; line-height: 1.65; }
+.arizona-rule-callout strong { color: #f0c38d; }
+.arizona-species-section { border-top: 1px solid #203840; }
+.arizona-species-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 13px; }
+.arizona-species-card { min-height: 165px; padding: 18px; }
+.arizona-species-number { color: #e8b783; font-size: 12px; font-weight: 900; letter-spacing: .12em; }
+.arizona-species-card h3 { margin: 20px 0 12px; color: #edf4f2; font-size: 18px; }
+.arizona-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.arizona-tags span { padding: 5px 8px; border: 1px solid #3a5258; border-radius: 999px; background: #172e35; color: #bfd1d0; font-size: 10px; font-weight: 800; }
+.arizona-tags span.is-native { background: #26392e; border-color: #506b4c; color: #d1e2a5; }
+.arizona-species-link { display: inline-block; margin-top: 12px; }
+.arizona-tool-links { margin-top: 22px; }
+.arizona-tracker-section { border-top: 1px solid #203840; }
+.az-tracker { max-width: 1030px; }
+.az-tracker-tabs { display: flex; gap: 8px; margin-bottom: 12px; }
+.az-tracker-tabs button { min-height: 48px; padding: 11px 16px; border: 1px solid #36515a; border-radius: 13px; background: #10232c; color: #d7e4e1; font: inherit; font-size: 13px; font-weight: 850; cursor: pointer; }
+.az-tracker-tabs button[aria-selected="true"] { background: #e0a36c; border-color: #e0a36c; color: #2a211a; }
+.az-tracker-tabs span { margin-left: 8px; opacity: .8; }
+.az-tracker-panel { padding: 25px; }
+.az-tracker-top { display: flex; justify-content: space-between; gap: 20px; align-items: center; }
+.az-tracker-top .az-kicker { margin-bottom: 7px; }
+.az-tracker-top h3 { margin: 0; color: #edf4f2; font-size: 24px; }
+.az-tracker-top p:last-child { margin: 6px 0 0; color: #aebfc1; }
+.az-tracker-top > strong { color: #e8b783; font-size: 40px; white-space: nowrap; }
+.az-tracker-top small { color: #aebfc1; font-size: 15px; }
+.az-progress { height: 9px; margin: 20px 0; overflow: hidden; background: #263e45; border-radius: 99px; }
+.az-progress span { display: block; height: 100%; background: linear-gradient(90deg,#e0a36c,#e8cf91); transition: width .2s ease; }
+.az-duplicate-note { margin: 0 0 15px; padding: 12px 14px; border: 1px solid #795e43; border-radius: 11px; background: #34291e; color: #f0cea5; font-size: 13px; line-height: 1.55; }
+.az-catch-list { display: grid; gap: 9px; }
+.az-catch { display: grid; grid-template-columns: minmax(200px,.65fr) minmax(0,1.35fr); gap: 14px; align-items: center; padding: 13px; background: #0b1d25; border: 1px solid #29434b; border-radius: 14px; }
+.az-catch.is-complete { border-color: #687e58; background: #132b27; }
+.az-catch-check { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
+.az-catch-check input { width: 18px; height: 18px; margin: 3px 0 0; accent-color: #e0a36c; flex: 0 0 auto; }
+.az-catch-check strong, .az-catch-check small { display: block; }
+.az-catch-check strong { color: #edf4f2; font-size: 14px; }
+.az-catch-check small { margin-top: 4px; color: #9fb4b8; font-size: 11px; }
+.az-catch-fields { display: grid; grid-template-columns: minmax(120px,.55fr) minmax(170px,1fr) minmax(95px,.45fr) auto; gap: 9px; align-items: end; }
+.az-catch-fields > label:not(.az-released) { display: grid; gap: 5px; color: #afc0c3; font-size: 10px; font-weight: 800; }
+.az-catch-fields input:not([type="checkbox"]), .az-catch-fields select { width: 100%; min-height: 38px; padding: 7px 9px; border: 1px solid #37525a; border-radius: 9px; background: #142a33; color: #edf4f2; font: inherit; font-size: 12px; }
+.az-released { display: flex; align-items: center; gap: 6px; min-height: 38px; color: #afc0c3; font-size: 11px; font-weight: 750; white-space: nowrap; }
+.az-released input { accent-color: #e0a36c; }
+.az-tracker-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 17px; }
+.az-clear { padding: 10px 4px; border: 0; background: transparent; color: #c7d6d5; font: inherit; font-weight: 750; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.az-tracker-actions [role="status"] { color: #e8b783; font-size: 12px; }
+.az-tracker-footnote { margin: 16px 0 0; color: #91a7aa; font-size: 12px; line-height: 1.6; }
+.arizona-howto { border-top: 1px solid #203840; }
+.arizona-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.arizona-steps article { padding: 22px; }
+.arizona-steps article > span { color: #e8b783; font-size: 12px; font-weight: 900; letter-spacing: .12em; }
+.arizona-steps h3 { margin: 17px 0 9px; color: #edf4f2; font-size: 18px; }
+.arizona-steps p, .arizona-survey-callout p { color: #b5c6c8; font-size: 13px; line-height: 1.65; }
+.arizona-survey-callout { margin-top: 22px; padding: 21px; }
+.arizona-survey-callout h3 { margin: 0 0 7px; color: #edf4f2; font-size: 18px; }
+.arizona-survey-callout p { margin: 0 0 13px; }
+.arizona-survey-callout a { margin-right: 18px; }
+.arizona-disclaimer { max-width: 900px; margin: 23px 0 0; color: #8fa5a9; font-size: 12px; line-height: 1.6; }
+.arizona-footer { display: flex; justify-content: space-between; gap: 20px; max-width: 1180px; margin: 0 auto; padding: 24px; border-top: 1px solid #203840; color: #dbe8e6; font-size: 13px; }
+@media (max-width: 980px) {
+  .arizona-species-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .az-catch-fields { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .arizona-steps { grid-template-columns: 1fr; }
+}
+@media (max-width: 660px) {
+  .arizona-breadcrumb { padding: 18px 20px 0; font-size: 12px; }
+  .arizona-hero { padding: 60px 20px 55px; }
+  .arizona-lead { font-size: 17px; }
+  .arizona-section { padding: 56px 20px; }
+  .arizona-track-grid, .arizona-species-grid { grid-template-columns: 1fr; }
+  .arizona-track-card p { min-height: 0; }
+  .arizona-rule-callout { grid-template-columns: 1fr; gap: 5px; }
+  .az-tracker-panel { padding: 17px; }
+  .az-catch { grid-template-columns: 1fr; }
+  .az-catch-fields { grid-template-columns: 1fr 1fr; padding-left: 28px; }
+  .arizona-footer { padding: 20px; }
+}
