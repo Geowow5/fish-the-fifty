@@ -41,9 +41,11 @@ create policy own_profile on public.member_profiles for select to authenticated 
 create policy own_state_progress on public.state_progress for all to authenticated using((select auth.uid())=user_id) with check((select auth.uid())=user_id);
 create policy own_catches on public.catch_logs for all to authenticated using((select auth.uid())=user_id) with check((select auth.uid())=user_id);
 create policy own_snapshots on public.tracker_snapshots for all to authenticated using((select auth.uid())=user_id) with check((select auth.uid())=user_id);
-create function public.create_member_profile() returns trigger language plpgsql security definer set search_path='' as $$
+create schema if not exists private;
+revoke all on schema private from public, anon, authenticated;
+create function private.create_member_profile() returns trigger language plpgsql security definer set search_path='' as $$
 begin insert into public.member_profiles(user_id) values(new.id); return new; end; $$;
-revoke all on function public.create_member_profile() from public;
-create trigger create_member_after_signup after insert on auth.users for each row execute function public.create_member_profile();
+revoke all on function private.create_member_profile() from public, anon, authenticated;
+create trigger create_member_after_signup after insert on auth.users for each row execute function private.create_member_profile();
 -- Membership levels can later be updated by a trusted payment webhook only.
 insert into public.member_profiles(user_id) select id from auth.users on conflict do nothing;

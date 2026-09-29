@@ -10,7 +10,7 @@ The /members page includes email/password sign-up, confirmation, password recove
    - `NEXT_PUBLIC_SUPABASE_URL`
    - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
    These are public client configuration; never use a secret or service-role key here.
-4. Redeploy after adding variables. Configure a production email sender in Supabase for reliable confirmation and reset emails; review its current email limits before launch.
+4. Configure a production email sender in Supabase for confirmation and reset emails. The default sender is for testing and may restrict recipients to organization members. Review current limits before launch. Set `NEXT_PUBLIC_MEMBERS_ENABLED=true` in Vercel production only after URL settings and email delivery are ready, then redeploy. Without this activation flag the page remains a preview even when connection variables are present.
 5. Verify sign-up, confirmation, sign-in, password recovery, sign-out, saved catches and device restore with test accounts. Test account A cannot read, insert, update or delete account B's rows in all four tables. Verify users cannot change membership_tier.
 
 ## Privacy and current scope
