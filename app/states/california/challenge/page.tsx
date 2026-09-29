@@ -3,7 +3,7 @@ import CaliforniaTracker from "./tracker";
 import { heritageTrout, passportAwards } from "./trout-data";
 
 export const metadata: Metadata = { title: "California Fishing Challenges | Fish the Fifty", description: "Track California's Heritage Trout Challenge and California Fishing Passport awards." };
-const links = { heritage: "https://wildlife.ca.gov/Fishing/Inland/HTC", application: "https://wildlife.ca.gov/Fishing/Inland/HTC/Application", passport: "https://wildlife.ca.gov/Fishing/Passport/Awards", passportBook: "https://wildlife.ca.gov/Fishing/Passport", waters: "https://wildlife.ca.gov/Fishing/Inland/Trout-Waters", regulations: "https://wildlife.ca.gov/Regulations", license: "https://www.ca.wildlifelicense.com/InternetSales/" };
+const links = { heritage: "https://wildlife.ca.gov/Fishing/Inland/HTC", application: "https://wildlife.ca.gov/Fishing/Inland/HTC/Application", passport: "https://wildlife.ca.gov/Fishing/Passport/Awards", passportBook: "https://wildlife.ca.gov/Fishing/Passport", waters: "https://wildlife.ca.gov/Fishing/Inland/Trout-Waters", regulations: "https://wildlife.ca.gov/Regulations", license: "https://wildlife.ca.gov/Licensing/Fishing" };
 
 export default function CaliforniaChallengePage() { return <main>
   <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/#progress">My Progress</a></nav></div></header><div className="breadcrumb"><a href="/states">States</a><span> / </span><a href="/states/california/challenge">California</a><span> / </span><span>Fishing Challenges</span></div>

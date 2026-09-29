@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 const proud = "https://gfp.sd.gov/proud-angler/";
 const records = "https://gfp.sd.gov/state-record-fish/";
 const fishing = "https://gfp.sd.gov/fish/";
-const handbook = "https://gfp.sd.gov/userdocs/docs/fishinghandbook.pdf";
+const handbook = "https://gfp.sd.gov/UserDocs/nav/FishingHandbook_2026.pdf";
 const examples = [
   ["Walleye", "8 lb", "27 in", "https://gfp.sd.gov/walleye/"],
   ["Smallmouth bass", "3 lb", "18 in", "https://gfp.sd.gov/smallmouth-bass/"],

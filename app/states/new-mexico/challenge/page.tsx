@@ -11,7 +11,7 @@ const links = {
   bass: "https://wildlife.dgf.nm.gov/fishing/fishing-challenges/nmbc/",
   master: "https://wildlife.dgf.nm.gov/fishing/fishing-challenges/new-mexico-master-angler/",
   records: "https://wildlife.dgf.nm.gov/fishing/fishing-challenges/record-fish-award/",
-  license: "https://wildlife.dgf.nm.gov/hunting/licenses-and-permits/licenses-permits/",
+  license: "https://wildlife.dgf.nm.gov/fishing/",
   reports: "https://wildlife.dgf.nm.gov/fishing/weekly-report/",
 };
 

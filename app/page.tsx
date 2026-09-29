@@ -44,6 +44,7 @@ const featured = [
   { state: "New Mexico", title: "New Mexico Fish Challenges", detail: "Complete the five-trout or four-bass official species challenge.", href: "/states/new-mexico/challenge" },
   { state: "New York", title: "New York Angler Achievement Awards", detail: "Compare adult and youth trophy lengths for 40 freshwater species and plan entries.", href: "/states/new-york/challenge" },
   { state: "Ohio", title: "Fish Ohio & Master Angler", detail: "Catch one qualifying trophy fish—or four different species in one year for Master Angler.", href: "/states/ohio/challenge" },
+  { state: "Oklahoma", title: "Oklahoma Master Angler", detail: "Build five approved Trophy Angler awards, with no more than two from one species.", href: "/states/oklahoma/challenge" },
   { state: "Oregon", title: "Oregon Native Trout Challenge", detail: "Explore five Oregon native trout and char in the Western Native Trout Challenge.", href: "/states/oregon/challenge" },
   { state: "Pennsylvania", title: "Pennsylvania Angler Awards", detail: "Earn recognition by weight, catch-and-release length, first fish, or a 50-inch musky.", href: "/states/pennsylvania/challenge" },
   { state: "Rhode Island", title: "Rhode Island Game Fish Awards", detail: "Meet freshwater or saltwater trophy minimums for DEM recognition, or pursue a state record.", href: "/states/rhode-island/challenge" },
@@ -58,7 +59,7 @@ const featured = [
   { state: "West Virginia", title: "West Virginia Master Angler Slams", detail: "Complete six species slams across your fishing years for the lifetime Master Angler award.", href: "/states/west-virginia/challenge" },
   { state: "Wisconsin", title: "Hooked on Wisconsin Anglers’ Club", detail: "Earn awards for trophy catches or collect ten species in the lifetime Mixed Bag challenge.", href: "/states/wisconsin/challenge" },
   { state: "Wyoming", title: "Wyoming Cutt-Slam & Master Angler", detail: "Catch four native cutthroats or pursue qualifying fish across 24 Master Angler species.", href: "/states/wyoming/challenge" }
-];
+].sort((a, b) => a.state.localeCompare(b.state));
 
 export default function Home() {
   return (
@@ -111,7 +112,7 @@ export default function Home() {
         <div className="card-grid">
           {featured.map((item, index) => (
             <article className="challenge-card" key={item.title}>
-              <div className="card-number">0{index + 1}</div>
+              <div className="card-number">{String(index + 1).padStart(2, "0")}</div>
               <span className="state-pill">{item.state}</span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
@@ -134,7 +135,7 @@ export default function Home() {
           <a className="btn primary" href="/states/missouri/challenge">Open the Missouri guide →</a>
         </div>
         <div className="progress-card">
-          <div className="progress-top"><span>Your Progress</span><strong>0 / 9</strong></div>
+          <div className="progress-top"><span>Slam checklist preview</span><strong>0 / 9</strong></div>
           <div className="progress-track"><span /></div>
           <div className="water-list">
             {["Barren Fork Creek","Blue Springs Creek","Crane Creek","Current River","Eleven Point River","Little Piney Creek","Mill Creek","North Fork","Spring Creek"].map((water) => (
@@ -148,7 +149,7 @@ export default function Home() {
         <div className="section-heading">
           <p className="eyebrow">EXPLORE THE COUNTRY</p>
           <h2>Pick a state. Find your next adventure.</h2>
-          <p>Every state will eventually have its own challenge guide, fishing waters, access information, and trip-planning tools.</p>
+          <p>All 50 state pages are live. Explore fishing awards and challenges, with detailed water guides available for Oklahoma and Missouri.</p>
         </div>
         <div className="states-grid">
           {states.map((state) => (
@@ -162,7 +163,7 @@ export default function Home() {
       <section id="progress" className="section final-cta">
         <p className="eyebrow">THE BIG IDEA</p>
         <h2>How many states have you fished?</h2>
-        <p>Fish the Fifty will give anglers one place to track states, species, waters, slams, and the fishing adventures still ahead.</p>
+        <p>Use the private checklists on supported state challenge pages to record your catches. Progress saves in the browser you use; a combined national dashboard is still in development.</p>
         <a className="btn primary" href="/states">Start Your Fifty</a>
       </section>
 

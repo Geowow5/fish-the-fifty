@@ -3,7 +3,7 @@ import OhioTracker from "./tracker";
 import { ohioSpecies } from "./qualifying-species";
 
 export const metadata: Metadata = { title: "Ohio Fish Ohio Challenge | Fish the Fifty", description: "Plan and track qualifying catches for Ohio's Fish Ohio and Master Angler recognition program." };
-const links = { apply: "https://apps.ohiodnr.gov/wildlife/FishOhio/User/login.aspx", rules: "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/wildlife/laws-regs-licenses/OhioFishingRegs_English", license: "https://oh-web.s3licensing.com/", maps: "https://ohiodnr.gov/discover-and-learn/safety-conservation/about-odnr/wildlife/fishing-forecasts-and-reports" };
+const links = { apply: "https://apps.ohiodnr.gov/wildlife/FishOhio/User/login.aspx", rules: "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/wildlife/laws-regs-licenses/OhioFishingRegs_English", license: "https://oh-web.s3licensing.com/", maps: "https://ohiodnr.gov/buy-and-apply/hunting-fishing-boating/fishing-resources/fishing-reports-forecasts" };
 
 export default function OhioChallengePage() { return <main>
   <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/#progress">My Progress</a></nav></div></header><div className="breadcrumb"><a href="/states">States</a><span> / </span><a href="/states/ohio/challenge">Ohio</a><span> / </span><span>Fish Ohio</span></div>
