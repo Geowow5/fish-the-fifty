@@ -72,7 +72,7 @@ export default function WinterTroutPage() {
             </div>
             <p className="guide-intro">These are Oklahoma’s seasonal winter trout waters listed by ODWC. The date range is the stocking season, not a promise of a stocking on a particular day. Open the ODWC update links before traveling.</p>
 
-            <article className="stocking-notice local-trout-feature">
+            <article className="stocking-notice local-trout-feature" id="turtle-pond">
               <div>
                 <p className="eyebrow">CLOSEST FEATURED LOCATION · PAYNE COUNTY</p>
                 <h3>Lake Carl Blackwell Turtle Pond</h3>
@@ -92,7 +92,7 @@ export default function WinterTroutPage() {
 
             <div className="access-grid">
               {seasonalLocations.filter((location) => location.id !== "turtle-pond").map((location, index) => (
-                <article className="access-card" key={location.id}>
+                <article className="access-card" key={location.id} id={location.id}>
                   <div className="access-card-top"><span className="state-pill">{location.season}</span><span className="access-number" aria-hidden="true">0{index + 1}</span></div>
                   <p className="eyebrow">{location.area}</p>
                   <h3>{location.name}</h3>
