@@ -1,0 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Maine Tackle-Busters Club | Fish the Fifty",
+  description: "Explore Maine DMR's Tackle-Busters saltwater recognition, qualifying sizes, submission guidance, and state saltwater game fish records.",
+};
+
+const links = {
+  club: "https://www.maine.gov/dmr/fisheries/recreational/maine-saltwater-recreational-fishing-opportunities-to-participate/maine-tackle-busters-club",
+  sizes: "https://www.maine.gov/dmr/fisheries/recreational/maine-saltwater-recreational-fishing-opportunities-to-participate/maine-tackle-busters-club/what-are-the-minimum-qualifying-sizes",
+  records: "https://www.maine.gov/dmr/fisheries/recreational/maine-saltwater-recreational-fishing-opportunities-to-participate/maine-state-saltwater-game-fish-records",
+  regulations: "https://www.maine.gov/dmr/fisheries/recreational/fishing-regulations-tips",
+  registry: "https://www.maine.gov/dmr/fisheries/recreational/licenses-registry",
+  inland: "https://www.maine.gov/ifw/fishing-boating/fishing/laws-rules/statewide-laws.html",
+};
+
+const examples = [
+  ["Striped bass", "25 lb. or 42 in."], ["Bluefish", "15 lb. or 36 in."],
+  ["American shad", "21 in."], ["Black sea bass", "2 lb."],
+  ["Haddock", "7 lb."], ["Pollock", "25 lb."],
+  ["Atlantic mackerel", "2 lb."], ["Winter flounder", "2 lb."],
+] as const;
+
+export default function MaineChallengePage() {
+  return <main>
+    <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/#progress">My Progress</a></nav></div></header>
+    <div className="breadcrumb"><a href="/states">States</a><span aria-hidden="true"> / </span><span>Maine</span></div>
+    <section className="page-hero challenge-hero"><div className="page-hero-inner"><p className="eyebrow">MAINE · DEPARTMENT OF MARINE RESOURCES</p><h1>Maine<br />Tackle-Busters.</h1><p className="lead">Land an outstanding saltwater fish that meets Maine DMR’s Tackle-Busters minimum size. Qualifying anglers can receive a club membership card and window decal without breaking a state record.</p><div className="state-facts"><span>Saltwater recognition</span><span>Rod and reel</span><span>Weight or select release lengths</span></div><div className="actions"><a className="btn primary" href="#sizes">See qualifying sizes ↓</a><a className="btn secondary" href={links.club} target="_blank" rel="noreferrer">Official Tackle-Busters Club ↗</a></div></div></section>
+    <section className="section challenge-layout"><div><p className="eyebrow">THE OFFICIAL CLUB PATH</p><h2>A big catch on Maine’s coast.</h2><ol className="challenge-steps"><li><strong>Choose a listed saltwater species.</strong><span>Compare your target with DMR’s current minimum weight or length requirements. This program is for rod-and-reel catches.</span></li><li><strong>Fish within current rules.</strong><span>Check Maine’s saltwater registry and the current species and area regulations before your trip. A recognition threshold does not replace a harvest limit.</span></li><li><strong>Document the fish.</strong><span>Keep a clear photograph and the application details. For a released striped bass or bluefish, show its total length beside a visible measuring tape; the DMR form also lists a release-length option for shad.</span></li><li><strong>Confirm current submission instructions.</strong><span>DMR’s club page links to a card marked 2025 with a January 1, 2026 deadline. Contact DMR recreational fisheries staff for the current form and deadline before submitting a 2026 catch.</span></li></ol><a className="btn primary" href={links.club} target="_blank" rel="noreferrer">Check DMR club instructions ↗</a></div><aside className="challenge-side"><p className="eyebrow">WHAT YOU EARN</p><h2>Join the club.</h2><p>DMR says anglers meeting the minimum specifications are enrolled in the Tackle-Busters Club and receive a membership card and window decal. The program recognizes large saltwater catches that fall short of state record status.</p><p>The linked application card is dated 2025. Confirm the current year’s details with DMR before relying on its submission date or sending an entry.</p><a className="btn secondary" href={links.club} target="_blank" rel="noreferrer">Visit DMR’s club page ↗</a></aside></section>
+    <section className="section qualification-section alabama-size-section" id="sizes"><div className="section-heading"><p className="eyebrow">SELECT TACKLE-BUSTERS MINIMUMS</p><h2>Find your saltwater target.</h2><p>These are examples from DMR’s published list. Length alternatives are for the species shown; consult DMR’s full list and live fishing regulations before planning a catch.</p></div><div className="qualification-table-wrap alabama-table-wrap"><table><caption className="visually-hidden">Selected Maine Tackle-Busters minimum fish sizes</caption><thead><tr><th scope="col">Species</th><th scope="col">Qualifying size</th></tr></thead><tbody>{examples.map(([species, size]) => <tr key={species}><th scope="row">{species}</th><td>{size}</td></tr>)}</tbody></table></div><div className="actions"><a className="btn primary" href={links.sizes} target="_blank" rel="noreferrer">All DMR minimum sizes ↗</a></div></section>
+    <section className="section challenge-layout"><div><p className="eyebrow">A SEPARATE RECORD PATH</p><h2>Go for a saltwater state record.</h2><p>DMR also maintains Maine State Saltwater Game Fish Records with current standings, vacancies, and a separate application. The record program includes rod-and-reel and fly-rod categories with detailed evidence, weighing, and tackle rules. Read its full rules before pursuing a record.</p><a className="btn primary" href={links.records} target="_blank" rel="noreferrer">Explore Maine saltwater records ↗</a></div><aside className="challenge-side"><p className="eyebrow">FRESHWATER IS DIFFERENT</p><h2>Planning an inland trip?</h2><p>Tackle-Busters is a marine program. Maine’s Department of Inland Fisheries and Wildlife publishes separate statewide and water-specific rules for brook trout, landlocked salmon, bass, and other inland species.</p><a className="btn secondary" href={links.inland} target="_blank" rel="noreferrer">Check inland fishing laws ↗</a></aside></section>
+    <section className="section final-cta challenge-final"><p className="eyebrow">READY TO PLAN?</p><h2>Check the fish. Check the rules.</h2><p>Compare DMR’s qualifying sizes, then verify current saltwater regulations, registration requirements, and club submission details before fishing.</p><div className="actions"><a className="btn primary" href={links.regulations} target="_blank" rel="noreferrer">Maine saltwater regulations ↗</a><a className="btn secondary" href={links.registry} target="_blank" rel="noreferrer">Saltwater registry ↗</a></div></section>
+    <footer><strong>FISH THE FIFTY</strong><span>Built for anglers who want to fish farther.</span></footer>
+  </main>;
+}
