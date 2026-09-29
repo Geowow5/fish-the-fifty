@@ -70,7 +70,7 @@ export default function Home() {
           <nav>
             <a href="/states">States</a>
             <a href="#challenges">Challenges</a>
-            <a href="#progress">My Progress</a>
+            <a href="/members">My Progress</a>
           </nav>
         </div>
       </header>
@@ -163,8 +163,8 @@ export default function Home() {
       <section id="progress" className="section final-cta">
         <p className="eyebrow">THE BIG IDEA</p>
         <h2>How many states have you fished?</h2>
-        <p>Use the private checklists on supported state challenge pages to record your catches. Progress saves in the browser you use; a combined national dashboard is still in development.</p>
-        <a className="btn primary" href="/states">Start Your Fifty</a>
+        <p>Explore the member dashboard for state milestones, catch logs, and private checklist backups. Existing state checklists continue to save in your browser.</p>
+        <a className="btn primary" href="/members">Members &amp; My Progress →</a>
       </section>
 
       <footer>

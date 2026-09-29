@@ -30,7 +30,7 @@ const trophyExamples = [
 
 export default function NorthDakotaChallengePage() {
   return <main>
-    <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/#progress">My Progress</a></nav></div></header>
+    <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/members">My Progress</a></nav></div></header>
     <div className="breadcrumb"><a href="/states">States</a><span aria-hidden="true"> / </span><span>North Dakota</span></div>
 
     <section className="page-hero challenge-hero"><div className="page-hero-inner">

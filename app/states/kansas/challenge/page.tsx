@@ -22,7 +22,7 @@ const targetGroups = [
 
 export default function KansasChallengePage() {
   return <main>
-    <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/#progress">My Progress</a></nav></div></header>
+    <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/members">My Progress</a></nav></div></header>
     <div className="breadcrumb"><a href="/states">States</a><span aria-hidden="true"> / </span><a href="/states/kansas/challenge">Kansas</a><span aria-hidden="true"> / </span><span>Master Angler</span></div>
 
     <section className="page-hero challenge-hero kansas-hero"><div className="page-hero-inner"><p className="eyebrow">KANSAS · OFFICIAL KDWP PROGRAM</p><h1>Catch a Kansas trophy.<br />Earn Master Angler.</h1><p className="lead">Catch a fish by legal means that meets or exceeds Kansas Department of Wildlife and Parks’ published minimum length for its species, document it, and apply for official recognition.</p><div className="state-facts"><span>One qualifying fish earns an award</span><span>Length-based standards</span><span>Kansas waters</span><span>Legal fishing methods</span></div><div className="actions"><a className="btn primary" href={links.awards}>Official sizes and application ↗</a><a className="btn secondary" href={links.regulations}>Kansas fishing regulations ↗</a></div></div></section>

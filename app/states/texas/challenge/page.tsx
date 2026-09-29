@@ -21,7 +21,7 @@ function MinimumTable({ title, fish }: { title: string; fish: readonly (readonly
 
 export default function TexasCompetitionPage() {
   return <main>
-    <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/#progress">My Progress</a></nav></div></header>
+    <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/members">My Progress</a></nav></div></header>
     <div className="breadcrumb"><a href="/states">States</a><span aria-hidden="true"> / </span><a href="/states">Texas</a><span aria-hidden="true"> / </span><span>Competition</span></div>
 
     <section className="page-hero challenge-hero texas-hero"><div className="page-hero-inner"><p className="eyebrow">TEXAS · OFFICIAL TPWD PROGRAM</p><h1>Earn your<br />Elite Angler status.</h1><p className="lead">Catch five qualifying trophy fish from five different species in one division—freshwater or saltwater—and work toward Texas Parks and Wildlife Department’s Elite Angler Award.</p><div className="state-facts"><span>5 different species</span><span>Freshwater or saltwater</span><span>No time limit to complete</span><span>Photos required</span></div><div className="actions"><a className="btn primary" href={links.awards}>Read Elite Angler rules ↗</a><a className="btn secondary" href={links.records}>TPWD Fish Records & Awards ↗</a></div></div></section>

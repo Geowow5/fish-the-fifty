@@ -1149,3 +1149,29 @@ footer { background: #050f14; border-top: 1px solid #20363e; }
   .az-catch-fields { grid-template-columns: 1fr 1fr; padding-left: 28px; }
   .arizona-footer { padding: 20px; }
 }
+
+/* Private member dashboard */
+.member-panel { background: #10232c; border: 1px solid #39515a; border-radius: 24px; padding: 28px; margin-bottom: 28px; }
+.member-panel h2, .member-heading h2 { font-size: clamp(28px,4vw,42px); margin-bottom: 16px; }
+.member-panel h3 { font-size: 25px; margin-bottom: 18px; }
+.member-panel p, .member-heading p { color: #afc0c3; line-height: 1.65; margin: 12px 0; }
+.member-form { display: grid; gap: 18px; max-width: 680px; }
+.member-form label { display: grid; gap: 8px; color: #edf4f2; font-size: 15px; }
+.member-form input, .member-form select, .member-form textarea { width: 100%; min-height: 46px; padding: 12px; background: #08171e; color: #f2f7f5; border: 1px solid #5b777e; border-radius: 10px; font: inherit; }
+.member-form textarea { min-height: 100px; resize: vertical; }
+.member-form input:focus, .member-form select:focus, .member-form textarea:focus { outline: 2px solid #91d4ce; outline-offset: 2px; }
+.member-form .btn { justify-self: start; }
+.member-actions { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 22px; }
+.member-actions button, .member-catches button { background: transparent; color: #91d4ce; border: 0; padding: 10px 0; text-decoration: underline; cursor: pointer; font: inherit; }
+.member-dashboard button:disabled, .member-panel button:disabled { opacity: .6; cursor: wait; }
+.member-heading { display: flex; justify-content: space-between; gap: 20px; align-items: center; flex-wrap: wrap; }
+.member-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin: 24px 0; }
+.member-stats div { background: #142f32; border-radius: 18px; padding: 22px; }
+.member-stats strong, .member-stats span { display: block; }
+.member-stats strong { font-size: 30px; margin-bottom: 8px; }
+.member-stats span { color: #afc0c3; }
+.member-state-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.member-state-list span { background: #203c34; padding: 10px 14px; border-radius: 12px; }
+.member-catches article { padding: 18px 0; border-bottom: 1px solid #39515a; overflow-wrap: anywhere; }
+.member-panel .card-grid { margin: 24px 0; }
+@media(max-width:600px) { .member-stats { grid-template-columns: 1fr; } .member-panel { padding: 22px; } }

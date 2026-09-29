@@ -17,7 +17,7 @@ const links = {
 
 export default function ColoradoChallengePage() {
   return <main>
-    <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/#progress">My Progress</a></nav></div></header>
+    <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/members">My Progress</a></nav></div></header>
     <div className="breadcrumb"><a href="/states">States</a><span aria-hidden="true"> / </span><a href="/states/colorado/challenge">Colorado</a><span aria-hidden="true"> / </span><span>Master Angler</span></div>
 
     <section className="page-hero challenge-hero colorado-hero"><div className="page-hero-inner"><p className="eyebrow">COLORADO · OFFICIAL CPW PROGRAM</p><h1>Find a trophy.<br />Make Master Angler.</h1><p className="lead">Catch a Colorado fish that meets or exceeds its published trophy-length standard, document it correctly, and submit the catch to Colorado Parks and Wildlife within 60 days.</p><div className="state-facts"><span>44 species categories</span><span>Length-based awards</span><span>60-day submission window</span><span>Certificate and annual patch</span></div><div className="actions"><a className="btn primary" href={links.program}>Official rules and lengths ↗</a><a className="btn secondary" href={links.apply}>Apply online ↗</a></div></div></section>

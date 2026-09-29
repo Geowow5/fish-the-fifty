@@ -21,7 +21,7 @@ export default function AlabamaChallengePage() {
           <nav aria-label="Main navigation">
             <a href="/states">States</a>
             <a href="/#challenges">Challenges</a>
-            <a href="/#progress">My Progress</a>
+            <a href="/members">My Progress</a>
           </nav>
         </div>
       </header>

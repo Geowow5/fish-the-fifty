@@ -26,7 +26,7 @@ const waters = [
 
 export default function UtahCutthroatSlamPage() {
   return <main className="utah-page">
-    <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/#progress">My Progress</a></nav></div></header>
+    <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/members">My Progress</a></nav></div></header>
     <div className="breadcrumb"><a href="/states">States</a><span aria-hidden="true"> / </span><a href="/states">Utah</a><span aria-hidden="true"> / </span><span>Competition</span></div>
 
     <section className="utah-hero"><div className="utah-hero-inner"><p className="utah-kicker">UTAH · OFFICIAL CONSERVATION CHALLENGE</p><h1>Four native trout.<br /><em>One Utah Slam.</em></h1><p className="utah-lead">Explore Utah’s waters and complete the Cutthroat Slam by catching and photographing one of each native subspecies within its historic range.</p><div className="utah-facts"><span>4 native subspecies</span><span>No expiration</span><span>All fishing methods</span><span>Conservation-supported</span></div><div className="utah-actions"><a className="utah-btn utah-btn-lime" href={links.register}>Registration instructions ↗</a><a className="utah-btn utah-btn-outline" href={links.map}>Open the native-range map ↗</a></div></div></section>

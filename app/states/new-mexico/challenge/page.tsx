@@ -24,7 +24,7 @@ const programs = [
 
 export default function NewMexicoChallengePage() {
   return <main>
-    <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/#progress">My Progress</a></nav></div></header>
+    <header className="nav-shell"><div className="nav-wrap"><a className="brand" href="/">FISH THE FIFTY</a><nav aria-label="Main navigation"><a href="/states">States</a><a href="/#challenges">Challenges</a><a href="/members">My Progress</a></nav></div></header>
     <div className="breadcrumb"><a href="/states">States</a><span aria-hidden="true"> / </span><a href="/states/new-mexico/challenge">New Mexico</a><span aria-hidden="true"> / </span><span>Challenges</span></div>
 
     <section className="page-hero challenge-hero nm-hero"><div className="page-hero-inner"><p className="eyebrow">NEW MEXICO · OFFICIAL NMDOW PROGRAMS</p><h1>Desert bass.<br />Native trout.</h1><p className="lead">Complete New Mexico’s official five-species Trout Challenge, four-species Bass Challenge—or pursue trophy recognition through Master Angler and Record Fish.</p><div className="state-facts"><span>2 multispecies challenges</span><span>No entry fee</span><span>No completion deadline</span><span>Residents and visitors eligible</span></div><div className="actions"><a className="btn primary" href={links.trout}>Official Trout Challenge ↗</a><a className="btn secondary" href={links.bass}>Official Bass Challenge ↗</a></div></div></section>

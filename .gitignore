@@ -2,3 +2,7 @@ node_modules/
 .next/
 out/
 .vercel/
+
+# Local service configuration
+.env*
+!.env.example
