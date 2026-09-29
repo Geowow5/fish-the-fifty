@@ -9,6 +9,7 @@ const states = [
 ];
 
 const featured = [
+  { state: "Alabama", title: "Alabama Master & Trophy Angler", detail: "Compare the official weight and length standards for 18 freshwater species and track potential recognition.", href: "/states/alabama/challenge" },
   { state: "Arizona", title: "Arizona Trout & Wild Trout Challenges", detail: "Catch six of eight trout species, or complete the five-species Wild Trout Challenge.", href: "/states/arizona/challenge" },
   { state: "Arkansas", title: "Arkansas Master Angler", detail: "Catch qualifying trophy fish from four of eight categories—across as many years as needed.", href: "/states/arkansas/challenge" },
   { state: "California", title: "California Heritage Trout", detail: "Catch six of California’s 11 native trout forms within their historic drainages.", href: "/states/california/challenge" },
@@ -117,7 +118,7 @@ export default function Home() {
         </div>
         <div className="states-grid">
           {states.map((state) => (
-            <a key={state} href={state === "Oklahoma" ? "/states/oklahoma" : state === "Missouri" ? "/states/missouri" : state === "Arizona" ? "/states/arizona/challenge" : state === "Kansas" ? "/states/kansas/challenge" : state === "Utah" ? "/states/utah/challenge" : state === "Texas" ? "/states/texas/challenge" : state === "New Mexico" ? "/states/new-mexico/challenge" : state === "Colorado" ? "/states/colorado/challenge" : state === "Pennsylvania" ? "/states/pennsylvania/challenge" : state === "Ohio" ? "/states/ohio/challenge" : state === "Illinois" ? "/states/illinois/challenge" : state === "Arkansas" ? "/states/arkansas/challenge" : state === "California" ? "/states/california/challenge" : state === "Florida" ? "/states/florida/challenge" : state === "Georgia" ? "/states/georgia/challenge" : "/states"}>
+            <a key={state} href={state === "Alabama" ? "/states/alabama/challenge" : state === "Oklahoma" ? "/states/oklahoma" : state === "Missouri" ? "/states/missouri" : state === "Arizona" ? "/states/arizona/challenge" : state === "Kansas" ? "/states/kansas/challenge" : state === "Utah" ? "/states/utah/challenge" : state === "Texas" ? "/states/texas/challenge" : state === "New Mexico" ? "/states/new-mexico/challenge" : state === "Colorado" ? "/states/colorado/challenge" : state === "Pennsylvania" ? "/states/pennsylvania/challenge" : state === "Ohio" ? "/states/ohio/challenge" : state === "Illinois" ? "/states/illinois/challenge" : state === "Arkansas" ? "/states/arkansas/challenge" : state === "California" ? "/states/california/challenge" : state === "Florida" ? "/states/florida/challenge" : state === "Georgia" ? "/states/georgia/challenge" : "/states"}>
               {state}
             </a>
           ))}
