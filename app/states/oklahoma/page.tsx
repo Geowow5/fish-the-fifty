@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { seasonalLocations, sources as troutSources } from "../../winter-trout/data";
 import { checkedDate, checkedLabel, guidePath, sources } from "./lower-illinois-river/guide-data";
 import { guidePath as mountainForkPath } from "./lower-mountain-fork/guide-data";
 import { guidePath as soonerLakePath } from "./sooner-lake/guide-data";
@@ -9,7 +10,7 @@ import { guidePath as carlBlackwellPath } from "./lake-carl-blackwell/guide-data
 
 export const metadata: Metadata = {
   title: "Oklahoma Fishing Guide | Fish the Fifty",
-  description: "Explore Oklahoma fishing waters, the Lower Illinois River access guide, and official angler recognition and licensing resources.",
+  description: "Explore Oklahoma fishing waters, winter trout stocking locations and seasons, public access guides, and official angler recognition resources.",
 };
 
 const waters = [
@@ -39,6 +40,29 @@ export default function OklahomaPage() {
           <h1>Fish Oklahoma.</h1>
           <p className="lead">From cold-water trout tailwaters to prairie reservoirs and rivers full of bass, catfish, and freshwater drum, Oklahoma offers more variety than many traveling anglers expect.</p>
           <div className="state-facts"><span>South Central</span><span>200+ lakes</span><span>Trout to trophy stripers</span><span>Year-round fishing</span></div>
+          <div className="actions"><a className="btn primary" href="#winter-trout">Winter trout fishing ↓</a><a className="btn secondary" href="/winter-trout">Stocking locations &amp; maps →</a></div>
+        </div>
+      </section>
+
+      <section className="section" id="winter-trout" aria-labelledby="winter-trout-heading">
+        <div className="section-heading">
+          <p className="eyebrow">NOVEMBER THROUGH EARLY SPRING</p>
+          <h2 id="winter-trout-heading">Winter trout fishing in Oklahoma.</h2>
+          <p>Cold weather brings seasonal rainbow trout stockings to Oklahoma streams and park ponds. Many areas start in November; Oklahoma City and Jenks ponds start in December. These are published stocking seasons, not guaranteed delivery dates—check recent reports before traveling.</p>
+        </div>
+        <div className="actions"><a className="btn primary" href="/winter-trout">Open the winter trout guide →</a><a className="btn secondary" href={troutSources.fishingReports.url} target="_blank" rel="noreferrer">Latest ODWC fishing reports ↗</a></div>
+        <div className="card-grid">
+          {seasonalLocations.map((location) => <article className="challenge-card" key={location.id}>
+            <span className="state-pill">{location.season}</span>
+            <h3>{location.name}</h3>
+            <p>{location.area}</p>
+            <a href={`/winter-trout#${location.id}`}>Access details &amp; map links →</a>
+          </article>)}
+        </div>
+        <div className="state-stocking-note"><strong>Start near Stillwater: Turtle Pond</strong><p>ODWC lists Lake Carl Blackwell’s Turtle Pond for November 1–March 31 stockings. It is about eight miles west of Stillwater; check the park’s recreation permit requirements.</p><a className="text-link" href="/winter-trout#turtle-pond">Plan a Turtle Pond visit →</a></div>
+        <div className="detail-grid">
+          <article className="detail-panel"><p className="eyebrow">FISHING TIPS &amp; RULES</p><h3>Keep your winter setup simple.</h3><p>Bring small nymphs, midges, and an olive Woolly Bugger for fly fishing. With spinning tackle, use light line and small lures or permitted bait. Fish slowly and adjust depth until you find feeding trout.</p><p>Use the current rules for your exact water. Some reaches require artificial flies or lures and barbless hooks; urban trout ponds allow bank fishing only. State licenses and local permits may apply.</p><a className="text-link" href="/winter-trout#rules">See trout rules &amp; fly tips →</a></article>
+          <aside className="detail-panel"><p className="eyebrow">CHECK BEFORE YOU GO</p><h3>Stocking alerts and year-round options.</h3><p>Lower Mountain Fork is a year-round trout option. ODWC currently reports suspended stocking on the Lower Illinois River and at Lake Watonga, with Lake Boecher also paused.</p><p>Stockings can change with temperature, flooding, fish availability, and equipment. Information verified September 29, 2026; check ODWC’s latest notice before each trip.</p><a className="text-link" href="/winter-trout#paused">View stocking alerts →</a><br /><a className="text-link" href={troutSources.troutInformation.url} target="_blank" rel="noreferrer">Official ODWC trout updates ↗</a></aside>
         </div>
       </section>
 
@@ -48,7 +72,7 @@ export default function OklahomaPage() {
           <h2>Featured public waters</h2>
           <p>Start with the completed water guides for public access, maps, current rules, and trip-planning resources. More Oklahoma waters are in development.</p>
           <div className="water-cards">
-            {waters.map((water) => <div className={`water-card${water.href ? " water-card-live" : ""}`} key={water.name}><strong>{water.name}</strong><span>{water.detail}</span>{water.href ? <a className="water-guide-link" href={water.href}>Open river guide →</a> : <small className="water-guide-pending">Detailed guide coming soon</small>}</div>)}
+            {waters.map((water) => <div className={`water-card${water.href ? " water-card-live" : ""}`} key={water.name}><strong>{water.name}</strong><span>{water.detail}</span>{water.href ? <a className="water-guide-link" href={water.href}>Open water guide →</a> : <small className="water-guide-pending">Detailed guide coming soon</small>}</div>)}
           </div>
           <div className="state-stocking-note"><strong>Lower Illinois stocking update</strong><p>ODWC lists a temporary trout stocking suspension. Checked <time dateTime={checkedDate}>{checkedLabel}</time>.</p><a className="text-link" href={sources.area.url}>Read the latest ODWC notice ↗</a></div>
         </article>
