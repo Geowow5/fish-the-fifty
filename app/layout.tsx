@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "Fish the state. Complete the challenge. Explore fishing adventures across all 50 states.",
   other: {
     "impact-site-verification": "2786409d-c42f-4c4a-b056-0f299b54ddb6",
+    "fo-verify": "b867a9db-3cd2-4429-90f1-ae27ffa3c9e3",
   },
 };
 
