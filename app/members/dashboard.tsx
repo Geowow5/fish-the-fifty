@@ -58,7 +58,13 @@ export default function MemberDashboard() {
       else if (mode === "new-password") {const {error}=await client.auth.updateUser({password});if(error)throw error;setMode("login");window.history.replaceState(null,"","/members");setNotice("Password updated.");}
       else if (mode === "signup") {const {error}=await client.auth.signUp({email,password,options:{emailRedirectTo:`${window.location.origin}/members`}});if(error)throw error;setNotice("Check your email to confirm your account before signing in.");}
       else {const {error}=await client.auth.signInWithPassword({email,password});if(error)throw error;setNotice("Signed in.");}
-    } catch {setNotice(mode === "login" ? "Sign-in failed. Check your email and password, or use password recovery." : "That request could not be completed. Check your details and try again.");}
+    } catch (error) {
+      const code = error && typeof error === "object" && "code" in error ? String(error.code) : "";
+      if (code === "over_email_send_rate_limit") setNotice("A confirmation or reset email was recently requested. Check your inbox and spam folder for the newest message. Wait 60 seconds before requesting another email.");
+      else if (code === "email_not_confirmed") setNotice("Confirm your email first. Open the newest confirmation email in your inbox or spam folder, then return here to sign in.");
+      else if (code === "weak_password") setNotice("Choose a password with at least 12 characters.");
+      else setNotice(mode === "login" ? "Sign-in failed. Check your email and password, or use password recovery." : "That request could not be completed. Check your details and try again.");
+    }
     finally {setBusy(false);}
   }
   async function saveState(e: FormEvent) {
