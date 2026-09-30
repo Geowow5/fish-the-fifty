@@ -1,10 +1,11 @@
 "use client";
 import { FormEvent, useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
+import CatchRecordForm, { CatchRecord, catchColumns, memberStates } from "./catch-record";
 import { memberClient as client, memberServiceConfigured } from "../../lib/member-client";
-const states = "Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming".split("|");
+const states = memberStates;
 type Progress = { state: string; status: "planned" | "fished" | "completed" };
-type Catch = { id: string; state: string; species: string; water: string; caught_on: string; length_inches: number | null; notes: string };
+type Catch = CatchRecord;
 type Snapshot = { tracker_key: string; data: unknown; updated_at: string };
 type Mode = "login" | "signup" | "reset" | "new-password";
 function labelFor(key: string) { return key.replace(/^fish-the-fifty-/, "").replace(/-v\d+$/, "").replace(/-/g, " "); }
@@ -17,6 +18,8 @@ export default function MemberDashboard() {
   const [loading,setLoading] = useState(false);
   const [progress,setProgress] = useState<Progress[]>([]);
   const [catches,setCatches] = useState<Catch[]>([]);
+  const [editingCatch,setEditingCatch] = useState<Catch | undefined>();
+  const [catchFilter,setCatchFilter] = useState("All states");
   const [snapshots,setSnapshots] = useState<Snapshot[]>([]);
   const [tier,setTier] = useState("free");
   const [selectedState,setSelectedState] = useState("Oklahoma");
@@ -39,7 +42,7 @@ export default function MemberDashboard() {
     Promise.all([
       client.from("member_profiles").select("membership_tier").eq("user_id",user.id).single(),
       client.from("state_progress").select("state,status").eq("user_id",user.id),
-      client.from("catch_logs").select("id,state,species,water,caught_on,length_inches,notes").eq("user_id",user.id).order("caught_on",{ascending:false}).limit(200),
+      client.from("catch_logs").select(catchColumns).eq("user_id",user.id).order("caught_on",{ascending:false}).limit(200),
       client.from("tracker_snapshots").select("tracker_key,data,updated_at").eq("user_id",user.id),
     ]).then(([profile,p,c,s]) => {
       if (!alive) return;
@@ -70,11 +73,6 @@ export default function MemberDashboard() {
   async function saveState(e: FormEvent) {
     e.preventDefault();if(!client || !user)return;setBusy(true);
     try {const {error}=await client.from("state_progress").upsert({user_id:user.id,state:selectedState,status:selectedStatus,updated_at:new Date().toISOString()},{onConflict:"user_id,state"});if(error)throw error;setProgress(p=>[...p.filter(x=>x.state!==selectedState),{state:selectedState,status:selectedStatus}]);setNotice("State progress saved to your account.");}catch {setNotice("State progress was not saved. Please try again.");}finally{setBusy(false);}
-  }
-  async function addCatch(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();if(!client || !user)return;const element=e.currentTarget;const f=new FormData(element);setBusy(true);
-    const entry={user_id:user.id,state:String(f.get("state")),species:String(f.get("species")).trim(),water:String(f.get("water")).trim(),caught_on:String(f.get("caught_on")),length_inches:f.get("length") ? Number(f.get("length")) : null,notes:String(f.get("notes")).trim()};
-    try{const {data,error}=await client.from("catch_logs").insert(entry).select("id,state,species,water,caught_on,length_inches,notes").single();if(error)throw error;setCatches(c=>[data,...c].sort((a,b)=>b.caught_on.localeCompare(a.caught_on)));element.reset();setNotice("Catch saved to your account.");}catch{setNotice("Catch was not saved. Please try again.");}finally{setBusy(false);}
   }
   async function deleteCatch(id:string) {
     if(!client || !user || !window.confirm("Delete this catch from your account?"))return;setBusy(true);
@@ -109,7 +107,8 @@ export default function MemberDashboard() {
     <p role="status" aria-live="polite">{loading?"Loading saved progress…":notice}</p>
     <div className="member-stats"><div><strong>{progress.filter(p=>p.status!=="planned").length}/50</strong><span>States fished</span></div><div><strong>{progress.filter(p=>p.status==="completed").length}</strong><span>Challenges marked complete</span></div><div><strong>{catches.length}</strong><span>Catches shown</span></div></div>
     <section className="member-panel"><h3>Mark your next milestone.</h3><form className="member-form" onSubmit={saveState}><label>State<select value={selectedState} onChange={e=>{setSelectedState(e.target.value);setSelectedStatus(progress.find(p=>p.state===e.target.value)?.status ?? "planned");}}>{states.map(s=><option key={s}>{s}</option>)}</select></label><label>Progress<select value={selectedStatus} onChange={e=>setSelectedStatus(e.target.value as Progress["status"])}><option value="planned">Trip planned</option><option value="fished">State fished</option><option value="completed">Challenge completed</option></select></label><button className="btn primary" disabled={busy || loading}>Save state progress</button></form><p>These are your personal milestones. Official fishing awards still require the issuing program’s approval.</p><div className="member-state-list">{[...progress].sort((a,b)=>a.state.localeCompare(b.state)).map(p=><span key={p.state}>{p.state} · {p.status}</span>)}</div></section>
-    <section className="member-panel"><h3>Record a catch.</h3><form className="member-form member-catch-form" onSubmit={addCatch}><label>State<select name="state">{states.map(s=><option key={s}>{s}</option>)}</select></label><label>Species<input name="species" required maxLength={100}/></label><label>Water<input name="water" required maxLength={150}/></label><label>Catch date<input name="caught_on" type="date" required/></label><label>Length in inches (optional)<input name="length" type="number" min="0" max="1000" step="0.01"/></label><label>Notes (optional)<textarea name="notes" maxLength={2000}/></label><button className="btn primary" disabled={busy || loading}>Save catch</button></form><div className="member-catches">{catches.length?catches.map(c=><article key={c.id}><h4>{c.species} · {c.state}</h4><p>{c.water} · {c.caught_on}{c.length_inches!==null?` · ${c.length_inches} inches`:""}</p>{c.notes && <p>{c.notes}</p>}<button type="button" disabled={busy} onClick={()=>deleteCatch(c.id)}>Delete catch</button></article>):<p>No catches saved yet.</p>}</div></section>
+    <CatchRecordForm key={editingCatch?.id ?? "new-catch"} userId={user.id} initial={editingCatch} onCancel={()=>setEditingCatch(undefined)} onSaved={record=>{setCatches(current=>[record,...current.filter(c=>c.id!==record.id)].sort((a,b)=>b.caught_on.localeCompare(a.caught_on)));setEditingCatch(undefined);setNotice("Catch saved to your account.");}} />
+    <section className="member-panel"><h3>Your saved catches.</h3><div className="member-form"><label>Filter catches by state<select value={catchFilter} onChange={e=>setCatchFilter(e.target.value)}><option>All states</option>{states.map(s=><option key={s}>{s}</option>)}</select></label></div><div className="member-catches">{catches.filter(c=>catchFilter==="All states"||c.state===catchFilter).map(c=><article key={c.id}><h4>{c.species} · {c.state}</h4><p>{c.details?.program ?? "Personal catch log"}<br/>{c.water} · {c.caught_on}{c.length_inches!==null?` · ${c.length_inches} inches`:""}{c.details?.weight_pounds?` · ${c.details.weight_pounds} lb`:""}</p><details><summary>View complete catch record</summary><dl className="member-record-details">{Object.entries(c.details??{}).filter(([key])=>key!=="program").map(([key,value])=><div key={key}><dt>{key.replace(/_/g," ")}</dt><dd>{(key==="photo_url"||key==="measurement_url")&&/^https?:\/\//.test(value)?<a href={value} target="_blank" rel="noreferrer">Open saved evidence</a>:value}</dd></div>)}</dl>{c.notes&&<p>{c.notes}</p>}</details><div className="member-actions"><button type="button" disabled={busy} onClick={()=>{setEditingCatch(c);document.getElementById("catch-form")?.scrollIntoView({behavior:"smooth"});}}>Edit catch</button><button type="button" disabled={busy} onClick={()=>deleteCatch(c.id)}>Delete catch</button></div></article>)}{!catches.length&&<p>No catches saved yet.</p>}{catches.length>0&&!catches.some(c=>catchFilter==="All states"||c.state===catchFilter)&&<p>No catches saved for this state.</p>}</div></section>
     <section className="member-panel"><h3>Bring your state checklists with you.</h3><p>Save your progress on a state page first, then back it up here. On another device, sign in and restore a checklist before opening that state page. Backups are manual and do not change your state milestones.</p><button className="btn primary" disabled={busy || loading} onClick={backup}>Back up browser checklists</button><div className="member-catches">{snapshots.map(s=><article key={s.tracker_key}><h4>{labelFor(s.tracker_key)}</h4><p>Backed up {new Date(s.updated_at).toLocaleDateString()}</p><button type="button" disabled={busy} onClick={()=>restore(s)}>Restore to this browser</button></article>)}</div></section>
   </div>;
 }

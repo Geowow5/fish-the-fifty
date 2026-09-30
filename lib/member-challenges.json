@@ -1,0 +1,2354 @@
+{
+  "Alabama": {
+    "slug": "alabama",
+    "programs": [
+      {
+        "name": "Master Angler",
+        "species": [
+          "Alabama Bass",
+          "Black Crappie",
+          "Blue Catfish",
+          "Bluegill Sunfish",
+          "Channel Catfish",
+          "Flathead Catfish",
+          "Hybrid Striped Bass",
+          "Largemouth Bass",
+          "Redear Sunfish",
+          "Redeye Bass",
+          "Sauger",
+          "Smallmouth Bass",
+          "Spotted Bass",
+          "Striped Bass",
+          "Walleye",
+          "White Bass",
+          "White Crappie",
+          "Yellow Perch"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Trophy Angler",
+        "species": [
+          "Alabama Bass",
+          "Black Crappie",
+          "Blue Catfish",
+          "Bluegill Sunfish",
+          "Channel Catfish",
+          "Flathead Catfish",
+          "Hybrid Striped Bass",
+          "Largemouth Bass",
+          "Redear Sunfish",
+          "Redeye Bass",
+          "Sauger",
+          "Smallmouth Bass",
+          "Spotted Bass",
+          "Striped Bass",
+          "Walleye",
+          "White Bass",
+          "White Crappie",
+          "Yellow Perch"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Alaska": {
+    "slug": "alaska",
+    "programs": [
+      {
+        "name": "Stream Slam",
+        "species": [
+          "Rainbow trout",
+          "Arctic grayling",
+          "Dolly Varden"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Stillwater Slam",
+        "species": [
+          "Lake trout",
+          "Burbot",
+          "Northern pike"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Saltwater Slam",
+        "species": [
+          "Halibut",
+          "Lingcod",
+          "Rockfish"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Five Salmon Slam",
+        "species": [
+          "Chinook salmon",
+          "Chum salmon",
+          "Coho salmon",
+          "Pink salmon",
+          "Sockeye salmon"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Master the Waters",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Arizona": {
+    "slug": "arizona",
+    "programs": [
+      {
+        "name": "AZGFD Trout Challenge",
+        "species": [
+          "Apache Trout",
+          "Arctic Grayling",
+          "Brook Trout",
+          "Brown Trout",
+          "Cutthroat Trout",
+          "Gila Trout",
+          "Rainbow Trout",
+          "Tiger Trout"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Wild Trout Challenge",
+        "species": [
+          "Apache Trout",
+          "Brook Trout",
+          "Brown Trout",
+          "Gila Trout",
+          "Rainbow Trout"
+        ],
+        "strict": true
+      }
+    ],
+    "waters": []
+  },
+  "Arkansas": {
+    "slug": "arkansas",
+    "programs": [
+      {
+        "name": "Master Angler",
+        "species": [
+          "Black Crappie",
+          "Blue Catfish",
+          "Bluegill",
+          "Bowfin",
+          "Brook Trout",
+          "Brown Trout",
+          "Buffalo",
+          "Bullhead Catfish",
+          "Channel Catfish",
+          "Cutthroat Trout",
+          "Flathead Catfish",
+          "Freshwater Drum",
+          "Gar",
+          "Green Sunfish",
+          "Hybrid Striped Bass",
+          "Largemouth Bass",
+          "Longear Sunfish",
+          "Paddlefish",
+          "Pickerel",
+          "Rainbow Trout",
+          "Redear",
+          "Rock Bass",
+          "Sauger",
+          "Saugeye",
+          "Smallmouth Bass",
+          "Spotted Bass",
+          "Striped Bass",
+          "Walleye",
+          "Warmouth",
+          "White Bass",
+          "White Crappie"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Arkansas Grand Slam",
+        "species": [
+          "Catfish",
+          "Bass",
+          "Crappie",
+          "Bream",
+          "Trout"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Legacy Lunker",
+        "species": [
+          "Largemouth Bass"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "California": {
+    "slug": "california",
+    "programs": [
+      {
+        "name": "Heritage Trout Challenge",
+        "species": [
+          "Coastal Cutthroat Trout",
+          "Lahontan Cutthroat Trout",
+          "Paiute Cutthroat Trout",
+          "Coastal Rainbow Trout",
+          "Eagle Lake Rainbow Trout",
+          "McCloud River Redband Trout",
+          "Goose Lake Redband Trout",
+          "Warner Lakes Redband Trout",
+          "Kern River Rainbow Trout",
+          "California Golden Trout",
+          "Little Kern Golden Trout"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Fishing Passport — Warmwater",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "Fishing Passport — Coldwater",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "Fishing Passport — Ocean",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "Fishing Passport — Shellfish",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Colorado": {
+    "slug": "colorado",
+    "programs": [
+      {
+        "name": "Master Angler",
+        "species": [
+          "Arctic Char",
+          "Black Bullhead",
+          "Black Crappie",
+          "Blue Catfish",
+          "Bluegill",
+          "Brook Trout",
+          "Brown Bullhead",
+          "Brown Trout",
+          "Channel Catfish",
+          "Common Carp",
+          "Cutbow",
+          "Flathead Catfish",
+          "Freshwater Drum",
+          "Golden Trout",
+          "Grass Carp",
+          "Grayling",
+          "Green Sunfish",
+          "Hybrid Striped Bass (Wiper)",
+          "Hybrid Sunfish",
+          "Kokanee (angling only)",
+          "Lake Trout",
+          "Largemouth Bass",
+          "Longnose Sucker",
+          "Mountain Whitefish",
+          "Native Cutthroat",
+          "Northern Pike",
+          "Rainbow Trout",
+          "Redear Sunfish",
+          "Sacramento Perch",
+          "Sauger",
+          "Saugeye",
+          "Smallmouth Bass",
+          "Snake River Cutthroat",
+          "Splake",
+          "Spotted Bass",
+          "Striped Bass",
+          "Tench",
+          "Tiger Muskie",
+          "Tiger Trout",
+          "Walleye",
+          "White Bass",
+          "White Crappie",
+          "White Sucker",
+          "Yellow Perch"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Connecticut": {
+    "slug": "connecticut",
+    "programs": [
+      {
+        "name": "Freshwater Trophy Fish Award",
+        "species": [
+          "American Eel",
+          "American Shad",
+          "Atlantic Salmon",
+          "Bluegill",
+          "Bowfin",
+          "Brook Trout",
+          "Brown Bullhead",
+          "Brown Trout",
+          "Calico Bass (Black Crappie)",
+          "Chain Pickerel",
+          "Channel Catfish",
+          "Common Carp",
+          "Fallfish",
+          "Kokanee",
+          "Lake Trout",
+          "Largemouth Bass",
+          "Northern Pike",
+          "Pumpkinseed",
+          "Rainbow Trout (including Golden Rainbow Trout)",
+          "Redbreast Sunfish",
+          "Rock Bass",
+          "Smallmouth Bass",
+          "Sunfish Hybrids",
+          "Tench",
+          "Tiger Musky",
+          "Tiger Trout",
+          "Walleye",
+          "White Catfish",
+          "White Perch",
+          "White Sucker",
+          "Yellow Bullhead",
+          "Yellow Perch"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Youth Fishing Challenge",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Delaware": {
+    "slug": "delaware",
+    "programs": [
+      {
+        "name": "Freshwater Sport Fishing Tournament / Elite Angler",
+        "species": [
+          "Hybrid striped bass",
+          "Largemouth bass",
+          "Smallmouth bass¹",
+          "Striped bass",
+          "Bluegill",
+          "Carp",
+          "Channel catfish",
+          "Blue catfish (invasive)²",
+          "Flathead catfish (invasive)²",
+          "Crappie",
+          "Muskie",
+          "White perch",
+          "Yellow perch",
+          "Chain pickerel",
+          "American shad",
+          "Snakehead (invasive)²",
+          "Redear sunfish",
+          "Trout"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Saltwater Sport Fishing Tournament / Elite Angler",
+        "species": [
+          "False albacore",
+          "True albacore",
+          "Striped bass",
+          "Black sea bass",
+          "Bluefish",
+          "Cobia",
+          "Atlantic croaker",
+          "Dolphinfish",
+          "Black drum",
+          "Red drum",
+          "Flounder",
+          "Kingfish",
+          "Atlantic mackerel",
+          "King mackerel",
+          "Spanish mackerel",
+          "Blue marlin³",
+          "White marlin³",
+          "Scup (porgy)",
+          "Shark (excluding mako)³",
+          "Sheepshead",
+          "Swordfish³",
+          "Tautog",
+          "Blueline tilefish",
+          "Golden tilefish",
+          "Gray triggerfish",
+          "Bluefin tuna³",
+          "Yellowfin or bigeye tuna³",
+          "Wahoo",
+          "Weakfish (sea trout)"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Florida": {
+    "slug": "florida",
+    "programs": [
+      {
+        "name": "Big Catch",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "TrophyCatch",
+        "species": [
+          "Largemouth bass"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Saltwater Life List",
+        "species": [
+          "African pompano",
+          "Almaco jack",
+          "Atlantic croaker",
+          "Atlantic sharpnose shark",
+          "Atlantic spadefish",
+          "Banded rudderfish",
+          "Black drum",
+          "Black grouper",
+          "Black sea bass",
+          "Blackfin snapper",
+          "Blackfin tuna",
+          "Blacknose shark",
+          "Blacktip shark",
+          "Blue marlin",
+          "Blue runner",
+          "Bluefish",
+          "Bonefish",
+          "Bonnethead shark",
+          "Bull shark",
+          "Cero",
+          "Common thresher shark",
+          "Cobia",
+          "Crevalle jack",
+          "Cubera snapper",
+          "Dog snapper",
+          "Dolphinfish",
+          "Florida pompano",
+          "Gafftopsail catfish",
+          "Gag",
+          "Gray (mangrove) snapper",
+          "Gray triggerfish",
+          "Great barracuda",
+          "Greater amberjack",
+          "Gulf flounder",
+          "Gulf kingfish (whiting)",
+          "Hardhead catfish",
+          "Hogfish",
+          "Horse-eye jack",
+          "King mackerel",
+          "Lane snapper",
+          "Ladyfish",
+          "Lesser amberjack",
+          "Little tunny",
+          "Mutton snapper",
+          "Northern kingfish",
+          "Palometa",
+          "Permit",
+          "Queen snapper",
+          "Red drum",
+          "Red grouper",
+          "Red porgy",
+          "Red snapper",
+          "Sailfish",
+          "Scamp",
+          "Schoolmaster",
+          "Sheepshead",
+          "Silk snapper",
+          "Snook",
+          "Southern flounder",
+          "Southern kingfish (whiting)",
+          "Spanish mackerel",
+          "Spinner shark",
+          "Spotted seatrout",
+          "Swordfish",
+          "Tarpon",
+          "Tripletail",
+          "Vermilion snapper",
+          "Wahoo",
+          "Warsaw grouper",
+          "Weakfish",
+          "White grunt",
+          "White marlin",
+          "Yellow jack",
+          "Yellowfin tuna",
+          "Yellowtail snapper"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Reel Big Fish",
+        "species": [
+          "African pompano",
+          "Almaco jack",
+          "Black drum",
+          "Black sea bass",
+          "Bluefish",
+          "Catfish",
+          "Cobia",
+          "Crevalle jack",
+          "Florida pompano",
+          "Flounder",
+          "Gag",
+          "Gray (mangrove) snapper",
+          "Gray triggerfish",
+          "Greater amberjack",
+          "Hogfish",
+          "King mackerel",
+          "Ladyfish",
+          "Mutton snapper",
+          "Permit",
+          "Red drum",
+          "Red grouper",
+          "Red porgy",
+          "Scamp",
+          "Sheepshead",
+          "Snook",
+          "Spanish mackerel",
+          "Spotted seatrout",
+          "Tripletail",
+          "Vermilion snapper",
+          "Yellowtail snapper"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Saltwater Grand Slam",
+        "species": [
+          "African pompano",
+          "Almaco jack",
+          "Atlantic croaker",
+          "Atlantic sharpnose shark",
+          "Atlantic spadefish",
+          "Banded rudderfish",
+          "Black drum",
+          "Black grouper",
+          "Black sea bass",
+          "Blackfin snapper",
+          "Blackfin tuna",
+          "Blacknose shark",
+          "Blacktip shark",
+          "Blue marlin",
+          "Blue runner",
+          "Bluefish",
+          "Bonefish",
+          "Bonnethead shark",
+          "Bull shark",
+          "Cero",
+          "Common thresher shark",
+          "Cobia",
+          "Crevalle jack",
+          "Cubera snapper",
+          "Dog snapper",
+          "Dolphinfish",
+          "Florida pompano",
+          "Gafftopsail catfish",
+          "Gag",
+          "Gray (mangrove) snapper",
+          "Gray triggerfish",
+          "Great barracuda",
+          "Greater amberjack",
+          "Gulf flounder",
+          "Gulf kingfish (whiting)",
+          "Hardhead catfish",
+          "Hogfish",
+          "Horse-eye jack",
+          "King mackerel",
+          "Lane snapper",
+          "Ladyfish",
+          "Lesser amberjack",
+          "Little tunny",
+          "Mutton snapper",
+          "Northern kingfish",
+          "Palometa",
+          "Permit",
+          "Queen snapper",
+          "Red drum",
+          "Red grouper",
+          "Red porgy",
+          "Red snapper",
+          "Sailfish",
+          "Scamp",
+          "Schoolmaster",
+          "Sheepshead",
+          "Silk snapper",
+          "Snook",
+          "Southern flounder",
+          "Southern kingfish (whiting)",
+          "Spanish mackerel",
+          "Spinner shark",
+          "Spotted seatrout",
+          "Swordfish",
+          "Tarpon",
+          "Tripletail",
+          "Vermilion snapper",
+          "Wahoo",
+          "Warsaw grouper",
+          "Weakfish",
+          "White grunt",
+          "White marlin",
+          "Yellow jack",
+          "Yellowfin tuna",
+          "Yellowtail snapper"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Georgia": {
+    "slug": "georgia",
+    "programs": [
+      {
+        "name": "Georgia Bass Slam",
+        "species": [
+          "Altamaha Bass",
+          "Bartram’s Bass",
+          "Chattahoochee Bass",
+          "Largemouth Bass",
+          "Redeye Bass",
+          "Shoal Bass",
+          "Smallmouth Bass",
+          "Spotted Bass",
+          "Suwannee Bass",
+          "Tallapoosa Bass"
+        ],
+        "strict": true
+      }
+    ],
+    "waters": []
+  },
+  "Hawaii": {
+    "slug": "hawaii",
+    "programs": [
+      {
+        "name": "Island Waters — Marine (self-guided)",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "Island Waters — Freshwater (self-guided)",
+        "species": [
+          "Largemouth bass",
+          "Smallmouth bass",
+          "Tucunare (peacock bass)",
+          "Channel catfish",
+          "Rainbow trout"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Hawaii Fishing News Record (independent)",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Idaho": {
+    "slug": "idaho",
+    "programs": [
+      {
+        "name": "Certified-weight Record",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "Catch-and-release Record",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "Western Native Trout Challenge",
+        "species": [
+          "Redband trout",
+          "Westslope cutthroat trout",
+          "Yellowstone cutthroat trout",
+          "Bonneville cutthroat trout",
+          "Bull trout"
+        ],
+        "strict": true
+      }
+    ],
+    "waters": []
+  },
+  "Illinois": {
+    "slug": "illinois",
+    "programs": [
+      {
+        "name": "Master Angler — Hook and Line",
+        "species": [
+          "Black Crappie",
+          "Blue Catfish",
+          "Bluegill",
+          "Bowfin",
+          "Brook Trout",
+          "Brown Trout",
+          "Bullhead",
+          "Channel Catfish",
+          "Common Carp",
+          "Flathead Catfish",
+          "Freshwater Drum",
+          "Grass Carp",
+          "Hybrid Striped Bass",
+          "Lake Trout",
+          "Largemouth Bass",
+          "Longnose Gar",
+          "Muskellunge",
+          "Northern Pike",
+          "Pumpkinseed",
+          "Rainbow Trout",
+          "Redear Sunfish",
+          "Rock Bass",
+          "Sauger",
+          "Saugeye",
+          "Shortnose Gar",
+          "Smallmouth Bass",
+          "Spotted Bass",
+          "Steelhead Trout",
+          "Sunfish",
+          "Walleye",
+          "Warmouth",
+          "White Bass",
+          "White Crappie",
+          "Yellow Bass",
+          "Yellow Perch"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Master Angler — Bow Fishing",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Indiana": {
+    "slug": "indiana",
+    "programs": [
+      {
+        "name": "Fish of the Year",
+        "species": [
+          "Black crappie",
+          "Blue catfish",
+          "Bluegill",
+          "Bowfin",
+          "Brook trout",
+          "Brown trout",
+          "Channel catfish",
+          "Chinook salmon",
+          "Coho salmon",
+          "Common carp",
+          "Largemouth bass",
+          "Shovelnose sturgeon",
+          "Smallmouth bass",
+          "Steelhead",
+          "Walleye",
+          "Yellow perch"
+        ],
+        "strict": false
+      },
+      {
+        "name": "State Record",
+        "species": [
+          "Black crappie",
+          "Blue catfish",
+          "Bluegill",
+          "Bowfin",
+          "Brook trout",
+          "Brown trout",
+          "Channel catfish",
+          "Chinook salmon",
+          "Coho salmon",
+          "Common carp",
+          "Largemouth bass",
+          "Shovelnose sturgeon",
+          "Smallmouth bass",
+          "Steelhead",
+          "Walleye",
+          "Yellow perch"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Iowa": {
+    "slug": "iowa",
+    "programs": [
+      {
+        "name": "Master Angler",
+        "species": [
+          "Bigmouth buffalo",
+          "Black buffalo",
+          "Black crappie",
+          "Blue catfish",
+          "Blue sucker",
+          "Bluegill",
+          "Bowfin (dogfish)",
+          "Brook trout",
+          "Brown trout",
+          "Bullhead (species)",
+          "Carpsucker species",
+          "Channel catfish",
+          "Common carp",
+          "Flathead catfish",
+          "Freshwater drum",
+          "Goldeye / mooneye",
+          "Green sunfish",
+          "Hybrid crappie",
+          "Hybrid striped bass",
+          "Largemouth bass",
+          "Longnose gar",
+          "Muskellunge",
+          "Northern hog sucker",
+          "Northern pike",
+          "Paddlefish",
+          "Pumpkinseed",
+          "Rainbow trout",
+          "Redear sunfish",
+          "Redhorse species",
+          "Rock bass",
+          "Sauger",
+          "Saugeye",
+          "Shortnose gar",
+          "Shovelnose sturgeon",
+          "Smallmouth bass",
+          "Smallmouth buffalo",
+          "Spotted bass",
+          "Walleye",
+          "Warmouth",
+          "White bass",
+          "White crappie",
+          "White or spotted sucker",
+          "Yellow bass",
+          "Yellow perch"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Species Specialist",
+        "species": [
+          "Bigmouth buffalo",
+          "Black buffalo",
+          "Black crappie",
+          "Blue catfish",
+          "Blue sucker",
+          "Bluegill",
+          "Bowfin (dogfish)",
+          "Brook trout",
+          "Brown trout",
+          "Bullhead (species)",
+          "Carpsucker species",
+          "Channel catfish",
+          "Common carp",
+          "Flathead catfish",
+          "Freshwater drum",
+          "Goldeye / mooneye",
+          "Green sunfish",
+          "Hybrid crappie",
+          "Hybrid striped bass",
+          "Largemouth bass",
+          "Longnose gar",
+          "Muskellunge",
+          "Northern hog sucker",
+          "Northern pike",
+          "Paddlefish",
+          "Pumpkinseed",
+          "Rainbow trout",
+          "Redear sunfish",
+          "Redhorse species",
+          "Rock bass",
+          "Sauger",
+          "Saugeye",
+          "Shortnose gar",
+          "Shovelnose sturgeon",
+          "Smallmouth bass",
+          "Smallmouth buffalo",
+          "Spotted bass",
+          "Walleye",
+          "Warmouth",
+          "White bass",
+          "White crappie",
+          "White or spotted sucker",
+          "Yellow bass",
+          "Yellow perch"
+        ],
+        "strict": false
+      },
+      {
+        "name": "First Fish",
+        "species": [
+          "Bigmouth buffalo",
+          "Black buffalo",
+          "Black crappie",
+          "Blue catfish",
+          "Blue sucker",
+          "Bluegill",
+          "Bowfin (dogfish)",
+          "Brook trout",
+          "Brown trout",
+          "Bullhead (species)",
+          "Carpsucker species",
+          "Channel catfish",
+          "Common carp",
+          "Flathead catfish",
+          "Freshwater drum",
+          "Goldeye / mooneye",
+          "Green sunfish",
+          "Hybrid crappie",
+          "Hybrid striped bass",
+          "Largemouth bass",
+          "Longnose gar",
+          "Muskellunge",
+          "Northern hog sucker",
+          "Northern pike",
+          "Paddlefish",
+          "Pumpkinseed",
+          "Rainbow trout",
+          "Redear sunfish",
+          "Redhorse species",
+          "Rock bass",
+          "Sauger",
+          "Saugeye",
+          "Shortnose gar",
+          "Shovelnose sturgeon",
+          "Smallmouth bass",
+          "Smallmouth buffalo",
+          "Spotted bass",
+          "Walleye",
+          "Warmouth",
+          "White bass",
+          "White crappie",
+          "White or spotted sucker",
+          "Yellow bass",
+          "Yellow perch"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Kansas": {
+    "slug": "kansas",
+    "programs": [
+      {
+        "name": "Master Angler",
+        "species": [
+          "Black crappie",
+          "Blue catfish",
+          "Bluegill",
+          "Channel catfish",
+          "Common carp",
+          "Flathead catfish",
+          "Freshwater drum",
+          "Largemouth bass",
+          "Rainbow trout",
+          "Redear sunfish",
+          "Saugeye",
+          "Smallmouth bass",
+          "Walleye",
+          "White bass",
+          "White crappie",
+          "Wiper"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Kentucky": {
+    "slug": "kentucky",
+    "programs": [
+      {
+        "name": "Trophy Fish / Master Angler",
+        "species": [
+          "Blue Catfish",
+          "Bluegill",
+          "Bowfin",
+          "Brook Trout",
+          "Brown Trout",
+          "Bullhead Catfish",
+          "Chain Pickerel",
+          "Channel Catfish",
+          "Common Carp",
+          "Crappie",
+          "Flathead Catfish",
+          "Freshwater Drum",
+          "Gar",
+          "Hybrid Striped Bass",
+          "Kentucky Bass",
+          "Largemouth Bass",
+          "Muskellunge",
+          "Rainbow Trout",
+          "Redbreast Sunfish",
+          "Redear Sunfish",
+          "Rock Bass",
+          "Sauger",
+          "Saugeye",
+          "Smallmouth Bass",
+          "Striped Bass",
+          "Walleye",
+          "White Bass",
+          "Yellow Perch"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Louisiana": {
+    "slug": "louisiana",
+    "programs": [
+      {
+        "name": "LOWA Top Ten — Rod and Reel",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "LOWA Top Ten — Fly Rod",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Maine": {
+    "slug": "maine",
+    "programs": [
+      {
+        "name": "Tackle-Busters Club",
+        "species": [
+          "American shad",
+          "Atlantic mackerel",
+          "Black sea bass",
+          "Bluefish",
+          "Haddock",
+          "Pollock",
+          "Striped bass",
+          "Winter flounder"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Saltwater State Record",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Maryland": {
+    "slug": "maryland",
+    "programs": [
+      {
+        "name": "FishMaryland Species Award / Angler / Expert / Master",
+        "species": [
+          "Blue catfish",
+          "Brook trout",
+          "Brown trout",
+          "Crappie",
+          "Largemouth bass",
+          "Rainbow trout",
+          "Red drum",
+          "Striped bass",
+          "White perch",
+          "Yellow perch"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Massachusetts": {
+    "slug": "massachusetts",
+    "programs": [
+      {
+        "name": "Freshwater Sportfishing Award",
+        "species": [
+          "Brook trout",
+          "Brown trout",
+          "Crappie",
+          "Largemouth bass",
+          "Rainbow trout",
+          "Smallmouth bass",
+          "Sunfish",
+          "Walleye"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Saltwater Fishing Derby",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Michigan": {
+    "slug": "michigan",
+    "programs": [
+      {
+        "name": "Master Angler",
+        "species": [
+          "Bluegill",
+          "Brook trout",
+          "Brown trout",
+          "Channel catfish",
+          "Freshwater drum",
+          "Largemouth bass",
+          "Rainbow trout (steelhead)",
+          "Smallmouth bass",
+          "Walleye",
+          "White bass"
+        ],
+        "strict": false
+      },
+      {
+        "name": "State Record",
+        "species": [
+          "Bluegill",
+          "Brook trout",
+          "Brown trout",
+          "Channel catfish",
+          "Freshwater drum",
+          "Largemouth bass",
+          "Rainbow trout (steelhead)",
+          "Smallmouth bass",
+          "Walleye",
+          "White bass"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Minnesota": {
+    "slug": "minnesota",
+    "programs": [
+      {
+        "name": "Catch-and-release Record",
+        "species": [
+          "Brook trout",
+          "Brown trout",
+          "Channel catfish",
+          "Freshwater drum",
+          "Largemouth bass",
+          "Rainbow trout",
+          "Smallmouth bass",
+          "Walleye"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Certified-weight Record",
+        "species": [
+          "Brook trout",
+          "Brown trout",
+          "Channel catfish",
+          "Freshwater drum",
+          "Largemouth bass",
+          "Rainbow trout",
+          "Smallmouth bass",
+          "Walleye"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Mississippi": {
+    "slug": "mississippi",
+    "programs": [
+      {
+        "name": "Freshwater State Record",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "Saltwater State Record",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Missouri": {
+    "slug": "missouri",
+    "programs": [
+      {
+        "name": "Missouri Blue Ribbon Trout Slam",
+        "species": [
+          "Rainbow trout",
+          "Brown trout"
+        ],
+        "strict": true
+      }
+    ],
+    "waters": [
+      "Barren Fork Creek",
+      "Blue Springs Creek",
+      "Crane Creek",
+      "Current River (Blue Ribbon)",
+      "Eleven Point River",
+      "Little Piney Creek",
+      "Mill Creek",
+      "North Fork of the White River",
+      "Spring Creek"
+    ]
+  },
+  "Montana": {
+    "slug": "montana",
+    "programs": [
+      {
+        "name": "State Record",
+        "species": [
+          "Arctic Grayling",
+          "Black Crappie",
+          "Brook Trout",
+          "Brown Trout",
+          "Burbot",
+          "Channel Catfish",
+          "Kokanee Salmon",
+          "Lake Trout",
+          "Largemouth Bass",
+          "Mountain Whitefish",
+          "Northern Pike",
+          "Rainbow Trout",
+          "Smallmouth Bass",
+          "Walleye",
+          "Westslope Cutthroat Trout",
+          "Yellowstone Cutthroat Trout"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Nebraska": {
+    "slug": "nebraska",
+    "programs": [
+      {
+        "name": "Master Angler — Catch and Release",
+        "species": [
+          "Bluegill",
+          "Brown trout",
+          "Channel catfish",
+          "Crappie",
+          "Freshwater drum",
+          "Largemouth bass",
+          "Rainbow trout",
+          "Smallmouth bass",
+          "Walleye",
+          "White bass"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Master Angler — Harvested",
+        "species": [
+          "Bluegill",
+          "Brown trout",
+          "Channel catfish",
+          "Crappie",
+          "Freshwater drum",
+          "Largemouth bass",
+          "Rainbow trout",
+          "Smallmouth bass",
+          "Walleye",
+          "White bass"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Nevada": {
+    "slug": "nevada",
+    "programs": [
+      {
+        "name": "Native Fish-Slam",
+        "species": [
+          "Lahontan cutthroat trout",
+          "Bonneville cutthroat trout",
+          "Yellowstone cutthroat trout",
+          "Redband trout",
+          "Bull trout",
+          "Mountain whitefish"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Trophy Fish",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "First Fish",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "New Hampshire": {
+    "slug": "new-hampshire",
+    "programs": [
+      {
+        "name": "Trophy Fish",
+        "species": [
+          "Black crappie",
+          "Brook trout",
+          "Brown trout",
+          "Lake trout",
+          "Largemouth bass",
+          "Smallmouth bass",
+          "Striped bass"
+        ],
+        "strict": false
+      },
+      {
+        "name": "State Record",
+        "species": [
+          "Black crappie",
+          "Brook trout",
+          "Brown trout",
+          "Lake trout",
+          "Largemouth bass",
+          "Smallmouth bass",
+          "Striped bass"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "New Jersey": {
+    "slug": "new-jersey",
+    "programs": [
+      {
+        "name": "Skillful Angler",
+        "species": [
+          "Brook trout",
+          "Crappie",
+          "Fluke",
+          "Largemouth bass",
+          "Smallmouth bass",
+          "Striped bass",
+          "Tautog"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Salmonid Slam",
+        "species": [
+          "Lake trout",
+          "Brook trout",
+          "Brown trout",
+          "Rainbow trout",
+          "Landlocked Atlantic salmon"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Bass Slam",
+        "species": [
+          "Largemouth bass",
+          "Smallmouth bass"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Panfish Slam",
+        "species": [
+          "Sunfish",
+          "Crappie",
+          "Yellow perch"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Inshore Slam I",
+        "species": [
+          "Striped bass",
+          "Bluefish",
+          "Fluke"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Inshore Slam II",
+        "species": [
+          "Black sea bass",
+          "Tautog",
+          "Weakfish"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Offshore Pelagics Slam",
+        "species": [
+          "Bluefin tuna",
+          "Bigeye tuna",
+          "Yellowfin tuna",
+          "Dolphin"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Marlin Slam",
+        "species": [
+          "White marlin",
+          "Blue marlin"
+        ],
+        "strict": true
+      }
+    ],
+    "waters": []
+  },
+  "New Mexico": {
+    "slug": "new-mexico",
+    "programs": [
+      {
+        "name": "Trout Challenge",
+        "species": [
+          "Rio Grande cutthroat trout",
+          "Gila trout",
+          "Brown trout",
+          "Brook trout",
+          "Rainbow trout"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Bass Challenge",
+        "species": [
+          "Spotted bass",
+          "White bass",
+          "Largemouth bass",
+          "Smallmouth bass"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Master Angler",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "Record Fish",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "New York": {
+    "slug": "new-york",
+    "programs": [
+      {
+        "name": "Angler Achievement Award",
+        "species": [
+          "American Shad",
+          "Atlantic Salmon",
+          "Black Bullhead",
+          "Black Crappie",
+          "Bluegill",
+          "Bowfin",
+          "Brook Trout",
+          "Brown Bullhead",
+          "Brown Trout",
+          "Burbot",
+          "Chain Pickerel",
+          "Channel Catfish",
+          "Chinook Salmon",
+          "Cisco (Lake Herring)",
+          "Coho Salmon",
+          "Common Carp",
+          "Fallfish",
+          "Freshwater Drum",
+          "Lake Trout",
+          "Lake Whitefish",
+          "Largemouth Bass",
+          "Longnose Gar",
+          "Muskellunge",
+          "Northern Pike",
+          "Pumpkinseed",
+          "Rainbow Trout",
+          "Redbreast Sunfish",
+          "Redhorse Sucker species",
+          "Rock Bass",
+          "Smallmouth Bass",
+          "Splake",
+          "Striped Bass (inland Hudson/Delaware)",
+          "Tiger Muskellunge",
+          "Walleye",
+          "White Bass",
+          "White Catfish",
+          "White Crappie",
+          "White Perch",
+          "White Sucker",
+          "Yellow Perch"
+        ],
+        "strict": false
+      },
+      {
+        "name": "State Record",
+        "species": [
+          "American Shad",
+          "Atlantic Salmon",
+          "Black Bullhead",
+          "Black Crappie",
+          "Bluegill",
+          "Bowfin",
+          "Brook Trout",
+          "Brown Bullhead",
+          "Brown Trout",
+          "Burbot",
+          "Chain Pickerel",
+          "Channel Catfish",
+          "Chinook Salmon",
+          "Cisco (Lake Herring)",
+          "Coho Salmon",
+          "Common Carp",
+          "Fallfish",
+          "Freshwater Drum",
+          "Lake Trout",
+          "Lake Whitefish",
+          "Largemouth Bass",
+          "Longnose Gar",
+          "Muskellunge",
+          "Northern Pike",
+          "Pumpkinseed",
+          "Rainbow Trout",
+          "Redbreast Sunfish",
+          "Redhorse Sucker species",
+          "Rock Bass",
+          "Smallmouth Bass",
+          "Splake",
+          "Striped Bass (inland Hudson/Delaware)",
+          "Tiger Muskellunge",
+          "Walleye",
+          "White Bass",
+          "White Catfish",
+          "White Crappie",
+          "White Perch",
+          "White Sucker",
+          "Yellow Perch"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "North Carolina": {
+    "slug": "north-carolina",
+    "programs": [
+      {
+        "name": "Freshwater Angler Recognition / Master Angler",
+        "species": [
+          "Largemouth bass",
+          "Smallmouth bass",
+          "Crappie (black or white)",
+          "Freshwater drum",
+          "Brook trout",
+          "Walleye"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Saltwater Tournament Citation",
+        "species": [
+          "Red drum",
+          "Flounder",
+          "Spotted seatrout",
+          "Black sea bass"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "North Dakota": {
+    "slug": "north-dakota",
+    "programs": [
+      {
+        "name": "Classic Challenge",
+        "species": [
+          "Northern pike",
+          "Yellow perch",
+          "Smallmouth bass",
+          "Channel catfish"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Sportfish Challenge",
+        "species": [
+          "Bluegill",
+          "Walleye",
+          "Bass (specify type)",
+          "Trout (specify type)"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Rough Fish Challenge",
+        "species": [
+          "Bullhead (specify type)",
+          "Carp (specify type)",
+          "Sucker (specify type)"
+        ],
+        "strict": false
+      },
+      {
+        "name": "100 Fish Challenge",
+        "species": [
+          "Channel catfish",
+          "Freshwater drum",
+          "Northern pike",
+          "Rainbow trout",
+          "Smallmouth bass",
+          "Walleye",
+          "Yellow perch"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Total Catch Challenge",
+        "species": [
+          "Channel catfish",
+          "Freshwater drum",
+          "Northern pike",
+          "Rainbow trout",
+          "Smallmouth bass",
+          "Walleye",
+          "Yellow perch"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Whopper Club",
+        "species": [
+          "Channel catfish",
+          "Freshwater drum",
+          "Northern pike",
+          "Rainbow trout",
+          "Smallmouth bass",
+          "Walleye",
+          "Yellow perch"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Catch and Release Club",
+        "species": [
+          "Channel catfish",
+          "Freshwater drum",
+          "Northern pike",
+          "Rainbow trout",
+          "Smallmouth bass",
+          "Walleye",
+          "Yellow perch"
+        ],
+        "strict": false
+      },
+      {
+        "name": "State Record",
+        "species": [
+          "Channel catfish",
+          "Freshwater drum",
+          "Northern pike",
+          "Rainbow trout",
+          "Smallmouth bass",
+          "Walleye",
+          "Yellow perch"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Ohio": {
+    "slug": "ohio",
+    "programs": [
+      {
+        "name": "Fish Ohio / Master Angler",
+        "species": [
+          "Blue Catfish",
+          "Bowfin",
+          "Brown Trout",
+          "Bullhead",
+          "Carp",
+          "Channel Catfish",
+          "Crappie",
+          "Flathead Catfish",
+          "Freshwater Drum",
+          "Hybrid-Striped Bass",
+          "Lake Trout",
+          "Largemouth Bass",
+          "Longnose Gar",
+          "Muskellunge",
+          "Northern Pike",
+          "Rock Bass",
+          "Sauger",
+          "Saugeye",
+          "Smallmouth Bass",
+          "Spotted Bass",
+          "Steelhead Trout",
+          "Sucker",
+          "Sunfish",
+          "Walleye",
+          "White Bass",
+          "Yellow Perch"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Oklahoma": {
+    "slug": "oklahoma",
+    "programs": [
+      {
+        "name": "Trophy Angler / Master Angler",
+        "species": [
+          "Black/white crappie",
+          "Blue catfish",
+          "Brown trout",
+          "Channel catfish",
+          "Flathead catfish",
+          "Largemouth bass",
+          "Rainbow trout",
+          "Sauger",
+          "Saugeye",
+          "Smallmouth bass",
+          "Spotted bass",
+          "Striped bass",
+          "Striped/white hybrid",
+          "Sunfish (all species)",
+          "Walleye",
+          "White bass"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": [
+      "Lower Illinois River",
+      "Lower Mountain Fork River",
+      "Blue River",
+      "Sooner Lake",
+      "Lake Texoma",
+      "Lake Hefner",
+      "Lake Carl Blackwell",
+      "Great Salt Plains Lake"
+    ]
+  },
+  "Oregon": {
+    "slug": "oregon",
+    "programs": [
+      {
+        "name": "Western Native Trout Challenge",
+        "species": [
+          "Bull trout",
+          "Coastal cutthroat trout",
+          "Lahontan cutthroat trout",
+          "Redband trout",
+          "Westslope cutthroat trout"
+        ],
+        "strict": true
+      }
+    ],
+    "waters": []
+  },
+  "Pennsylvania": {
+    "slug": "pennsylvania",
+    "programs": [
+      {
+        "name": "Angler Award",
+        "species": [
+          "American Shad",
+          "Atlantic Salmon",
+          "Bluegill",
+          "Brook Trout",
+          "Brown Trout",
+          "Bullhead Catfish",
+          "Chain Pickerel",
+          "Channel Catfish",
+          "Chinook Salmon",
+          "Coho Salmon",
+          "Common Carp",
+          "Crappie",
+          "Flathead Catfish",
+          "Freshwater Drum",
+          "Golden Rainbow Trout",
+          "Lake Trout",
+          "Largemouth Bass",
+          "Muskellunge (includes tiger)",
+          "Northern Pike",
+          "Pink Salmon",
+          "Rainbow Trout",
+          "Rock Bass",
+          "Sauger",
+          "Smallmouth Bass",
+          "Steelhead Trout",
+          "Striped Bass — Inland (includes hybrid)",
+          "Striped Bass — Marine (includes hybrid)",
+          "Suckers",
+          "Walleye",
+          "White Bass",
+          "White Perch",
+          "Yellow Perch"
+        ],
+        "strict": false
+      },
+      {
+        "name": "State Record",
+        "species": [
+          "American Shad",
+          "Atlantic Salmon",
+          "Bluegill",
+          "Brook Trout",
+          "Brown Trout",
+          "Bullhead Catfish",
+          "Chain Pickerel",
+          "Channel Catfish",
+          "Chinook Salmon",
+          "Coho Salmon",
+          "Common Carp",
+          "Crappie",
+          "Flathead Catfish",
+          "Freshwater Drum",
+          "Golden Rainbow Trout",
+          "Lake Trout",
+          "Largemouth Bass",
+          "Muskellunge (includes tiger)",
+          "Northern Pike",
+          "Pink Salmon",
+          "Rainbow Trout",
+          "Rock Bass",
+          "Sauger",
+          "Smallmouth Bass",
+          "Steelhead Trout",
+          "Striped Bass — Inland (includes hybrid)",
+          "Striped Bass — Marine (includes hybrid)",
+          "Suckers",
+          "Walleye",
+          "White Bass",
+          "White Perch",
+          "Yellow Perch"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Rhode Island": {
+    "slug": "rhode-island",
+    "programs": [
+      {
+        "name": "Game Fish Award — Freshwater",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "Game Fish Award — Saltwater",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "Freshwater State Record",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "Saltwater State Record",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "Children’s First Fish",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "South Carolina": {
+    "slug": "south-carolina",
+    "programs": [
+      {
+        "name": "Freshwater State Record",
+        "species": [],
+        "strict": false
+      },
+      {
+        "name": "Saltwater State Record",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "South Dakota": {
+    "slug": "south-dakota",
+    "programs": [
+      {
+        "name": "Proud Angler",
+        "species": [
+          "Northern pike",
+          "Smallmouth bass",
+          "Walleye"
+        ],
+        "strict": false
+      },
+      {
+        "name": "State Record",
+        "species": [
+          "Northern pike",
+          "Smallmouth bass",
+          "Walleye"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Tennessee": {
+    "slug": "tennessee",
+    "programs": [
+      {
+        "name": "TARP Trophy Fish / Master Angler",
+        "species": [
+          "Blue catfish",
+          "Bluegill",
+          "Bowfin",
+          "Brook trout",
+          "Brown trout",
+          "Channel catfish",
+          "Cherokee bass (hybrid striped bass)",
+          "Common carp",
+          "Crappie (black or white)",
+          "Flathead catfish",
+          "Freshwater drum",
+          "Lake trout",
+          "Largemouth bass",
+          "Longnose gar",
+          "Muskellunge",
+          "Rainbow trout",
+          "Redear sunfish",
+          "Rock bass",
+          "Sauger",
+          "Smallmouth bass",
+          "Spotted bass",
+          "Striped bass",
+          "Walleye",
+          "White bass",
+          "Yellow bass",
+          "Yellow perch"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Texas": {
+    "slug": "texas",
+    "programs": [
+      {
+        "name": "Big Fish / Elite Angler — Freshwater",
+        "species": [
+          "Guadalupe bass",
+          "Hybrid striped bass",
+          "Largemouth bass",
+          "Smallmouth bass",
+          "Spotted bass",
+          "Striped bass",
+          "White bass",
+          "Bluegill",
+          "Bowfin",
+          "Bigmouth buffalo",
+          "Black buffalo",
+          "Smallmouth buffalo",
+          "Common carp",
+          "Blue catfish",
+          "Channel catfish",
+          "Flathead catfish",
+          "Rio Grande cichlid",
+          "Black crappie",
+          "White crappie",
+          "Freshwater drum",
+          "Alligator gar",
+          "Longnose gar",
+          "Spotted gar",
+          "Sunfish",
+          "Rainbow trout",
+          "Walleye"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Big Fish / Elite Angler — Saltwater",
+        "species": [
+          "Greater amberjack",
+          "Gafftopsail catfish",
+          "Atlantic croaker",
+          "Cobia (ling)",
+          "Dolphin (mahi mahi)",
+          "Black drum",
+          "Red drum",
+          "Flounder",
+          "Crevalle jack",
+          "Ladyfish",
+          "King mackerel",
+          "Spanish mackerel",
+          "Blue marlin",
+          "Sailfish",
+          "Sand seatrout",
+          "Spotted seatrout",
+          "Sheepshead",
+          "Red snapper",
+          "Snook",
+          "Atlantic spadefish",
+          "Tarpon",
+          "Little tunny"
+        ],
+        "strict": false
+      },
+      {
+        "name": "ShareLunker",
+        "species": [
+          "Largemouth Bass"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Utah": {
+    "slug": "utah",
+    "programs": [
+      {
+        "name": "Utah Cutthroat Slam",
+        "species": [
+          "Bonneville Cutthroat",
+          "Bear River Cutthroat",
+          "Colorado River Cutthroat",
+          "Yellowstone Cutthroat"
+        ],
+        "strict": true
+      }
+    ],
+    "waters": []
+  },
+  "Vermont": {
+    "slug": "vermont",
+    "programs": [
+      {
+        "name": "Trophy Angler / Master Angler",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Virginia": {
+    "slug": "virginia",
+    "programs": [
+      {
+        "name": "Freshwater Trophy / Master / Expert Angler",
+        "species": [
+          "Brook trout",
+          "Brown trout",
+          "Common carp",
+          "Freshwater drum",
+          "Largemouth bass",
+          "Rainbow trout",
+          "Smallmouth bass"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Saltwater Tournament Citation",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Washington": {
+    "slug": "washington",
+    "programs": [
+      {
+        "name": "Trout Derby",
+        "species": [
+          "Rainbow trout"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Sport Fish Record",
+        "species": [],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "West Virginia": {
+    "slug": "west-virginia",
+    "programs": [
+      {
+        "name": "Black Bass Slam",
+        "species": [
+          "Largemouth bass",
+          "Smallmouth bass",
+          "Spotted bass"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Catfish Slam",
+        "species": [
+          "Blue catfish",
+          "Flathead catfish",
+          "Channel catfish"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Panfish Slam",
+        "species": [
+          "Sunfish",
+          "Rock bass",
+          "Black crappie",
+          "White crappie",
+          "Yellow perch"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Nongame Slam",
+        "species": [
+          "Fallfish",
+          "Bullhead",
+          "Freshwater drum",
+          "Common carp"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Predator Slam",
+        "species": [
+          "Musky",
+          "Walleye",
+          "Hybrid striped bass",
+          "Striped bass"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Trout Slam",
+        "species": [
+          "Brook trout",
+          "Brown trout",
+          "Golden rainbow trout",
+          "Rainbow trout",
+          "Tiger trout"
+        ],
+        "strict": true
+      }
+    ],
+    "waters": []
+  },
+  "Wisconsin": {
+    "slug": "wisconsin",
+    "programs": [
+      {
+        "name": "Anglers’ Club — Kept Fish",
+        "species": [
+          "Lake sturgeon",
+          "Lake whitefish",
+          "Lake herring (cisco)",
+          "Coho salmon",
+          "Chinook salmon",
+          "Rainbow/Steelhead (GL)",
+          "Rainbow trout (inland)",
+          "Brown trout (GL)",
+          "Brown trout (inland)",
+          "Brook trout (GL)",
+          "Brook trout (inland)",
+          "Lake trout",
+          "Northern pike",
+          "Muskellunge",
+          "Tiger muskellunge",
+          "Bullhead (all species)",
+          "Channel catfish",
+          "Flathead catfish",
+          "Common carp",
+          "White sucker",
+          "White bass",
+          "Rock bass",
+          "Bluegill",
+          "Sunfish (all others)",
+          "Smallmouth bass",
+          "Largemouth bass",
+          "Crappie (white or black)",
+          "Yellow perch",
+          "Sauger",
+          "Walleye",
+          "Freshwater drum"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Anglers’ Club — Live Release",
+        "species": [
+          "Lake sturgeon",
+          "Lake whitefish",
+          "Lake herring (cisco)",
+          "Coho salmon",
+          "Chinook salmon",
+          "Rainbow/Steelhead (GL)",
+          "Rainbow trout (inland)",
+          "Brown trout (GL)",
+          "Brown trout (inland)",
+          "Brook trout (GL)",
+          "Brook trout (inland)",
+          "Lake trout",
+          "Northern pike",
+          "Muskellunge",
+          "Tiger muskellunge",
+          "Bullhead (all species)",
+          "Channel catfish",
+          "Flathead catfish",
+          "Common carp",
+          "White sucker",
+          "White bass",
+          "Rock bass",
+          "Bluegill",
+          "Sunfish (all others)",
+          "Smallmouth bass",
+          "Largemouth bass",
+          "Crappie (white or black)",
+          "Yellow perch",
+          "Sauger",
+          "Walleye",
+          "Freshwater drum"
+        ],
+        "strict": false
+      },
+      {
+        "name": "Mixed Bag",
+        "species": [
+          "Lake sturgeon",
+          "Lake whitefish",
+          "Lake herring (cisco)",
+          "Coho salmon",
+          "Chinook salmon",
+          "Rainbow/Steelhead (GL)",
+          "Rainbow trout (inland)",
+          "Brown trout (GL)",
+          "Brown trout (inland)",
+          "Brook trout (GL)",
+          "Brook trout (inland)",
+          "Lake trout",
+          "Northern pike",
+          "Muskellunge",
+          "Tiger muskellunge",
+          "Bullhead (all species)",
+          "Channel catfish",
+          "Flathead catfish",
+          "Common carp",
+          "White sucker",
+          "White bass",
+          "Rock bass",
+          "Bluegill",
+          "Sunfish (all others)",
+          "Smallmouth bass",
+          "Largemouth bass",
+          "Crappie (white or black)",
+          "Yellow perch",
+          "Sauger",
+          "Walleye",
+          "Freshwater drum"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  },
+  "Wyoming": {
+    "slug": "wyoming",
+    "programs": [
+      {
+        "name": "Cutt-Slam",
+        "species": [
+          "Bonneville cutthroat trout",
+          "Colorado River cutthroat trout",
+          "Snake River cutthroat trout",
+          "Yellowstone cutthroat trout"
+        ],
+        "strict": true
+      },
+      {
+        "name": "Master Angler",
+        "species": [
+          "Brook Trout",
+          "Brown Trout",
+          "Burbot",
+          "Channel Catfish",
+          "Crappie",
+          "Cutthroat Trout",
+          "Freshwater Drum",
+          "Golden Trout",
+          "Grayling",
+          "Kokanee",
+          "Lake Trout",
+          "Largemouth Bass",
+          "Mountain Whitefish",
+          "Northern Pike",
+          "Rainbow Trout",
+          "Sauger",
+          "Shovelnose Sturgeon",
+          "Smallmouth Bass",
+          "Splake",
+          "Sunfish",
+          "Tiger Muskie",
+          "Tiger Trout",
+          "Walleye",
+          "Yellow Perch"
+        ],
+        "strict": false
+      }
+    ],
+    "waters": []
+  }
+}

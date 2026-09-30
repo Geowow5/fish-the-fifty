@@ -1175,3 +1175,16 @@ footer { background: #050f14; border-top: 1px solid #20363e; }
 .member-catches article { padding: 18px 0; border-bottom: 1px solid #39515a; overflow-wrap: anywhere; }
 .member-panel .card-grid { margin: 24px 0; }
 @media(max-width:600px) { .member-stats { grid-template-columns: 1fr; } .member-panel { padding: 22px; } }
+
+.member-hero { padding-top: 48px; padding-bottom: 48px; }
+.member-hero h1 { font-size: clamp(36px, 5vw, 64px); }
+.member-catch-form { max-width: none; }
+.member-catch-form fieldset { border: 1px solid #39515a; border-radius: 14px; padding: 24px; min-width: 0; margin: 0; }
+.member-catch-form legend { padding: 0 8px; font-size: 18px; font-weight: 700; color: #edf4f2; }
+.member-field-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+.member-form a, .member-record-details a { color: #91d4ce; text-decoration: underline; }
+.member-record-details { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; margin: 20px 0; }
+.member-record-details dt { text-transform: capitalize; font-weight: 700; color: #edf4f2; }
+.member-record-details dd { margin: 6px 0 0; color: #afc0c3; overflow-wrap: anywhere; }
+.member-catches summary { cursor: pointer; padding: 12px 0; color: #91d4ce; }
+@media(max-width:700px) { .member-field-grid, .member-record-details { grid-template-columns: 1fr; } .member-catch-form fieldset { padding: 18px; } }
